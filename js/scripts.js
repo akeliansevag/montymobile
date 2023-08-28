@@ -728,6 +728,7 @@ if($("#timeline-slider")){
     infinite: true,
     touchThreshold: 1000,
     autoplay: false,
+    arrows: false,
     responsive: [{
         breakpoint: 1199,
         settings: {
