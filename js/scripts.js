@@ -342,7 +342,7 @@ $(".feature-title").on("click", function () {
     var performanceItem = performanceItems.find(".performance-item");
     if(performanceItem.length){
       performanceItem.each((i, item) => {
-        $op = (performanceItem.length - i) / 10;
+        $op = (performanceItem.length - i) / 4;
         $(item).css("opacity", $op);
       });
   
@@ -634,16 +634,17 @@ if ($cpslider) {
 
 if ($cpislider) {
   let categoryProductsSlider = $("#category-products-slider").slick({
-    centerMode: true,
+    centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: $("#category-product-info-slider"),
     centerPadding: '50px'
   });
 }
 
 $(".category-product-item").on("click",function(){
-  $("#category-products-slider").slick("slickGoTo",$(this).data("key"));
+  $(".category-product-item").removeClass("category-active");
+  $(this).addClass("category-active");
+  $("#category-product-info-slider").slick("slickGoTo",$(this).data("key"));
 });
 
 if($("#about-us-half-sections")){

@@ -7,7 +7,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 ?>
 
-<section class="slider-section">
+<section class="slider-section position-relative">
     <div id="h-slider" class="h-slider">
         <?php if ($slider) : ?>
             <?php foreach ($slider as $key => $slide) : ?>
@@ -38,6 +38,9 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
+    </div>
+    <div class="field">
+        <div class="mouse"></div>
     </div>
 </section>
 
