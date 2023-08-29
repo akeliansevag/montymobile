@@ -3,7 +3,7 @@
 <?php
 $q = null;
 if (isset($_GET['q'])) {
-    $q = $_GET['q'];
+    $q = urldecode($_GET['q']);
 }
 if (get_query_var('paged')) {
     $paged = get_query_var('paged');
