@@ -131,7 +131,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <?php endif; ?>
 
     <?php
-    $products = get_field("homepage_products");
+    $products = get_field("top_tier_products");
     ?>
     <?php if ($products) : ?>
         <section class="h-products">
@@ -148,20 +148,19 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                         <div class="col-md-6">
                                             <div class="">
                                                 <div class="h-blog-meta mb-2 d-flex align-items-center">
-                                                    <span class="h-blog-category display-6 product-name"><?= $product->post_title; ?></span>
+                                                    <span class="h-blog-category display-6 product-name"><?= $product['title']; ?></span>
                                                     <span class="h-blog-shape"></span>
                                                     <span class="h-blog-dot"></span>
                                                 </div>
-                                                <?php $fname = get_field("full_name", $product->ID); ?>
-                                                <h3 class="product-full-name"><?= $fname; ?></h3>
+
                                                 <div class="product-description mb-4 mb-xl-0">
-                                                    <?= get_field('small_description', $product->ID); ?>
+                                                    <?= $product['description'] ?>
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                            <?php $infographic = get_field("homepage_infographic", $product->ID); ?>
+                                            <?php $infographic = $product['image']; ?>
                                             <?php if ($infographic) : ?>
                                                 <div class="h-product-image">
                                                     <img src="<?= $infographic['sizes']['lg-thumb']; ?>" alt="">
@@ -174,7 +173,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                             <div class="col-sm-12 text-center my-5">
                                                 <div id="slider-buttons">
                                                     <div>
-                                                        <a href="<?= get_permalink(($product->ID)) ?>" class="mm-button-2">Get started</a>
+                                                        <a target="<?= $product['link']['target'] ?>" href="<?= $product['link']['url'] ?>" class="mm-button-2">Get started</a>
                                                     </div>
                                                 </div>
                                             </div>
