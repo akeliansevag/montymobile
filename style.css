@@ -685,7 +685,7 @@ a.black-hover:hover .right-arrow i{
 }
 .v-wrapper img{
   max-width: 100%;
-  
+  max-height: 100%;
 }
 
 .h-blog-date, .meta-separator{
