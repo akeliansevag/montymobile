@@ -104,7 +104,8 @@ if($vslider.length){
           slidesToShow: 2,
           slidesToScroll: 2,
           centerMode: true,
-          centerPadding: '50px'
+          centerPadding: '50px',
+          dots:false
         }
       }
     ]
