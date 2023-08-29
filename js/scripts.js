@@ -664,7 +664,15 @@ if ($cpislider) {
     centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding: '50px'
+    centerPadding: '50px',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 }
 

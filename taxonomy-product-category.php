@@ -41,17 +41,20 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
             <?php if ($products) : ?>
                 <section class="category-products-slider py-5">
                     <div class="container">
-                        <div id="category-products-slider" class="">
-                            <?php foreach ($products as $key => $pr) : ?>
-                                <div class="px-2">
-                                    <div class="category-product-item <?= $key == 0 ? "category-active" : "" ?> py-4" data-key="<?= $key ?>">
-                                        <h4 class="fs-1 fw-semi-bold"><?= $pr->post_title ?></h4>
+                        <div class="px-3 px-md-0">
+                            <div id="category-products-slider" class="">
+                                <?php foreach ($products as $key => $pr) : ?>
+                                    <div class="px-2">
+                                        <div class="category-product-item <?= $key == 0 ? "category-active" : "" ?> py-4" data-key="<?= $key ?>">
+                                            <h4 class="fs-1 fw-semi-bold"><?= $pr->post_title ?></h4>
+                                        </div>
                                     </div>
-                                </div>
 
 
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
+
                     </div>
 
                 </section>
