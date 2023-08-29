@@ -1,7 +1,6 @@
 var $ = jQuery;
 var $hslider = $('#h-slider');
 var $eventsSlider = $("#events-slider");
-var $vslider = $(".v-slider");
 var $pslider = $("#products-slider");
 var $sbuttons = $("#slider-buttons");
 if($hslider.length){
@@ -83,10 +82,41 @@ if($pslider.length){
 
   initSlider();
 }
-
-if($vslider.length){
-  $vslider.slick({
+const $sliderAwards = $("#slider-awards");
+if($sliderAwards.length){
+  $sliderAwards.slick({
     slidesToShow: 5,
+    arrows: false,
+    dots: true,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          centerMode: true,
+          centerPadding: '50px',
+          dots:false
+        }
+      }
+    ]
+  });
+}
+
+const $sliderClients = $("#slider-clients");
+if($sliderClients.length){
+  $sliderClients.slick({
+    slidesToShow: 5,
+    rows:2,
+    slidesPerRow: 5,
     arrows: false,
     dots: true,
     slidesToScroll: 5,

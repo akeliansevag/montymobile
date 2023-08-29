@@ -257,7 +257,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
             <div class="container">
                 <h2 class="section-title display-4"><?= get_field("homepage_awards_title", 7); ?></h2>
 
-                <div class="awards-slider v-slider">
+                <div class="awards-slider v-slider" id="slider-awards">
                     <?php foreach ($awards as $award) : ?>
                         <div class="v-slide px-2">
                             <div class="v-wrapper">
@@ -279,7 +279,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
             <div class="container">
                 <h2 class="section-title display-4"><?= get_field("homepage_clients_title", 7); ?></h2>
 
-                <div class="clients-slider v-slider">
+                <div class="clients-slider v-slider" id="slider-clients">
                     <?php foreach ($clients as $client) : ?>
                         <div class="v-slide">
                             <div class="v-wrapper">

@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '7.8.8');
+	define('_S_VERSION', '7.9.1');
 }
 
 require_once 'custom-menu-walker.php';
