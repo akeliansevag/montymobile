@@ -27,7 +27,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     <div class="h-slider-content">
                         <div class="h-slider-inner text-center">
                             <?php if ($slide['text']) : ?>
-                                <h1 class="display-3"><?= $slide['text']; ?></h1>
+                                <h1 class="display-3 fw-semi-bold"><?= $slide['text']; ?></h1>
                             <?php endif; ?>
                             <?php if ($slide['link']) : ?>
                                 <a target="<?= $slide['link']['target']; ?>" href="<?= $slide['link']['url'] ?>" class="mm-button-2 my-3"><?= $slide['link']['title']; ?></a>
@@ -136,7 +136,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <?php if ($products) : ?>
         <section class="h-products">
             <div class="container">
-                <h2 class="section-title display-4"><?= get_field("homepage_products_title") ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold"><?= get_field("homepage_products_title") ?></h2>
             </div>
             <div class="products-slider" id="products-slider">
                 <?php foreach ($products as $key => $product) : ?>
@@ -206,7 +206,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
         <section class="h-blogs">
 
             <div class="container">
-                <h2 class="section-title display-4"><?= get_field("homepage_blogs_title"); ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold"><?= get_field("homepage_blogs_title"); ?></h2>
                 <div class="blogs">
                     <?php foreach ($posts as $key => $post) : ?>
                         <?php
@@ -255,7 +255,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <?php if ($awards) : ?>
         <section class="h-awards">
             <div class="container">
-                <h2 class="section-title display-4"><?= get_field("homepage_awards_title", 7); ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold"><?= get_field("homepage_awards_title", 7); ?></h2>
 
                 <div class="awards-slider v-slider" id="slider-awards">
                     <?php foreach ($awards as $award) : ?>
@@ -277,7 +277,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <?php if ($clients) : ?>
         <section class="h-clients">
             <div class="container">
-                <h2 class="section-title display-4"><?= get_field("homepage_clients_title", 7); ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold"><?= get_field("homepage_clients_title", 7); ?></h2>
 
                 <div class="clients-slider v-slider" id="slider-clients">
                     <?php foreach ($clients as $client) : ?>
