@@ -2693,7 +2693,8 @@ background-position: right 12px center;
 }
 #slider-clients .v-wrapper{
   height:150px;
-  background-color: red;
+  padding:30px;
+  margin-bottom:10px;
 }
   /*------------------------------------*\
     RESPONSIVE
