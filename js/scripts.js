@@ -122,15 +122,13 @@ if($sliderClients.length){
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesPerRow: 3,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesPerRow: 2,
           centerMode: true,
           centerPadding: '50px',
           dots:false
