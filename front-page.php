@@ -112,7 +112,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
         <?php $events_title = get_field("homepage_events_title"); ?>
         <section class="h-events">
             <div class="container">
-                <h2 class="section-title display-4"><?= $events_title; ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold"><?= $events_title; ?></h2>
             </div>
             <div id="events-slider" class="events-slider">
                 <?php foreach ($events as $key => $event) : ?>
