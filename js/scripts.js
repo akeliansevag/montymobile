@@ -281,9 +281,9 @@ $(".feature-title").on("click", function () {
     let productCategoriesSlider = $("#product-categories-slider-"+blockID).slick({
       arrows:false,
       touchThreshold: 1000,
-      centerMode: true,
-      centerPadding: '75px',
+      centerMode: false,
       slidesToShow: 4,
+      variableWidth:true,
       arrows: true,
       responsive: [
         {

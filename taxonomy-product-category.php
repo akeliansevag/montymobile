@@ -78,8 +78,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
                                                 <?php $infographic = get_field("homepage_infographic", $p->ID); ?>
                                                 <?php if ($infographic) : ?>
                                                     <img class="mw-100" src="<?= $infographic['sizes']['lg-thumb']; ?>" alt="">
-                                                <?php else : ?>
-                                                    <img class="mw-100" src="http://localhost/montymobile/wp-content/uploads/2023/07/placeholder.png" alt="">
+
                                                 <?php endif; ?>
                                             </div>
                                         </div>
