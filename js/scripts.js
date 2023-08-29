@@ -86,7 +86,7 @@ if($pslider.length){
 
 if($vslider.length){
   $vslider.slick({
-    slidesToShow: 4,
+    slidesToShow: 5,
     arrows: false,
     dots: true,
     slidesToScroll: 5,
