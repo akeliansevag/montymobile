@@ -40,35 +40,38 @@ $blockID = $block['id'];
                         </div>
                     </div>
                     <div class="col-md-7 bg-pink">
-                        <div class="features-image features-image-slider" id="features-image-slider-<?= $blockID ?>">
-                            <?php foreach ($features as $ft2) : ?>
-                                <div class="feature-item">
-                                    <div class="feature-content py-5 px-3">
-                                        <?php if ($ft2['inner_description'] || $ft2['inner_points']) : ?>
-                                            <div class="feature-inner">
-                                                <?php if ($ft2['inner_description']) : ?>
-                                                    <div class="inner-description">
-                                                        <p><?= $ft2['inner_description']; ?></p>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <?php if ($ft2['inner_points']) : ?>
-                                                    <div class="inner-points">
-                                                        <?= $ft2['inner_points'] ?>
-                                                    </div>
-                                                <?php endif; ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if ($ft2['image']) : ?>
-                                            <div class="feature-image">
-                                                <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['url'] ?>" alt="">
-                                            </div>
-                                        <?php endif; ?>
+                        <div class="d-flex align-items-center">
+                            <div class="features-image features-image-slider" id="features-image-slider-<?= $blockID ?>">
+                                <?php foreach ($features as $ft2) : ?>
+                                    <div class="feature-item">
+                                        <div class="feature-content py-5 px-3">
+                                            <?php if ($ft2['inner_description'] || $ft2['inner_points']) : ?>
+                                                <div class="feature-inner">
+                                                    <?php if ($ft2['inner_description']) : ?>
+                                                        <div class="inner-description">
+                                                            <p><?= $ft2['inner_description']; ?></p>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <?php if ($ft2['inner_points']) : ?>
+                                                        <div class="inner-points">
+                                                            <?= $ft2['inner_points'] ?>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if ($ft2['image']) : ?>
+                                                <div class="feature-image">
+                                                    <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['url'] ?>" alt="">
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                </div>
 
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
 
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
