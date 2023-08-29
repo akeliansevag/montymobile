@@ -6,8 +6,8 @@ $backgroundColor = get_field("block_background_color");
 <?php if ($table) : ?>
     <section class="py-5" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
         <div class="container">
-            <div class="table-responsive table-wrapper">
-                <table class="table table-block table-striped">
+            <div class="table-responsive table-wrapper <?= get_field("table_dark") ? "table-dark" : "" ?>">
+                <table class="table table-block">
                     <?php $thead = $table['header']; ?>
                     <thead>
                         <tr>

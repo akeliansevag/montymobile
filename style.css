@@ -2229,7 +2229,7 @@ background-position: right 12px center;
 }
 
 .table-wrapper{
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
     -moz-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
     -webkit-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
@@ -2241,14 +2241,45 @@ background-position: right 12px center;
   min-width: 800px;
 }
 .table-block th{
-  background-color:var(--mmPink);
-  color:var(--mmWhite);
+  background-color:var(--mmWhite);
+  color:var(--mmBlack);
+  font-weight: 600;
+  background-color: #e5e5e5;
+}
+.table-block tbody tr{
+  border-bottom:1px solid #e5e5e5;
+}
+
+.table-block tbody tr:last-child{
+  border-bottom: none;
 }
 .table-wrapper .table>:not(caption)>*>*{
   border:0;
 }
 .table-wrapper .table-striped>tbody>tr:nth-of-type(odd)>*{
   background-color: var(--mmGray2);
+}
+
+.table-dark .table-block th{
+  background-color: #000000;
+  color:white;
+}
+
+.table-dark .table-block tr{
+  border-bottom:1px solid #ffffff;
+}
+
+.table-dark .table-block tbody td{
+  background-color:#000000;
+  color:#ffffff;
+}
+
+.table-wrapper.table-dark{
+  border:2px solid #ffffff;
+}
+
+.table-dark thead tr{
+  border-bottom:2px solid #ffffff !important;
 }
 
 #category-products-slider {
