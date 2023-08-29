@@ -259,7 +259,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
                 <div class="awards-slider v-slider">
                     <?php foreach ($awards as $award) : ?>
-                        <div class="v-slide">
+                        <div class="v-slide px-2">
                             <div class="v-wrapper">
                                 <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="" class="v-slider-img">
                             </div>
