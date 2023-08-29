@@ -22,9 +22,9 @@ $blockID = $block['id'];
         <?php endif; ?>
         <div class="product-features">
             <div class="container-fluid">
-                <div class="row align-items-center">
+                <div class="row">
                     <div class="col-md-5">
-                        <div class="features-text container-margin features-text-slider" id="features-text-slider-<?= $blockID ?>" data-slide-count="<?= count($features); ?>">
+                        <div class="features-text py-5 container-margin features-text-slider" id="features-text-slider-<?= $blockID ?>" data-slide-count="<?= count($features); ?>">
                             <?php foreach ($features as $key => $ft) : ?>
                                 <div>
                                     <div class="feature-title" data-key="<?= $key ?>" data-block-id="<?= $blockID ?>">
@@ -39,7 +39,7 @@ $blockID = $block['id'];
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="col-md-7 bg-pink">
+                    <div class="col-md-7 bg-pink d-flex align-items-center">
                         <div class="features-image features-image-slider" id="features-image-slider-<?= $blockID ?>">
                             <?php foreach ($features as $ft2) : ?>
                                 <div class="feature-item">
