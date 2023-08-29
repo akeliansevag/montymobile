@@ -114,7 +114,7 @@ if($sliderAwards.length){
 const $sliderClients = $("#slider-clients");
 if($sliderClients.length){
   $sliderClients.slick({
-    rows:3,
+    rows:2,
     slidesPerRow: 5,
     arrows: false,
     dots: true,
