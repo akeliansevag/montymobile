@@ -10,6 +10,8 @@ if (get_field("dark_theme")) {
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<link href="<?= get_field("favicon", "options") ?>" rel="shortcut icon">
+	<link href="<?= get_field("favicon", "options") ?>" rel="apple-touch-icon-precomposed">
 	<?php wp_head(); ?>
 </head>
 
