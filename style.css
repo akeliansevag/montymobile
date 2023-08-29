@@ -2595,6 +2595,11 @@ background-position: right 12px center;
   display: flex;
   align-items: center;
 }
+
+.v-slider .slick-track{
+  display: flex;
+  align-items: center;
+}
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
