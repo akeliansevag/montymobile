@@ -114,12 +114,10 @@ if($sliderAwards.length){
 const $sliderClients = $("#slider-clients");
 if($sliderClients.length){
   $sliderClients.slick({
-    slidesToShow: 5,
-    rows:2,
+    rows:3,
     slidesPerRow: 5,
     arrows: false,
     dots: true,
-    slidesToScroll: 5,
     responsive: [
       {
         breakpoint: 1199,
