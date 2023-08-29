@@ -2845,6 +2845,10 @@ background-position: right 12px center;
       display:block !important;
     }
 
+    .v-wrapper img{
+      filter: grayscale(0);
+    }
+
   }
   
   @media only screen and (max-width:576px) {
