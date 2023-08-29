@@ -39,7 +39,7 @@ $blockID = $block['id'];
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="col-md-7 bg-pink d-flex align-items-center">
+                    <div class="col-md-7 bg-pink">
                         <div class="features-image features-image-slider" id="features-image-slider-<?= $blockID ?>">
                             <?php foreach ($features as $ft2) : ?>
                                 <div class="feature-item">
