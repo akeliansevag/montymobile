@@ -564,6 +564,60 @@ a.black-hover:hover .right-arrow i{
   color:inherit;
 }
 
+.accordion-item{
+  border-radius: 25px;
+  border:none;
+  background-color:#e5e5e5;
+  margin-bottom:15px;
+}
+
+.accordion-header{
+  background-color: #e5e5e5;
+  border-radius:25px;
+}
+
+.accordion-button, .accordion-item:first-of-type .accordion-button, .accordion-item:last-of-type .accordion-button.collapsed{
+  border-radius: 25px;
+  background-color:#ffffff;
+}
+
+.accordion-button{
+  padding:10px 20px;
+}
+
+.accordion-item:first-of-type, .accordion-item:last-of-type{
+  border-radius:25px;
+}
+
+.accordion-button:focus{
+  background-color: #ffffff;
+}
+
+.accordion-button::after{
+  border-radius:50%;
+  padding:13px;
+  background-position: center;
+  border:1px dashed black;
+}
+
+.accordion-dark .accordion-header{
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.accordion-dark .accordion-button,.accordion-dark .accordion-item:first-of-type .accordion-button,.accordion-dark .accordion-item:last-of-type .accordion-button.collapsed{
+  background-color: #000000;
+  color:#ffffff;
+}
+
+.accordion-dark .accordion-button::after{
+  color:#ffffff;
+  border:1px dashed #ffffff;
+}
+.accordion-dark .accordion-button.collapsed::after, .accordion-dark .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
 .h-slider-item{
     height:80vh;
     width:100%;

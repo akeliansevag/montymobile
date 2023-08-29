@@ -7,7 +7,7 @@ $blockID = $block['id'];
 <?php if ($items) : ?>
   <section class="py-4" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
     <div class="container">
-      <div class="accordion" id="accordion-<?= $blockID ?>">
+      <div class="accordion <?= get_field("accordion_dark") ? "accordion-dark" : "" ?>" id="accordion-<?= $blockID ?>">
         <?php foreach ($items as $key => $item) : ?>
           <div class="accordion-item">
             <h2 class="accordion-header" id="heading-<?= $blockID ?>-<?= $key ?>">
