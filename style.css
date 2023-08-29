@@ -2687,6 +2687,14 @@ background-position: right 12px center;
   align-items: center;
 }
 
+#clients-slider .slick-slide > div{
+  display: flex;
+  align-items: center;
+}
+#clients-slider .v-wrapper{
+  height:150px;
+  background-color: red;
+}
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
