@@ -1862,6 +1862,9 @@ span.filter-separator {
 .mission-vision-content .right-image {
   flex: 1;
 }
+.mission-vision-content .right-image{
+  text-align: right;
+}
 .mission-vision-content .left-image img,
 .mission-vision-content .right-image img {
   width: 80%;
