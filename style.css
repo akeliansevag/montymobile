@@ -746,7 +746,6 @@ a.black-hover:hover .right-arrow i{
 .v-wrapper{
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 5px;
 }
 .v-wrapper img{
