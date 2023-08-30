@@ -46,8 +46,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <div class="position-relative motion-path-container">
     <div id="path-container" style="margin-top:300px;position:absolute;height:100%;width:100%;top:0;z-index:-1;">
-        <img style="position:absolute;top:0;left; -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);transform-origin:center;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">
+        <img style="position:absolute;top:0;left;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">
     </div>
     <?php if (get_field("homepage_about_us")) : ?>
         <section class="h-about-us text-center">
