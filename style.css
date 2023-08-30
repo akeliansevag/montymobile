@@ -1864,7 +1864,7 @@ span.filter-separator {
 }
 .mission-vision-content .left-image img,
 .mission-vision-content .right-image img {
-  width: 100%;
+  width: 80%;
 }
 .mission-vision-text {
   flex: 1;
