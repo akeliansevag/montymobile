@@ -174,7 +174,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                                     <span class="h-blog-dot"></span>
                                                 </div>
                                                 <?php if ($product['full_title']) : ?>
-                                                    <h3><i><?= $product['full_title']; ?></i></h3>
+                                                    <h3 class="fs-4"><i><?= $product['full_title']; ?></i></h3>
                                                 <?php endif; ?>
                                                 <div class="product-description mb-4 mb-xl-0">
                                                     <?= $product['description'] ?>
