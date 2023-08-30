@@ -116,7 +116,6 @@ if($sliderClients.length){
   $sliderClients.slick({
     rows:2,
     slidesPerRow: 6,
-    variableWidth: true,
     arrows: false,
     dots: true,
     responsive: [
