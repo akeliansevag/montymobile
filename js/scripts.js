@@ -115,7 +115,7 @@ const $sliderClients = $("#slider-clients");
 if($sliderClients.length){
   $sliderClients.slick({
     rows:2,
-    slidesPerRow: 6,
+    slidesPerRow: 5,
     arrows: false,
     dots: true,
     responsive: [
