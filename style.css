@@ -715,7 +715,22 @@ a.black-hover:hover .right-arrow i{
     position: relative;
     object-position: center;
 }
-
+.event-item .event-content{
+  position:relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event-item h4{
+  position: relative;
+  z-index: 2;
+  
+  text-align: center;
+}
+.event-item.with-image h4{
+  color:var(--mmWhite);
+}
 .box-bg{
   position: absolute;
   top:0;
@@ -726,6 +741,18 @@ a.black-hover:hover .right-arrow i{
   height: 100%;
 }
 
+.event-overlay{
+  position:absolute;
+  z-index: 1;
+  background-color:rgba(0,0,0,0.4);
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+}
+.event-logo{
+  max-width: 100%;
+}
 .event-item:hover{
     color: var(--mmBlack);
 }

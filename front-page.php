@@ -104,7 +104,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <?php
     $events = new WP_Query([
         'post_type' => 'event',
-        'posts_per_page' => 15
+        'posts_per_page' => 10
     ]);
     $events = $events->posts;
     ?>
@@ -115,13 +115,30 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 <h2 class="section-title display-4 fw-semi-bold"><?= $events_title; ?></h2>
             </div>
             <div id="events-slider" class="events-slider">
-                <?php foreach ($events as $key => $event) : ?>
+                <?php
+                foreach ($events as $key => $event) :
+                    $eventImage = get_field('event_small_thumbnail', $event->ID);
+                    $eventLogo = get_field("event_logo", $event->ID);
+                ?>
                     <div class="event-slide">
-                        <a class="event-item" href="<?= home_url('/events') ?>">
-                            <?php $eventImage = get_the_post_thumbnail($event->ID, 'lg-thumb'); ?>
-                            <img class="box-bg" src="<?= $eventImage ?>" alt="">
-                            <h4><?= $event->post_title; ?></h4>
-                            <p><?= $event->post_excerpt; ?></p>
+                        <a class="event-item <?= $eventImage ? "with-image" : "" ?>" href="<?= home_url('/events') ?>">
+                            <?php
+
+                            ?>
+                            <?php if ($eventImage) : $withImage = true; ?>
+                                <img class="box-bg" src="<?= $eventImage['sizes']['lg-thumb'] ?>" alt="">
+                                <div class="event-overlay"></div>
+                            <?php endif; ?>
+                            <div class="event-content">
+                                <div>
+                                    <?php if ($eventLogo) : ?>
+                                        <img src="<?= $eventLogo['sizes']['lg-thumb'] ?>" alt="" class="event-logo">
+                                    <?php endif; ?>
+                                    <h4><?= $event->post_title; ?></h4>
+                                </div>
+
+                            </div>
+
                         </a>
                     </div>
 
