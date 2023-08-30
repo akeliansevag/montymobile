@@ -46,7 +46,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <div class="position-relative motion-path-container">
     <div id="path-container" style="margin-top:300px;position:absolute;height:100%;width:100%;top:0;z-index:-1;">
-        <img style="position:absolute;top:0;left" id="floating-astro" src="<?= $astroImage['sizes']['mid-thumb'] ?>" alt="">
+        <img style="position:absolute;top:0;left" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">
     </div>
     <?php if (get_field("homepage_about_us")) : ?>
         <section class="h-about-us text-center">
@@ -117,7 +117,9 @@ $astroImage = get_field("floating_astronaut_image", 7);
             <div id="events-slider" class="events-slider">
                 <?php foreach ($events as $key => $event) : ?>
                     <div class="event-slide">
-                        <a class="event-item" href="#">
+                        <a class="event-item" href="<?= home_url('/events') ?>">
+                            <?php $eventImage = get_the_post_thumbnail($event->ID, 'lg-thumb'); ?>
+                            <img class="box-bg" src="<?= $eventImage ?>" alt="">
                             <h4><?= $event->post_title; ?></h4>
                             <p><?= $event->post_excerpt; ?></p>
                         </a>
