@@ -721,6 +721,7 @@ a.black-hover:hover .right-arrow i{
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .event-item h4{
   position: relative;
@@ -752,6 +753,8 @@ a.black-hover:hover .right-arrow i{
 }
 .event-logo{
   max-width: 100%;
+  width: 100px;
+  display: inline-block;
 }
 .event-item:hover{
     color: var(--mmBlack);
