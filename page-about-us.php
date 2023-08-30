@@ -261,7 +261,7 @@ $timeline_items = get_field("timeline_items");
 $awards = get_field('homepage_awards', 7);
 ?>
 <?php if ($awards) : ?>
-    <section class="h-awards py-5">
+    <section class="h-awards pb-5">
         <div class="container">
             <h2 class="section-title fs-2 fw-semi-bold text-white"><?= get_field("homepage_awards_title", 7); ?></h2>
 
