@@ -133,8 +133,10 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                 <div>
                                     <?php if ($eventLogo) : ?>
                                         <img src="<?= $eventLogo['sizes']['lg-thumb'] ?>" alt="" class="event-logo">
+                                    <?php else : ?>
+                                        <h4><?= $event->post_title; ?></h4>
                                     <?php endif; ?>
-                                    <h4><?= $event->post_title; ?></h4>
+
                                 </div>
 
                             </div>
