@@ -257,7 +257,28 @@ $timeline_items = get_field("timeline_items");
     </div><!--half-sections-->
 </section>
 
+<?php
+$awards = get_field('homepage_awards', 7);
+?>
+<?php if ($awards) : ?>
+    <section class="h-awards py-5">
+        <div class="container">
+            <h2 class="section-title fs-2 fw-semi-bold text-white"><?= get_field("homepage_awards_title", 7); ?></h2>
 
+            <div class="awards-slider v-slider" id="slider-awards">
+                <?php foreach ($awards as $award) : ?>
+                    <div class="v-slide px-2">
+                        <div class="v-wrapper">
+                            <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="" class="v-slider-img">
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+
+            </div>
+
+    </section>
+<?php endif; ?>
 <section class="py-5 white-text">
     <div class="container">
         <h2><?= get_field("about_us_services_title") ?></h2>
