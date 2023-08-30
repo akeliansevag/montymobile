@@ -740,12 +740,7 @@ a.black-hover:hover .right-arrow i{
 .v-wrapper img{
   max-width: 100%;
   max-height: 100%;
-  filter: grayscale(100%);
   transition: filter 0.1s linear;
-}
-
-.v-wrapper img:hover{
-  filter: grayscale(0);
 }
 
 .h-blog-date, .meta-separator{
@@ -2933,10 +2928,6 @@ background-position: right 12px center;
     }
     .display-flickity-buttons .flickity-prev-next-button{
       display:block !important;
-    }
-
-    .v-wrapper img{
-      filter: grayscale(0);
     }
 
   }
