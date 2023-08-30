@@ -169,7 +169,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                         <div class="col-md-5">
                                             <div class="">
                                                 <div class="h-blog-meta mb-2 d-flex align-items-center">
-                                                    <span class="h-blog-category display-6 product-name"><?= $product['title']; ?></span>
+                                                    <span class="h-blog-category display-6 product-name fw-semi-bold"><?= $product['title']; ?></span>
                                                     <span class="h-blog-shape"></span>
                                                     <span class="h-blog-dot"></span>
                                                 </div>
@@ -238,7 +238,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                         ?>
                         <div class="mb-4 mb-md-0 h-blog row <?= ($key + 1) % 2 == 0 ? "flex-row-reverse" : "" ?>">
                             <div class="col-md-5 animated-element">
-                                <div class="fw-semi-bold display-7 h-blog-meta mb-2 d-flex align-items-center <?= ($key + 1) % 2 == 0 ? "flex-row-reverse" : "" ?>">
+                                <div class="display-7 h-blog-meta mb-2 d-flex align-items-center <?= ($key + 1) % 2 == 0 ? "flex-row-reverse" : "" ?>">
                                     <span class="h-blog-category"><a href="<?= get_category_link($category[0]->term_id) ?>"><?= $category[0]->cat_name; ?></a></span>
                                     <span class="meta-separator"> | </span>
                                     <span class="h-blog-date"><?= date("d.m.Y", strtotime($post->post_date)) ?></span>
