@@ -1555,6 +1555,19 @@ footer .social-icons svg:hover path{
     min-height:150px;
     display: flex;
     align-items: center;
+    overflow: hidden;
+  }
+
+  .product-slider-item > div{
+    width: 100%;
+  }
+
+  .product-slider-item h5{
+    color:var(--mmWhite);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom:0;
   }
 
   .related-products-slider .slick-prev:before, .related-products-slider .slick-next:before{
