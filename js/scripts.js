@@ -25,7 +25,7 @@ if($eventsSlider.length){
     centerPadding: '100px',
     slidesToShow: 5,
     touchThreshold: 400,
-    autoplay: false,
+    autoplay: 5000,
     responsive: [
       {
         breakpoint: 1199,
