@@ -180,8 +180,8 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                             </div>
 
                                         </div>
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-5 d-flex align-items-center justify-content-center">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-6 d-flex align-items-center justify-content-center">
                                             <?php $infographic = $product['image']; ?>
                                             <?php if ($infographic) : ?>
                                                 <div class="h-product-image">
