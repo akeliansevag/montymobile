@@ -43,7 +43,6 @@ $posts = $query->posts;
                                     <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
                                     <p>
                                     <div class="truncate"><?= $description ?></div>
-                                    <br>
                                     <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
                                     </p>
 
