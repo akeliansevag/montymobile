@@ -2912,6 +2912,9 @@ background-position: right 12px center;
   }
   
   @media only screen and (max-width:768px) {
+    #floating-astro{
+      width:95% !important;
+    }
     
     .swiper-slide{
       width:60%;
