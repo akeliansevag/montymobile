@@ -283,6 +283,7 @@ $(".feature-title").on("click", function () {
       touchThreshold: 1000,
       centerMode: false,
       slidesToShow: 4,
+      slidesToScroll: 4,
       variableWidth:true,
       arrows: true,
       responsive: [
