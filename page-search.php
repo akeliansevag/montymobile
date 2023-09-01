@@ -42,7 +42,7 @@ $posts = $query->posts;
                                 <div class="card-item skewElem">
                                     <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
                                     <p>
-                                        <?= $description ?>
+                                        <span class="truncate"><?= $description ?></span>
                                         <br>
                                         <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
                                     </p>
