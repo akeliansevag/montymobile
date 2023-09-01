@@ -18,13 +18,6 @@ if($hslider.length){
   });
 
 }
-const video = document.getElementById("myVideo");
-video.play();
-if($(".slider-video").length > 0){
-  $(".slider-video").each(function(i,item){
-    item.play();
-  });
-}
 
 if($eventsSlider.length){
   $eventsSlider.slick({
