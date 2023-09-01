@@ -212,7 +212,7 @@ $(".product-features-section").each(function (i, item) {
   var blockID = $(this).data('block-id');
   $("#features-text-slider-"+blockID).find(".feature-title:first").addClass('activated');
 
-    const featuresImageSlider = $("#features-image-slider-"+blockID).slick({arrows:false, draggable: false});
+    const featuresImageSlider = $("#features-image-slider-"+blockID).slick({arrows:false, draggable: false,speed: 100});
 });
 
 $(".feature-title").on("click", function () { 
