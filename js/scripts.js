@@ -55,7 +55,7 @@ if($pslider.length){
   var prslider;
   function initSlider(){
     prslider = $pslider.slick({
-      adaptiveHeight: true,
+      adaptiveHeight: false,
     });
   }
 
