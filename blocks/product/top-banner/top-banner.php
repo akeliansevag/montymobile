@@ -27,7 +27,7 @@ $textDark = get_field("block_product_top_banner_dark_text");
                             <h2 class="display-6 <?= $textDark ? "black-text" : "" ?>"><?= $top_banner_title; ?></h2>
                         <?php endif; ?>
                         <?php if ($top_banner_description) : ?>
-                            <?= $top_banner_description; ?>
+                            <span class="<?= $textDark ? "black-text" : "white-text" ?>"><?= $top_banner_description; ?></span>
                         <?php endif; ?>
 
                     </div>
