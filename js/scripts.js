@@ -688,6 +688,7 @@ if ($cpislider) {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerPadding: '50px',
+    touchThreshold: 1000,
     responsive: [
       {
         breakpoint: 768,
