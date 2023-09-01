@@ -21,12 +21,16 @@ $textDark = get_field("block_product_top_banner_dark_text");
                     <?php elseif (!get_field("disable_product_title")) : ?>
                         <h1 class="display-6 fw-400 <?= $textDark ? "black-text" : "" ?>" data-text="<?= $product_title ?>"><?= $product_title ?></h1>
                     <?php endif; ?>
-                    <?php if ($top_banner_title || $top_banner_description) : ?>
-                        <div class="product-description <?= $textDark ? "black-text" : "" ?>">
+
+                    <div class="product-description <?= $textDark ? "black-text" : "" ?>">
+                        <?php if ($top_banner_title) : ?>
                             <h2 class="display-6 <?= $textDark ? "black-text" : "" ?>"><?= $top_banner_title; ?></h2>
+                        <?php endif; ?>
+                        <?php if ($top_banner_description) : ?>
                             <?= $top_banner_description; ?>
-                        </div>
-                    <?php endif; ?>
+                        <?php endif; ?>
+
+                    </div>
                 </div>
             </div>
         </div>
