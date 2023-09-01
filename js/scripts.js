@@ -622,7 +622,7 @@ $(".left-right-items").each(function(i){
         y:0,
         scrollTrigger: {
           trigger: $(item),
-          start: "top 80%"
+          start: "top 90%"
         }
       });
   });
