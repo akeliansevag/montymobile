@@ -5,7 +5,7 @@ $big_title = get_field("block_product_info_big_text");
 $description = get_field("block_product_info_description");
 ?>
 
-<?php if ($big_title) : ?>
+<?php if ($big_title || $points || $description) : ?>
     <section class="product-info py-1" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
         <div class="container">
             <div class="product-info-top my-2 my-md-5">
