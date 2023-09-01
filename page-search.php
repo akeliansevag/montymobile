@@ -42,9 +42,9 @@ $posts = $query->posts;
                                 <div class="card-item skewElem">
                                     <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
                                     <p>
-                                        <span class="truncate"><?= $description ?></span>
-                                        <br>
-                                        <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
+                                    <div class="truncate"><?= $description ?></div>
+                                    <br>
+                                    <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
                                     </p>
 
                                     <?php if ($cat) : ?>
