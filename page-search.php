@@ -34,10 +34,8 @@ $posts = $query->posts;
                     <div class="row">
                         <?php foreach ($posts as $p) : ?>
                             <?php
-                            $description = get_field("very_small_description", $p->ID);
-                            if (!$description) {
-                                $description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s";
-                            }
+                            $description = get_field("small_description", $p->ID);
+
                             $cat = wp_get_post_terms($p->ID, 'product-category');
                             ?>
                             <div class="col-md-4 mb-3">
