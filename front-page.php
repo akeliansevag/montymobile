@@ -327,7 +327,7 @@ $astronaut_poster = get_field("astronaut_video_poster", 7);
 ?>
 <?php if ($astronaut_video) : ?>
     <section class="h-video-section">
-        <video id="h-video" autoplay muted loop poster="<?= $astronaut_poster['sizes']['background']; ?>">
+        <video playsinline id="h-video" autoplay muted loop poster="<?= $astronaut_poster['sizes']['background']; ?>">
             <source src="<?= $astronaut_video['url'] ?>" type="video/mp4">
             </source>
         </video>
