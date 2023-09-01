@@ -452,9 +452,32 @@ $(".vision-filter").on("click", function () {
   $(".mission-vision").css("transform", "translateX(-50%)");
 });
 
-$(".team-member").on("click", function () {
+/*$(".member-pic").on("click", function () {
   var n = $(this).data("popup");
   $("#" + n).addClass("open");
+});*/
+let isDraggable = false;
+let startX, startY;
+$(".member-pic").on("mousedown",function(e){
+  startX = e.pageX;
+  startY = e.pageY;
+  isDraggable = false;
+});
+
+$('.member-pic').on('mousemove', function(e) {
+  if (Math.abs(e.pageX - startX) > 5 || Math.abs(e.pageY - startY) > 5) {
+    isDraggable = true;
+  }
+});
+
+$(".member-pic").on('mouseup',function(){
+  if(!isDraggable){
+    var n = $(this).data("popup");
+    $("#" + n).addClass("open");
+  }
+
+  isDraggable = false;
+
 });
 
 $(".team-popup .close-container").on("click", function () {

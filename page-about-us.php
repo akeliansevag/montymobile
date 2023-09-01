@@ -98,9 +98,9 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t1['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t1['image']) : ?>
-                                <div class="member-pic"><img src="<?= $t1['image']['sizes']['large'] ?>" alt=""></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"><img src="<?= $t1['image']['sizes']['large'] ?>" alt=""></div>
                             <?php else : ?>
-                                <div class="member-pic no-pic"></div>
+                                <div class="member-pic no-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
 
                             <div class="member-name"><?= $t1['name'] ?></div>
@@ -153,9 +153,9 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t2['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t2['image']) : ?>
-                                <div class="member-pic"><img src="<?= $t2['image']['sizes']['large'] ?>" alt=""></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"><img src="<?= $t2['image']['sizes']['large'] ?>" alt=""></div>
                             <?php else : ?>
-                                <div class="member-pic no-pic"></div>
+                                <div class="member-pic no-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
 
                             <div class="member-name"><?= $t2['name'] ?></div>
