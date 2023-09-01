@@ -16,7 +16,11 @@ $textDark = get_field("block_product_top_banner_dark_text");
         <div class="row">
             <div class="col-md-5">
                 <div class="p-banner-content">
-
+                    <?php if ($top_banner_title && !get_field("disable_product_title")) : ?>
+                        <h1 class="fs-3 scramble fw-bold <?= $textDark ? "black-text" : "" ?>" data-text="<?= $product_title ?>"><?= $product_title ?></h1>
+                    <?php elseif (!get_field("disable_product_title")) : ?>
+                        <h1 class="display-6 fw-400 <?= $textDark ? "black-text" : "" ?>" data-text="<?= $product_title ?>"><?= $product_title ?></h1>
+                    <?php endif; ?>
 
                     <div class="product-description <?= $textDark ? "black-text" : "" ?>">
                         <?php if ($top_banner_title) : ?>
