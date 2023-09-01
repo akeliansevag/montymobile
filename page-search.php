@@ -39,7 +39,7 @@ $posts = $query->posts;
                             $cat = wp_get_post_terms($p->ID, 'product-category');
                             ?>
                             <div class="col-md-4 mb-3">
-                                <div class="card-item skewElem">
+                                <div class="card-item">
                                     <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
                                     <p>
                                     <div class="truncate"><?= $description ?></div>
