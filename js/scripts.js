@@ -705,10 +705,22 @@ if ($cpislider) {
 }
 
 $(".category-product-item").on("click",function(){
-  $(".category-product-item").removeClass("category-active");
-  $(this).addClass("category-active");
-  $("#category-product-info-slider").slick("slickGoTo",$(this).data("key"));
+  handleCategorySlideTransition($(this).data("key"));
 });
+
+
+$("#category-products-slider").on("afterChange",function(slick,currentSlide){
+  if(window.innerWidth <= 768){
+    handleCategorySlideTransition(currentSlide.currentSlide);
+  }
+});
+
+function handleCategorySlideTransition(slideIndex){
+  $(".category-product-item").removeClass("category-active");
+  $(".category-product-item[data-key='"+slideIndex+"']").addClass("category-active");
+  $("#category-product-info-slider").slick("slickGoTo",slideIndex);
+}
+
 
 if($("#about-us-half-sections")){
   ScrollTrigger.matchMedia({
