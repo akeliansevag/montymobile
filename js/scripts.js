@@ -665,13 +665,14 @@ $('a[href^="#"]').on("click", function(e) {
 });
 
 function scrollToHash(targ) {
-    /*gsap.to(window, {
+    gsap.to(window, {
       duration: 1.5,
       scrollTo: {
+        autoKill: true,
         y: targ,
         offsetY: $("header").height() + 50,
       }
-    });*/
+    });
 }
 
 var $cpslider = $("#category-products-slider");
