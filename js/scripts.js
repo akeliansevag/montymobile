@@ -199,6 +199,7 @@ $("#burger").on("click", function () {
   $("body").toggleClass("menu-open");
 });
 $(".mobile-menu a").on("click", function () {
+  $("body").removeClass("menu-open");
   if (!$(this).parent().hasClass("menu-item-has-children")) {
     if ($(this).attr("href") == "#") {
       e.preventDefault();
