@@ -203,10 +203,10 @@ $(".mobile-menu a").on("click", function () {
   if (!$(this).parent().hasClass("menu-item-has-children")) {
     if ($(this).attr("href") == "#") {
       e.preventDefault();
+    }else{
+      $("body").removeClass("menu-open");
     }
     window.location.href = $(this).attr("href");
-  }else{
-    $("body").removeClass("menu-open");
   }
 });
 
