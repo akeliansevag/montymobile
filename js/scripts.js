@@ -281,14 +281,15 @@ $(".feature-title").on("click", function () {
   $(".product-categories-container").each(function(){
     let blockID = $(this).data("block-id");
     
-    let productCategoriesSlider = $("#product-categories-slider-"+blockID).slick({
+    /*let productCategoriesSlider = $("#product-categories-slider-"+blockID).slick({
       arrows:false,
       touchThreshold: 1000,
-      centerMode: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
-      variableWidth:true,
+      centerMode: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      variableWidth:false,
       arrows: true,
+      infinite:true,
       responsive: [
         {
           breakpoint: 1199,
@@ -305,8 +306,19 @@ $(".feature-title").on("click", function () {
           }
         }
       ]
+    });*/
+    let productCategoriesSlider = $("#product-categories-slider-"+blockID).flickity({
+      cellAlign: 'left',
+      contain: true,
+      pageDots: false,
+      freeScroll: true
     });
-  })
+    let currentProductID = $("#product-categories-slider-"+blockID).data("current-product-id");
+    let slideToKey = $("#product-"+currentProductID).data("key");
+    console.log(slideToKey);
+    //productCategoriesSlider.select(slideToKey);
+    productCategoriesSlider.flickity('select',slideToKey);
+  });
 
   /****SOLUTIONS ANIMATIONS ****/
   $(".solution-items").each(function(i){

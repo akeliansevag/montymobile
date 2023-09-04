@@ -26,9 +26,9 @@ $blockID = $block['id'];
     <section data-block-id="<?= $blockID ?>" class="product-categories-container bg-gray py-5 w-100" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
         <div class="container">
             <div class="cat-container">
-                <div class="product-categories my-2" id="product-categories-slider-<?= $blockID ?>">
+                <div class="product-categories my-2" id="product-categories-slider-<?= $blockID ?>" data-current-product-id="<?= $post_id ?>">
                     <?php foreach ($products as $key => $p) : ?>
-                        <div>
+                        <div class="product-cat-slide" data-key="<?= $key ?>" id="product-<?= $p->ID ?>">
                             <div class="product-category px-2">
                                 <a class="<?= $post_id == $p->ID ? "active-cat" : "" ?>" href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a>
                             </div>

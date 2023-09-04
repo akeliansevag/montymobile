@@ -2758,6 +2758,15 @@ background-position: right 12px center;
 #slider-clients .v-wrapper{
   margin-bottom:10px;
 }
+
+.cat-container .flickity-prev-next-button.next{
+  right:0;
+  transform:translate(130%,-50%);
+}
+.cat-container .flickity-prev-next-button.previous{
+  left:0;
+  transform: translate(-130%, -50%);
+}
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
