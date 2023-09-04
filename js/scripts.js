@@ -669,7 +669,7 @@ function scrollToHash(targ) {
       duration: 1.5,
       scrollTo: {
         y: targ,
-        offsetY: $("header").height() + 20,
+        offsetY: $("header").height() + 50,
       }
     });
 }
