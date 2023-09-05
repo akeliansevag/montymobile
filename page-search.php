@@ -21,6 +21,14 @@ $query = new WP_Query([
 ]);
 $posts = $query->posts;
 
+
+$term_args = array(
+    'taxonomy' => 'product-category',
+    'name__like' => $q,
+);
+
+$cats = get_terms($term_args);
+
 ?>
 <style>
 
@@ -29,39 +37,60 @@ $posts = $query->posts;
     <div class="container">
         <h1>Search results for "<i><?= $q ?>"</i></h1>
         <div class="search-results my-5">
-            <?php if ($posts) : ?>
+            <?php if ($posts || $cats) : ?>
                 <div class="search-items card-items">
                     <div class="row">
-                        <?php foreach ($posts as $p) : ?>
-                            <?php
-                            $description = get_field("small_description", $p->ID);
 
-                            $cat = wp_get_post_terms($p->ID, 'product-category');
-                            ?>
-                            <div class="col-md-4 mb-3">
-                                <div class="card-item">
-                                    <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
-                                    <p>
-                                    <div class="truncate"><?= $description ?></div>
-                                    <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
-                                    </p>
+                        <?php if ($cats) : ?>
+                            <?php foreach ($cats as $cat) : ?>
+                                <?php
+                                $description = get_field("display_description", $cat->taxonomy . "_" . $cat->term_id);
+                                ?>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card-item">
+                                        <h4 class="card-title fs-5"><a href="<?= get_term_link($cat->term_id, 'product-category'); ?>"><?= $cat->name ?></a></h4>
+                                        <p>
+                                        <div class="truncate"><?= $description ? $description : "" ?></div>
+                                        <a href="<?= get_term_link($cat->term_id, 'product-category'); ?>" class="text-decoration-underline"><i>learn more</i></a>
+                                        </p>
 
-                                    <?php if ($cat) : ?>
-                                        <div class="card-meta">
-                                            <ul class="card-list py-2">
-                                                <?php foreach ($cat as $c) : ?>
-                                                    <li><a href="<?= get_term_link($c->term_id, 'product-category') ?>"><?= $c->name; ?></a></li>
-                                                <?php endforeach; ?>
-                                            </ul>
-
-                                        </div>
-                                    <?php endif; ?>
-
-
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
 
-                        <?php endforeach; ?>
+                        <?php if ($posts) : ?>
+                            <?php foreach ($posts as $p) : ?>
+                                <?php
+                                $description = get_field("small_description", $p->ID);
+
+                                $cat = wp_get_post_terms($p->ID, 'product-category');
+                                ?>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card-item">
+                                        <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
+                                        <p>
+                                        <div class="truncate"><?= $description ?></div>
+                                        <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
+                                        </p>
+
+                                        <?php if ($cat) : ?>
+                                            <div class="card-meta">
+                                                <ul class="card-list py-2">
+                                                    <?php foreach ($cat as $c) : ?>
+                                                        <li><a href="<?= get_term_link($c->term_id, 'product-category') ?>"><?= $c->name; ?></a></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+
+                                            </div>
+                                        <?php endif; ?>
+
+
+                                    </div>
+                                </div>
+
+                            <?php endforeach; ?>
+                        <?php endif; ?>
 
                     </div>
 
