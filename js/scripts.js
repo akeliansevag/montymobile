@@ -24,25 +24,29 @@ if($eventsSlider.length){
     centerMode: true,
     centerPadding: '100px',
     slidesToShow: 5,
+    slidesToScroll: 5,
     touchThreshold: 400,
     autoplay: 5000,
     responsive: [
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 3,
+          slidesToScroll: 3,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          slidesToScroll: 2,
         }
       },
       {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
           arrows: false,
           centerPadding: '50px'
         }
