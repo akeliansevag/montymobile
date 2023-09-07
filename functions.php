@@ -146,4 +146,13 @@ function build_menu_hierarchy($items, $parent_id = 0)
 	return $menu;
 }
 
+// Redirect /users endpoint to homepage
+function disable_users_endpoint()
+{
+	global $wp_rewrite;
+	add_rewrite_rule('^users/?$', 'index.php', 'top');
+	$wp_rewrite->flush_rules();
+}
+add_action('init', 'disable_users_endpoint');
+
 require_once "blocks/register.php";
