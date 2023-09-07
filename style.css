@@ -409,11 +409,12 @@ nav.main-menu > ul{
     margin:0;
 }
 
-nav.main-menu > ul > li > a{
+nav.main-menu > ul > li > a, .no-link-item{
     white-space: nowrap;
     height: var(--headerHeight);
     display: flex;
     align-items: center;
+    cursor: pointer;
     
 }   
 .dotted-design{
@@ -451,17 +452,17 @@ nav.main-menu > ul > li > a{
   transform: translateX(-50%) translateY(-50%);
   top:15%;
 }
-nav.main-menu > ul > li:hover > a > .dotted-design::after{
+nav.main-menu > ul > li:hover > a > .dotted-design::after, nav.main-menu > ul > li:hover > .no-link-item > .dotted-design::after{
   content: " ";
   display: block;
 }
 
-nav.main-menu > ul > li:hover > a > .dotted-design::before{
+nav.main-menu > ul > li:hover > a > .dotted-design::before, nav.main-menu > ul > li:hover > .no-link-item > .dotted-design::before{
   content: " ";
   display: block;
 }
 
-nav.main-menu > ul > li:hover > a > .dotted-design{
+nav.main-menu > ul > li:hover > a > .dotted-design,nav.main-menu > ul > li:hover > .no-link-item > .dotted-design{
     color:var(--mmPink);
     
     border-color: var(--mmBlack);
