@@ -2,6 +2,7 @@
 $title = get_field("block_product_info_features_title");
 $description = get_field("block_product_info_features_description");
 $features = get_field("block_product_info_features");
+$sameImage = get_field("same_image");
 $blockID = $block['id'];
 ?>
 
@@ -60,7 +61,7 @@ $blockID = $block['id'];
                                         <?php endif; ?>
                                         <?php if ($ft2['image']) : ?>
                                             <div class="feature-image">
-                                                <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['url'] ?>" alt="">
+                                                <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['sizes']['lg-thumb'] ?>" alt="">
                                             </div>
                                         <?php endif; ?>
                                     </div>
@@ -105,15 +106,20 @@ $blockID = $block['id'];
                                                     <?php endif; ?>
                                                 </div>
                                             <?php endif; ?>
-                                            <?php if ($ft['image']) : ?>
+                                            <?php if ($ft['image'] && !$sameImage) : ?>
                                                 <div class="feature-image">
-                                                    <img style="<?= $ft['width_infographic'] ? "width:" . $ft['width_infographic'] . "%;" : "" ?>" src="<?= $ft['image']['url'] ?>" alt="">
+                                                    <img style="<?= $ft['width_infographic'] ? "width:" . $ft['width_infographic'] . "%;" : "" ?>" src="<?= $ft['image']['sizes']['lg-thumb'] ?>" alt="">
                                                 </div>
                                             <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
+                            <?php if ($sameImage && $features[0]['image']) : ?>
+                                <div class="feature-image">
+                                    <img src="<?= $features[0]['image']['sizes']['lg-thumb'] ?>" alt="">
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
