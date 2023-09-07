@@ -20,7 +20,7 @@ $blockID = $block['id'];
                 </div>
             </div>
         <?php endif; ?>
-        <div class="product-features">
+        <div class="product-features d-none d-sm-none d-md-block">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-5">
@@ -70,6 +70,51 @@ $blockID = $block['id'];
 
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-features d-block d-sm-block d-md-none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="features-text py-5">
+                            <?php foreach ($features as $key => $ft) : ?>
+                                <div class="mb-5">
+                                    <div class="">
+                                        <div>
+                                            <h3 class="mb-0 h1 text-white"><?= $ft['title']; ?></h3>
+                                            <h5><?= $ft['description'] ?></h5>
+                                        </div>
+
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-content py-2">
+                                            <?php if ($ft['inner_description'] || $ft['inner_points']) : ?>
+                                                <div class="feature-inner">
+                                                    <?php if ($ft['inner_description']) : ?>
+                                                        <div class="inner-description">
+                                                            <p><?= $ft['inner_description']; ?></p>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <?php if ($ft['inner_points']) : ?>
+                                                        <div class="inner-points">
+                                                            <?= $ft['inner_points'] ?>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if ($ft['image']) : ?>
+                                                <div class="feature-image">
+                                                    <img style="<?= $ft['width_infographic'] ? "width:" . $ft['width_infographic'] . "%;" : "" ?>" src="<?= $ft['image']['url'] ?>" alt="">
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
             </div>

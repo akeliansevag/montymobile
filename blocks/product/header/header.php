@@ -8,7 +8,7 @@ $description = get_field("block_product_header_description");
     <section class="pt-5 pb-2" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-md-5">
                     <?php if ($title) : ?>
                         <h2 class="fw-semi-bold"><?= $title ?></h2>
                     <?php endif; ?>
