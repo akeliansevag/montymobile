@@ -742,7 +742,7 @@ if($("#about-us-half-sections")){
             trigger: "#about-us-half-sections",
             pin: true,
             start: "top top+=70",
-            end: "bottom top-=2000",
+            end: "bottom top-=200",
             onUpdate: (self) => {
                 if (self.direction == 1) {
                     if (self.progress > 0.4) {
