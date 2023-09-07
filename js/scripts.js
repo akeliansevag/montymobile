@@ -21,7 +21,7 @@ if($hslider.length){
 
 if($eventsSlider.length){
   $eventsSlider.slick({
-    centerMode: true,
+    centerMode: false,
     centerPadding: '100px',
     slidesToShow: 5,
     slidesToScroll: 5,
