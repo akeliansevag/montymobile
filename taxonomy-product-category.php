@@ -46,7 +46,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
                                 <?php foreach ($products as $key => $pr) : ?>
                                     <div class="px-2">
                                         <div class="category-product-item <?= $key == 0 ? "category-active" : "" ?> py-4" data-key="<?= $key ?>">
-                                            <h4 class="fs-1 fw-semi-bold"><?= $pr->post_title ?></h4>
+                                            <h4 class="fs-2 fw-semi-bold"><?= $pr->post_title ?></h4>
                                         </div>
                                     </div>
 
