@@ -10,7 +10,7 @@ $items = get_field("block_product_boxes_items");
                 <div class="row">
                     <?php foreach ($items as $key => $item) : ?>
                         <div class="col-md-4">
-                            <div class="box-item py-3">
+                            <div class="box-item p-5">
                                 <h3>
                                     <?= $item['title'] ?>
                                 </h3>

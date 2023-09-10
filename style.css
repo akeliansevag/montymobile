@@ -1226,7 +1226,11 @@ footer .social-icons svg:hover path{
     height: 100%;
     z-index: -1;
   }
-
+  .box-item{
+    border-radius:30px;
+    border:1px solid var(--mmBlack);
+    height: 100%;
+  }
   .bg-overlay{
     position:absolute;
     z-index: -1;
