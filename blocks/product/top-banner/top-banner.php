@@ -9,7 +9,9 @@ $textDark = get_field("block_product_top_banner_dark_text");
 ?>
 <div id="<?= $blockID ?>" class="product-top-banner py-4 d-flex align-items-center" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
     <?php if ($top_banner_image) : ?>
+
         <img class="background-image" src="<?= $top_banner_image['sizes']['background']; ?>" alt="">
+        <div class="bg-overlay"></div>
     <?php endif; ?>
 
     <div class="container">
