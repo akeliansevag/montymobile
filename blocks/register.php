@@ -19,4 +19,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/product/header');
     register_block_type(__DIR__ . '/product/table');
     register_block_type(__DIR__ . '/product/scroll-to-id');
+    register_block_type(__DIR__ . '/product/boxes');
 }
