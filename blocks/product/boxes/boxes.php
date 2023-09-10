@@ -9,8 +9,8 @@ $items = get_field("block_product_boxes_items");
             <div class="boxes-items">
                 <div class="row">
                     <?php foreach ($items as $key => $item) : ?>
-                        <div class="col-md-4">
-                            <div class="box-item p-5">
+                        <div class="col-lg-4">
+                            <div class="box-item p-5 mb-3 mb-sm-0">
                                 <h3>
                                     <?= $item['title'] ?>
                                 </h3>
