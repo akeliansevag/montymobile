@@ -12,7 +12,7 @@ $backgroundColor = get_field("block_background_color");
         <?php endif; ?>
         <?php if ($text) : ?>
             <div class="container position-relative">
-                <div class=" <?= $textDark ? "black-text" : "" ?>">
+                <div class="fs-4 <?= $textDark ? "black-text" : "" ?>">
                     <?= $text; ?>
                 </div>
             </div>
