@@ -311,17 +311,26 @@ $(".feature-title").on("click", function () {
         }
       ]
     });*/
-    let productCategoriesSlider = $("#product-categories-slider-"+blockID).flickity({
+    /*let productCategoriesSlider = $("#product-categories-slider-"+blockID).flickity({
       cellAlign: 'left',
       contain: true,
       pageDots: false,
       freeScroll: true
+    });*/
+
+    const productCategoriesSlider = new Swiper('#product-categories-swiper-'+blockID, {
+      freeMode: true,
+      slidesPerView: 'auto',
+       // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-    let currentProductID = $("#product-categories-slider-"+blockID).data("current-product-id");
+
+    let currentProductID = $("#product-categories-swiper-"+blockID).data("current-product-id");
     let slideToKey = $("#product-"+currentProductID).data("key");
-    console.log(slideToKey);
-    //productCategoriesSlider.select(slideToKey);
-    productCategoriesSlider.flickity('select',slideToKey);
+    productCategoriesSlider.slideTo(slideToKey);
   });
 
   /****SOLUTIONS ANIMATIONS ****/

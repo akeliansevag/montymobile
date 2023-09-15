@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '9.0.6');
+	define('_S_VERSION', '9.1.3');
 }
 
 require_once 'custom-menu-walker.php';
@@ -116,12 +116,15 @@ function montymobile_scripts()
 	wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/assets/slick/slick-theme.css', array(), _S_VERSION);
 	wp_enqueue_style('flickity-css', get_template_directory_uri() . '/assets/flickity/flickity.min.css', array(), _S_VERSION);
 
+	wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/swiperjs/swiper-bundle.min.css', array(), _S_VERSION);
+
 	wp_enqueue_style('montymobile-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.js', array(), _S_VERSION, true);
 	wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick.min.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('flickity-js', get_template_directory_uri() . '/assets/flickity/flickity.pkgd.min.js', array("jquery"), _S_VERSION, true);
+	wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/swiperjs/swiper-bundle.min.js', array("jquery"), _S_VERSION, true);
 
 	//wp_enqueue_script('scamble-text-js', get_template_directory_uri() . '/assets/ScrambleTextPlugin3.min.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('montymobile-js', get_template_directory_uri() . '/js/scripts.js', array("jquery"), _S_VERSION, true);

@@ -2597,7 +2597,19 @@ background-position: right 12px center;
 .swiper-button-next, 
 .swiper-button-prev
 {
-  color:var(--mmWhite);
+  color:var(--mmBlack);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 25px;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  left:-30px;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  right:-30px;
 }
 
 .related-products-section .swiper-button-next, .related-products-section .swiper-button-prev{
