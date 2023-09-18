@@ -56,7 +56,7 @@ $posts = $query->posts;
                 <?php $permalink = get_permalink($post->ID); ?>
                 <a class="post" href="<?= $permalink; ?><?= $category ? '?c=1' : ''; ?>">
                   <?= $new_ribbon; ?>
-                  <?php $thumbnail = get_the_post_thumbnail_url($post->ID, "xlarge"); ?>
+                  <?php $thumbnail = get_the_post_thumbnail_url($post->ID, "md-thumb"); ?>
                   <img src="<?= $thumbnail ?>" alt="" class="post-thumbnail">
                   <div class="post-overlay"></div>
                   <div class="post-content">
