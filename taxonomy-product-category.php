@@ -23,10 +23,11 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
 ?>
 <?php if ($term) : ?>
     <section class="position-relative product-category-section section-background">
-        <?php if($background):?>
-            <img src="<?=$background['sizes']['background-no-crop']?>" style="height:100vh;"  class="position-fixed object-fit-cover h-100 w-100 z-n1"/>
-        <?php endif;?> 
-        <div class="product-category-page white-text py-5">
+        
+        <div class="product-category-page white-text py-5 position-relative">
+            <?php if($background):?>
+                <img src="<?=$background['sizes']['background-no-crop']?>"  class="position-fixed object-fit-cover h-100 w-100 z-n1"/>
+            <?php endif;?> 
             <section class="product-category-header py-5">
                 <div class="container">
                     <div class="row align-items-center">
