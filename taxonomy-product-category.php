@@ -24,7 +24,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
 <?php if ($term) : ?>
     <section class="position-relative product-category-section section-background">
         <?php if($background):?>
-            <img src="<?=$background['sizes']['background-no-crop']?>"  class="position-fixed object-fit-cover h-100 w-100"/>
+            <img src="<?=$background['sizes']['background-no-crop']?>"  class="position-fixed object-fit-cover h-100 w-100 z-n1"/>
         <?php endif;?> 
         <div class="product-category-page white-text py-5">
             <section class="product-category-header py-5">
