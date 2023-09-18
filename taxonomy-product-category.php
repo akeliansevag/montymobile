@@ -22,7 +22,10 @@ $products = get_posts($args);
 $background = get_field("product_category_background_image", $term->taxonomy . "_" . $term->term_id);
 ?>
 <?php if ($term) : ?>
-    <section class="product-category-section section-background" style="<?= $background ? "background-image:url(" . $background['sizes']['background-no-crop'] . ");" : "" ?>">
+    <section class="position-relative product-category-section section-background">
+        <?php if($background):?>
+            <img src="<?=$background['sizes']['background-no-crop']?>"  class="position-fixed object-fit-cover h-100 w-100"/>
+        <?php endif;?> 
         <div class="product-category-page white-text py-5">
             <section class="product-category-header py-5">
                 <div class="container">
