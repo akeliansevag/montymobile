@@ -43,7 +43,7 @@ $posts = $query->posts;
 
                             <div class="col-md-4 mb-3">
 
-                                <div class="card-item skewElem">
+                                <div class="card-item">
                                     <div class="card-image">
                                         <img src="<?= $thumbnail ?>" alt="" class="event-thumbnail">
                                     </div>
