@@ -3054,6 +3054,11 @@ background-position: right 12px center;
       display:block !important;
     }
 
+    .background-section{
+      min-height: 30vh;
+      background-attachment: unset;
+    }
+
   }
   
   @media only screen and (max-width:576px) {
