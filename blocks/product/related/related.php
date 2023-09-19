@@ -10,15 +10,16 @@ $blockID = $block['id'];
         <div class="container">
             <h2 class="fw-semi-bold"><?= $title ?></h2>
         </div>
-        <div class="related-products-container bg-gray py-5 mt-3">
+        <div class="related-products-container position-relative bg-gray py-5 mt-3 d-flex align-items-center">
+            <img src="<?=get_template_directory_uri()?>/assets/img/relatedbg2.jpg" alt="" class="position-absolute object-fit-cover top-0 left-0 z-0 w-100 h-100">
             <div class="container">
-                <div class="swiper-cont position-relative">
+                <div class="swiper-cont position-relative my-4">
                     <div class="related-products-slider" id="related-products-slider-<?= $blockID ?>">
                         <?php foreach ($products as $p) : ?>
                             <div class="related-slide">
                                 <a href="<?= get_permalink($p->ID); ?>" class="product-slider-item mx-3 position-relative">
                                     <div>
-                                        <img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg.png" alt="" class="box-bg">
+                                        <!--<img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg.png" alt="" class="box-bg">-->
                                         <h5 class="fw-semi-bold"><?= $p->post_title ?></h5>
                                         <?php $very_small_description = get_field("very_small_description", $p->ID); ?>
                                         <?php if ($very_small_description) : ?>
