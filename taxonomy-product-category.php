@@ -26,7 +26,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
         
         <div class="product-category-page white-text py-5 position-relative">
             <?php if($background):?>
-                <img src="<?=$background['sizes']['background-no-crop']?>"  class="d-none d-sm-block position-absolute top-0 object-fit-cover h-100 w-100 z-n1"/>
+                <img src="<?=$background['sizes']['background-entir']?>"  class="d-none d-sm-block position-absolute top-0 object-fit-cover h-100 w-100 z-n1"/>
             <?php endif;?> 
             <section class="product-category-header py-5">
                 <div class="container">
