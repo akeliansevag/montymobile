@@ -80,6 +80,7 @@ function montymobile_setup()
 
 	add_image_size('background', 1920, 1080, true);
 	add_image_size('background-no-crop', 1920, 1080);
+	add_image_size('background-entire', 1920, 2500);
 	add_image_size('xl-thumb', 1440, 810);
 	add_image_size('lg-thumb', 960, 540);
 	add_image_size('md-thumb', 480, 270);
