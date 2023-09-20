@@ -24,7 +24,7 @@ $blockID = $block['id'];
         <div class="product-features d-none d-sm-none d-md-block">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-5 d-flex align-items-center">
                         <div class="features-text py-5 container-margin features-text-slider" id="features-text-slider-<?= $blockID ?>" data-slide-count="<?= count($features); ?>">
                             <?php foreach ($features as $key => $ft) : ?>
                                 <div>

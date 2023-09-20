@@ -1417,7 +1417,7 @@ footer .social-icons svg:hover path{
     justify-content: center;
   }
   .feature-image img{
-    width:40%;
+    width:70%;
   }
 
   .inner-points ul{
@@ -2313,7 +2313,7 @@ background-position: right 12px center;
 }
 
 .left-right-item img{
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .table-wrapper{

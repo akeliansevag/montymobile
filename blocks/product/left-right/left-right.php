@@ -16,7 +16,7 @@ $items = get_field("block_product_left_right_items");
                                 </h3>
                                 <?= $item['description'] ?>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 d-flex justify-content-center">
                                 <?php if ($item['image']) : ?>
                                     <img src="<?= $item['image']['sizes']['lg-thumb']; ?>" alt="">
                                 <?php endif; ?>
