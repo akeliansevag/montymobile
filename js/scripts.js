@@ -69,7 +69,11 @@ if($pslider.length){
       prslider = null;
     }
   }
-  
+  if(window.innerWidth <= 768){
+    if(prslider){
+      destroySlider();
+    }
+  }
   window.addEventListener('resize',function(){
     if(window.innerWidth <= 768){
       if(prslider){
