@@ -10,7 +10,7 @@ $blockID = $block['id'];
         <div class="container">
             <h2 class="fw-semi-bold"><?= $title ?></h2>
         </div>
-        <div class="related-products-container position-relative bg-gray py-5 mt-3 d-flex align-items-center px-md-3">
+        <div class="related-products-container position-relative bg-gray py-5 mt-3 d-flex align-items-center px-3 px-md-0">
             <img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg2.jpg" alt="" class="position-absolute object-fit-cover top-0 left-0 z-0 w-100 h-100">
             <div class="container">
                 <div class="swiper-cont position-relative my-4">
