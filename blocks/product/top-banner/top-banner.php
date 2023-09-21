@@ -1,5 +1,6 @@
 <?php
 $top_banner_image = get_field("block_product_top_banner_image");
+$mobile_image = get_field("block_product_top_banner_mobile_image");
 $top_banner_title = get_field("block_product_top_banner_title");
 $top_banner_description = get_field("block_product_top_banner_description");
 $product_title = get_the_title();
@@ -9,11 +10,13 @@ $textDark = get_field("block_product_top_banner_dark_text");
 ?>
 <div id="<?= $blockID ?>" class="product-top-banner py-4 d-flex align-items-center" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
     <?php if ($top_banner_image) : ?>
-
         <img class="background-image" src="<?= $top_banner_image['sizes']['background']; ?>" alt="">
         <div class="bg-overlay"></div>
     <?php endif; ?>
-
+    <?php if ($mobile_image) : ?>
+        <img class="background-image mobile-background-image d-block d-md-none" src="<?= $mobile_image['sizes']['background']; ?>" alt="">
+        <div class="bg-overlay"></div>
+    <?php endif; ?>
     <div class="container">
         <div class="row">
             <div class="col-md-5">
