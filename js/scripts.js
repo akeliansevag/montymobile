@@ -70,7 +70,7 @@ if($pslider.length){
     }
   }
   
-  window.addEventListener('resize load',function(){
+  window.addEventListener('resize',function(){
     if(window.innerWidth <= 768){
       if(prslider){
         destroySlider();
@@ -83,8 +83,10 @@ if($pslider.length){
       
     }
   });
-
-  initSlider();
+  if(window.innerWidth > 768){
+    initSlider();
+  }
+  
 }
 const $sliderAwards = $("#slider-awards");
 if($sliderAwards.length){
