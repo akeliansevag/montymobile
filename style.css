@@ -2129,11 +2129,6 @@ section.global-presence{
   background-color: var(--mmPink);
 }
 
-#management-team-slider .slick-prev:before,#management-team-slider .slick-next:before{
-  color:var(--mmBlack);
-}
-
-
 .page-content a{
   color: #2271b1;
 }
