@@ -70,7 +70,7 @@ if($pslider.length){
     }
   }
   
-  window.addEventListener('resize,load',function(){
+  window.addEventListener('resize load',function(){
     if(window.innerWidth <= 768){
       if(prslider){
         destroySlider();
