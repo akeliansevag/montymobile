@@ -2932,6 +2932,9 @@ background-position: right 12px center;
     .vision .mission-vision-text{
       padding-left:15px;
     }
+    .read-more-text{
+      max-height: 100% !important;
+    }
   }
   
   @media only screen and (max-width:992px) {
