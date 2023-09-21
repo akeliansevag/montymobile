@@ -14,11 +14,9 @@ if (get_query_var('paged')) {
 
 $args = [];
 $args['post_type'] = 'post';
-if ($paged == 1) {
-  $args['posts_per_page'] = 11;
-} else {
-  $args['posts_per_page'] = 12;
-}
+$args['posts_per_page'] = 11;
+
+
 
 $args['paged'] = $paged;
 
