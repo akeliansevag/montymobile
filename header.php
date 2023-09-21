@@ -40,7 +40,7 @@ if (get_field("dark_theme")) {
 				)
 			);
 			?>
-			<a href="<?= home_url('/contact-us') ?>" class="mm-button inside-menu d-block d-lg-none">Contact us</a>
+			<a href="<?= home_url('/contact-us') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Contact us</a>
 		</div>
 		<div class="background-container">
 			<div class="stars"></div>
