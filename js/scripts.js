@@ -428,9 +428,9 @@ $(".feature-title").on("click", function () {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
-            centerMode: true,
+            /*centerMode: true,
             centerPadding: '50px',
-            arrows: false
+            arrows: false*/
           }
         }
       ]
