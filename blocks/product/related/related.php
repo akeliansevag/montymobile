@@ -12,7 +12,7 @@ $blockID = $block['id'];
         </div>
         <div class="related-products-container position-relative bg-gray py-5 mt-3 d-flex align-items-center ">
             <img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg2.jpg" alt="" class="position-absolute object-fit-cover top-0 left-0 z-0 w-100 h-100">
-            <div class="container px-3 px-md-0">
+            <div class="container px-5 px-md-0">
                 <div class="swiper-cont position-relative my-4">
                     <div class="related-products-slider" id="related-products-slider-<?= $blockID ?>">
                         <?php foreach ($products as $p) : ?>
