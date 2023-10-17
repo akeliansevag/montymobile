@@ -12,7 +12,6 @@ if (get_field("dark_theme")) {
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="shortcut icon">
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="apple-touch-icon-precomposed">
-	<script src="https://tam-omni.montymobile.com/Chatbotscript.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
