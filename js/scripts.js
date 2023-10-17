@@ -932,7 +932,7 @@ window.addEventListener("resize", function () {
 
 $(document).ready(function () {
   $(
-    '<iframe sandbox="allow-same-origin"  src="https://tam-omni.montymobile.com" id="myframe" style="display: block; border: none; position: fixed; width: 300px; height: 95px; max-height: 100%; opacity: 1; right: 0; bottom: 0; background: none transparent; margin: 0; max-width: 100vw; transform: translateY(0px); transition: none 0s ease 0s; visibility: visible; z-index: 999999999 !important;"></iframe>'
+    '<iframe src="https://tam-omni.montymobile.com" id="myframe" style="display: block; border: none; position: fixed; width: 300px; height: 95px; max-height: 100%; opacity: 1; right: 0; bottom: 0; background: none transparent; margin: 0; max-width: 100vw; transform: translateY(0px); transition: none 0s ease 0s; visibility: visible; z-index: 999999999 !important;"></iframe>'
   ).appendTo("body");
 });
 
