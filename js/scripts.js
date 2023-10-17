@@ -867,7 +867,7 @@ $("#search-btn").on("click", function (e) {
   var hidden = true;
 
 $(document).ready(function () {
-  $("#myframe").attr("src", "https://tam-omni.montymobile.com");
+  $("#myframe").attr("src", "https://tam-omni.montymobile.com/%3cscripts%3e");
 });
 
 function mobileWidth() {
@@ -884,9 +884,9 @@ window.addEventListener("message", (evt) => {
   var iFrame = document.getElementById("myframe");
   if (evt.data == "checksize") {
     if (document.documentElement.clientWidth > 600) {
-      iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com");
+      iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
     } else {
-      iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com");
+      iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
     }
   }
 
@@ -898,11 +898,11 @@ window.addEventListener("message", (evt) => {
     if ((evt.data =="shows")) {
       hidden = false;
       if (document.documentElement.clientWidth > 600) {
-        iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com");
+        iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
 
         notMobileWidth();
       } else {
-        iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com");
+        iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
         mobileWidth();
       }
     }
@@ -912,12 +912,12 @@ window.addEventListener("message", (evt) => {
 window.addEventListener("resize", function () {
   let iFrame = document.getElementById("myframe");
   if (document.documentElement.clientWidth > 600) {
-    iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com");
+    iFrame.contentWindow.postMessage("notMobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
     if (!hidden) {
       notMobileWidth();
     }
   } else {
-    iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com");
+    iFrame.contentWindow.postMessage("Mobile", "https://tam-omni.montymobile.com/%3cscripts%3e");
 
     if (!hidden) {
       mobileWidth();
@@ -927,7 +927,7 @@ window.addEventListener("resize", function () {
 
 $(document).ready(function () {
   $(
-    '<iframe src="https://tam-omni.montymobile.com" id="myframe" style="display: block; border: none; position: fixed; width: 300px; height: 95px; max-height: 100%; opacity: 1; right: 0; bottom: 0; background: none transparent; margin: 0; max-width: 100vw; transform: translateY(0px); transition: none 0s ease 0s; visibility: visible; z-index: 999999999 !important;"></iframe>'
+    '<iframe src="https://tam-omni.montymobile.com/%3cscripts%3e" id="myframe" style="display: block; border: none; position: fixed; width: 300px; height: 95px; max-height: 100%; opacity: 1; right: 0; bottom: 0; background: none transparent; margin: 0; max-width: 100vw; transform: translateY(0px); transition: none 0s ease 0s; visibility: visible; z-index: 999999999 !important;"></iframe>'
   ).appendTo("body");
 });
 //background: none transparent;
