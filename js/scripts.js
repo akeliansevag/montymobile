@@ -91,23 +91,23 @@ if ($pslider.length) {
 const $sliderAwards = $("#slider-awards");
 if ($sliderAwards.length) {
   $sliderAwards.slick({
-    slidesToShow: 5,
+    slidesToShow: 3,
     arrows: false,
     dots: true,
-    slidesToScroll: 5,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           centerMode: true,
           centerPadding: '50px',
           dots: false

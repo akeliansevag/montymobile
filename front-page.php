@@ -237,7 +237,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                         $thumb = get_the_post_thumbnail($post->ID, 'lg-thumb');
                         ?>
                         <div class="mb-4 mb-md-0 h-blog row <?= ($key + 1) % 2 == 0 ? "flex-row-reverse" : "" ?>">
-                            <div class="col-md-5 animated-element">
+                            <div class="col-md-6 animated-element">
                                 <div class="display-7 h-blog-meta mb-2 d-flex align-items-center <?= ($key + 1) % 2 == 0 ? "flex-row-reverse" : "" ?>">
                                     <span class="h-blog-category"><a href="<?= get_category_link($category[0]->term_id) ?>"><?= $category[0]->cat_name; ?></a></span>
                                     <span class="meta-separator"> | </span>
@@ -254,8 +254,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-2"></div>
-                            <div class="col-md-5 text-center">
+                            <div class="col-md-6 text-center">
                                 <?php $fplanet = get_field("blogs_floating_planet", 7); ?>
                                 <?php if ($key == 0 && $fplanet) : ?>
                                     <!--<img src="<?= $fplanet['sizes']['mid-thumb'] ?>" class="floating-astro" alt="">-->

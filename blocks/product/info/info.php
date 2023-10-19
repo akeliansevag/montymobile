@@ -37,8 +37,8 @@ $description = get_field("block_product_info_description");
                                         <div class="point-circle"></div>
                                         <div class="point-line"></div>
                                     </div>
-                                    <h2><?= $point['title']; ?></h4>
-                                        <h5><?= $point['description']; ?></h5>
+                                    <h2><?= $point['title']; ?></h2>
+                                    <h5 class="text-capitalize"><?= $point['description']; ?></h5>
                                 </div>
                             </div>
                         <?php endforeach; ?>
