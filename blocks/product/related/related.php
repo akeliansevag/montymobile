@@ -18,8 +18,11 @@ $blockID = $block['id'];
                         <?php foreach ($products as $p) : ?>
                             <div class="related-slide">
                                 <a href="<?= get_permalink($p->ID); ?>" class="product-slider-item mx-3 position-relative">
-                                    <div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
                                         <!--<img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg.png" alt="" class="box-bg">-->
+                                        <?php if ($icon = get_field("related_product_icon", $p->ID)) : ?>
+                                            <img width="40" class="mb-2" src="<?= $icon['sizes']['logo'] ?>" alt="Icon">
+                                        <?php endif; ?>
                                         <h5 class="fw-semi-bold"><?= $p->post_title ?></h5>
                                         <?php $very_small_description = get_field("very_small_description", $p->ID); ?>
                                         <?php if ($very_small_description) : ?>
