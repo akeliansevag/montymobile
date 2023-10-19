@@ -64,15 +64,12 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                         <div class="col-lg-4 px-3">
                                             <div class="h-about-item">
                                                 <h5><?= $ha['title'] ?></h5>
-                                                <div class="text-container read-more-text">
+                                                <div class="read-more-text collapse" id="collapse-<?= $key ?>">
                                                     <div class="text-content">
                                                         <?= $ha['description']; ?>
                                                     </div>
-
                                                 </div>
-                                                <?php if ($key == 0) : ?>
-                                                    <a href="#" id="read-more-btn" class="white-text d-none d-lg-block">read more</a>
-                                                <?php endif; ?>
+                                                <a role="button" data-bs-toggle="collapse" href="#collapse-<?= $key ?>" class="read-more white-text d-none d-lg-block"></a>
 
                                             </div>
                                         </div>

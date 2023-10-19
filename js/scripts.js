@@ -3,6 +3,7 @@ var $hslider = $('#h-slider');
 var $eventsSlider = $("#events-slider");
 var $pslider = $("#products-slider");
 var $sbuttons = $("#slider-buttons");
+
 if ($hslider.length) {
 
   $hslider.on('init', function (slick) {
