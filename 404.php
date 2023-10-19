@@ -11,7 +11,7 @@
           <div class="page-title text-center">
             <h1 class="display-1">404</h1>
             <h2>Ooops!</h2>
-            <h4>THAT PAGE DOESN'T EXIST OR IS UNAVAILABLE..</h4>
+            <h4>THAT PAGE DOESN'T EXIST OR IS UNAVAILABLE.</h4>
             <div class="text-center my-5">
               <a class="mm-button" href="<?= home_url(); ?>">Go Back to Home</a>
             </div>
