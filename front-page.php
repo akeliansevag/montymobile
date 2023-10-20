@@ -62,14 +62,14 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                 <div class="row">
                                     <?php foreach ($habout as $key => $ha) : ?>
                                         <div class="col-lg-4 px-3">
-                                            <div class="h-about-item">
+                                            <div class="h-about-item border border-white rounded-5 p-3 mb-lg-0 mb-3">
                                                 <h5><?= $ha['title'] ?></h5>
                                                 <div class="read-more-text collapse" id="collapse-<?= $key ?>">
                                                     <div class="text-content">
                                                         <?= $ha['description']; ?>
                                                     </div>
                                                 </div>
-                                                <a role="button" data-bs-toggle="collapse" href="#collapse-<?= $key ?>" class="read-more white-text d-none d-lg-block"></a>
+                                                <a role="button" data-bs-toggle="collapse" href="#collapse-<?= $key ?>" class="read-more white-text"></a>
 
                                             </div>
                                         </div>
