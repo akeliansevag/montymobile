@@ -3011,6 +3011,13 @@ background-position: right 12px center;
     .performance-active::before{
       display: none;
     }
+    .performance-item p{
+      font-weight: 600;
+      font-size:1.7rem;
+    }
+    .performance-item{
+      opacity: 1 !important;
+    }
     ul.join-us-items{
       display:block;
       margin-top:20px;
