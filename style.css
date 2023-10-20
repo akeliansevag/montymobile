@@ -3013,7 +3013,7 @@ background-position: right 12px center;
     }
     .performance-item p{
       font-weight: 600;
-      font-size:1.7rem;
+      font-size:1.2rem !important;
     }
     .performance-item{
       opacity: 1 !important;
