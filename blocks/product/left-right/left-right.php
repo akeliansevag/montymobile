@@ -8,7 +8,7 @@ $items = get_field("block_product_left_right_items");
         <div class="container">
             <div class="left-right-items">
                 <?php foreach ($items as $key => $item) : ?>
-                    <div id="<?= $item['scroll_id'] ?>" class="left-right-item py-3">
+                    <div id="<?= $item['scroll_id'] ?>" class="left-right-item py-3" style="<?= $item['background_color'] ? "background-color:" . $item['background_color'] . ";" : ""; ?>">
                         <div class="row align-items-center <?= $key % 2 == 0 ? "flex-row-reverse" : "" ?>">
                             <div class="col-md-6">
                                 <h3>
