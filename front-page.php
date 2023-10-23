@@ -38,6 +38,30 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
+        <div class="h-slider-item slide-1">
+            <div class="h-slider-background">
+                <img src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/waslanding.jpg" alt="">
+            </div>
+
+            <div class="h-slider-content">
+                <div class="h-slider-inner text-center">
+                    <div class="text-center">
+                        <img class="d-inline-block mb-2" src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/mmlogo.png" alt="Logo">
+                        <h2 style="letter-spacing:2px;" class="mt-1 mb-3 fw-bold fs-2">HOSTING</h2>
+                        <img style="width:130px;" class="d-inline-block mb-2" src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/GSMALOGO.png" alt="GSMA Logo">
+                    </div>
+
+
+                    <h1>WAS#19</h1>
+                    <div class="p-3 text-center mt-3 d-inline-block" style="background-color: var(--mmPink);">
+                        <p class="text-center p-0 m-0 text-white fw-bold">
+                            APRIL 16-18, 2024, <br>
+                            ISTANBUL, TURKEY
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="field">
         <div class="mouse"></div>
