@@ -78,7 +78,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
                                                 <?php endif; ?>
                                                 <a class="white-text fst-italic text-decoration-underline" href="<?= get_permalink($p->ID); ?>">learn more</a>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-6 justify-content-center d-flex">
                                                 <?php $infographic = get_field("homepage_infographic", $p->ID); ?>
                                                 <?php if ($infographic) : ?>
                                                     <img class="mw-100" src="<?= $infographic['sizes']['lg-thumb']; ?>" alt="">
