@@ -23,11 +23,11 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
 ?>
 <?php if ($term) : ?>
     <section class="position-relative product-category-section section-background">
-        
+
         <div class="product-category-page white-text py-5 position-relative">
-            <?php if($background):?>
-                <img src="<?=$background['sizes']['background-entire']?>"  class="d-none d-sm-block position-absolute top-0 object-fit-cover h-100 w-100 z-n1"/>
-            <?php endif;?> 
+            <?php if ($background) : ?>
+                <img src="<?= $background['sizes']['background-entire'] ?>" class="d-none d-sm-block position-absolute top-0 object-fit-cover h-100 w-100 z-n1" />
+            <?php endif; ?>
             <section class="product-category-header py-5">
                 <div class="container">
                     <div class="row align-items-center">
@@ -62,7 +62,7 @@ $background = get_field("product_category_background_image", $term->taxonomy . "
                     </div>
 
                 </section>
-                <section class="product-info-slider py-5 my-4">
+                <section class="product-info-slider py-2 my-4">
                     <div class="container">
                         <div id="category-product-info-slider">
                             <?php foreach ($products as $key => $p) : ?>

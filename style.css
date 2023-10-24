@@ -3070,7 +3070,10 @@ background-position: right 12px center;
       min-height: 30vh;
       background-attachment: unset;
     }
-
+    .container, .container-fluid{
+      padding-right:20px !important;
+      padding-left:20px !important;
+    }
   }
   
   @media only screen and (max-width:576px) {

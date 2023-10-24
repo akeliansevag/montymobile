@@ -48,7 +48,7 @@ if (get_field("dark_theme")) {
 		</div>
 		<header>
 			<div class="container-fluid">
-				<div class="header-content px-2 px-lg-5">
+				<div class="header-content px-0 px-lg-5">
 					<span class="burger-wrapper">
 						<div id="burger">
 							<div></div>

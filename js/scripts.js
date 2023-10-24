@@ -161,15 +161,18 @@ animatedElements.forEach((animatedElement, i) => {
 });
 
 if ($(".parallax-image").length) {
-  gsap.to(".parallax-image", {
-    yPercent: -50,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".parallax-image",
-      // start: "top bottom", // the default values
-      // end: "bottom top",
-      scrub: 2
-    },
+  const parallaxImages = gsap.utils.toArray('.parallax-image');
+  parallaxImages.forEach((parallaxImage, i) => {
+    gsap.to(parallaxImage, {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: parallaxImage,
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: 2
+      },
+    });
   });
 }
 
@@ -225,7 +228,7 @@ $(".product-features-section").each(function (i, item) {
   const featuresImageSlider = $("#features-image-slider-" + blockID).slick({ arrows: false, draggable: false, speed: 100 });
 });
 
-$(".feature-title").on("click", function () {
+$(".feature-title").on("mouseenter", function () {
   var key = $(this).data("key");
   var blockID = $(this).data("block-id");
   $("#features-image-slider-" + blockID).slick('slickGoTo', key);
