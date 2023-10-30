@@ -8,10 +8,80 @@ if (get_field("dark_theme")) {
 <html <?php language_attributes(); ?> data-theme="<?= $theme ?>">
 
 <head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MML9G7B');
+	</script>
+	<!-- End Google Tag Manager -->
+
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="shortcut icon">
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="apple-touch-icon-precomposed">
+
+	<meta name="facebook-domain-verification" content="ed9xv4360f49lzzzg7bt1ehtsahj9k" />
+	<link href="//www.google-analytics.com" rel="dns-prefetch">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCLLMVSZJ1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-FCLLMVSZJ1');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199567258-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-199567258-1');
+	</script>
+	<script type="text/javascript">
+		_linkedin_partner_id = "609028";
+		window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+		window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+	</script>
+	<script type="text/javascript">
+		(function(l) {
+			if (!l) {
+				window.lintrk = function(a, b) {
+					window.lintrk.q.push([a, b])
+				};
+				window.lintrk.q = []
+			}
+			var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";
+			b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);
+		})(window.lintrk);
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=609028&fmt=gif" />
+	</noscript>
 	<?php wp_head(); ?>
 </head>
 
