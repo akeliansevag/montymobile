@@ -32,7 +32,7 @@
                                     <div class="col-md-4 mb-4">
                                         <div class="certificate">
                                             <div>
-                                                <img class="w-100" src="<?= $c['image']['sizes']['lg-thumb'] ?>" alt="">
+                                                <img width="150px" src="<?= $c['image']['sizes']['lg-thumb'] ?>" alt="">
                                                 <h3 class="fs-4"><?= $c['title'] ?></h3>
                                                 <h4 class="fs-6"><?= $c['small_title'] ?></h4>
                                                 <a href="<?= $c['pdf']; ?>" target="_blank">view certificate</a>
