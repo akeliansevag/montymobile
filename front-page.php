@@ -40,15 +40,15 @@ $astroImage = get_field("floating_astronaut_image", 7);
         <?php endif; ?>
         <div class="h-slider-item slide-1">
             <div class="h-slider-background">
-                <img src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/waslanding.jpg" alt="">
+                <img src="https://montymobile.com/wp-content/uploads/2023/10/waslanding.jpg" alt="">
             </div>
 
             <div class="h-slider-content">
                 <div class="h-slider-inner text-center">
                     <div class="text-center">
-                        <img class="d-inline-block mb-2" src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/mmlogo.png" alt="Logo">
+                        <img class="d-inline-block mb-2" src="https://montymobile.com/wp-content/uploads/2023/10/mmlogo.png" alt="Logo">
                         <h2 style="letter-spacing:2px;" class="mt-1 mb-3 fw-bold fs-2">HOSTING</h2>
-                        <img style="width:130px;" class="d-inline-block mb-2" src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/GSMALOGO.png" alt="GSMA Logo">
+                        <img style="width:130px;" class="d-inline-block mb-2" src="https://montymobile.com/wp-content/uploads/2023/10/GSMALOGO.png" alt="GSMA Logo">
                     </div>
 
 
@@ -277,11 +277,11 @@ $astroImage = get_field("floating_astronaut_image", 7);
                             </div>
                             <div class="col-md-6 text-center d-none d-md-block">
                                 <?php if ($key == 0) : ?>
-                                    <img width="70%" src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/new-moon1.png" class="parallax-image" alt="Moon image">
+                                    <img width="70%" src="https://montymobile.com/wp-content/uploads/2023/10/new-moon1.png" class="parallax-image" alt="Moon image">
                                 <?php endif; ?>
 
                                 <?php if ($key == 2) : ?>
-                                    <img src="https://stagingv3.montymobile.com/wp-content/uploads/2023/10/new-planet.png" class="parallax-image position-absolute top-0" alt="Moon image">
+                                    <img src="https://montymobile.com/wp-content/uploads/2023/10/new-planet.png" class="parallax-image position-absolute top-0" alt="Moon image">
                                 <?php endif; ?>
                             </div>
                         </div>
