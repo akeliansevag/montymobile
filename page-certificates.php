@@ -29,7 +29,7 @@
                             <div class="row">
 
                                 <?php foreach ($certificates as $c) : ?>
-                                    <div class="col-md-4 mb-4">
+                                    <div class="col-md-4 mb-3">
                                         <div class="certificate">
                                             <div>
                                                 <img class="mb-4" width="150px" src="<?= $c['image']['sizes']['lg-thumb'] ?>" alt="">
