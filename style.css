@@ -175,6 +175,9 @@ html{
 html[data-theme=dark]:root{
   --textColor: #ffffff;
 }
+
+.grecaptcha-badge { visibility: hidden; }
+
 .spacer-50{
     height: var(--spacer-50);
 }
