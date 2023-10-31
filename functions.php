@@ -115,7 +115,6 @@ function montymobile_scripts()
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css', array(), _S_VERSION);
 	wp_enqueue_style('slick-css', get_template_directory_uri() . '/assets/slick/slick.css', array(), _S_VERSION);
 	wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/assets/slick/slick-theme.css', array(), _S_VERSION);
-	wp_enqueue_style('flickity-css', get_template_directory_uri() . '/assets/flickity/flickity.min.css', array(), _S_VERSION);
 
 	wp_enqueue_style('swiper-css', get_template_directory_uri() . '/assets/swiperjs/swiper-bundle.min.css', array(), _S_VERSION);
 
@@ -124,10 +123,8 @@ function montymobile_scripts()
 
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.js', array(), _S_VERSION, true);
 	wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick.min.js', array("jquery"), _S_VERSION, true);
-	wp_enqueue_script('flickity-js', get_template_directory_uri() . '/assets/flickity/flickity.pkgd.min.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/swiperjs/swiper-bundle.min.js', array("jquery"), _S_VERSION, true);
 
-	//wp_enqueue_script('scamble-text-js', get_template_directory_uri() . '/assets/ScrambleTextPlugin3.min.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('montymobile-js', get_template_directory_uri() . '/js/scripts.js', array("jquery"), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'montymobile_scripts');
