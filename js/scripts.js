@@ -11,7 +11,8 @@ if ($hslider.length) {
   });
   $hslider.slick({
     arrows: true,
-    autoplay: 5000
+    autoplay: 5000,
+    infinite: false
   });
 
   $hslider.on('afterChange', function (event, slick, direction) {
