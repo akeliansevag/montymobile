@@ -138,7 +138,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
             <div id="events-slider" class="events-slider">
                 <?php
                 foreach ($events as $key => $event) :
-                    $eventImage = get_field('event_small_thumbnail', $event->ID);
+                    $eventImage = get_field('md-thumb', $event->ID);
                     $eventLogo = get_field("event_logo", $event->ID);
                 ?>
                     <div class="event-slide">
