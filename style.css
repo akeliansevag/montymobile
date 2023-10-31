@@ -967,7 +967,7 @@ footer .social-icons svg:hover path{
   }
   
   .stars {
-    background: black url('assets/img/stars.png') repeat;
+    background: black url('assets/img/stars.webp') repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -980,7 +980,7 @@ footer .social-icons svg:hover path{
   .twinkling {
     width: 10000px;
     height: 100%;
-    background: transparent url("assets/img/twinkling.png") repeat;
+    background: transparent url("assets/img/twinkling.webp") repeat;
     background-size: 1000px 1000px;
     position: absolute;
     right: 0;
