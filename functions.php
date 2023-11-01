@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '9.5.4');
+	define('_S_VERSION', '9.5.5');
 }
 
 require_once 'custom-menu-walker.php';
@@ -121,7 +121,7 @@ function montymobile_scripts()
 	wp_enqueue_style('montymobile-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 
-	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.js', array(), _S_VERSION, true);
+	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('slick-js', get_template_directory_uri() . '/assets/slick/slick.min.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/swiperjs/swiper-bundle.min.js', array("jquery"), _S_VERSION, true);
 
