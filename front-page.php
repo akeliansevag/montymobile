@@ -15,7 +15,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     <div class="h-slider-background">
                         <?php if ($slide['video']) : ?>
                             <video loading="lazy" playsinline autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
-                                <source srcc="<?= $slide['video']['url']; ?>" type="video/mp4">
+                                <source src="<?= $slide['video']['url']; ?>" type="video/mp4">
                             </video>
                         <?php else : ?>
                             <?php if ($slide['image']) : ?>
@@ -70,7 +70,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <div class="position-relative motion-path-container">
     <div id="path-container" class="d-none d-sm-block" style="position:absolute;height:100%;width:100%;top:0;z-index:-1;">
-        <img style="position:absolute;top:0;max-width:100%;" id="floating-astro" srcc="<?= $astroImage['url'] ?>" alt="">
+        <img style="position:absolute;top:0;max-width:100%;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">
     </div>
     <?php if (get_field("homepage_about_us")) : ?>
         <section class="h-about-us text-center">
@@ -351,7 +351,7 @@ $astronaut_poster = get_field("astronaut_video_poster", 7);
 <?php if ($astronaut_video) : ?>
     <section class="h-video-section">
         <video playsinline id="h-video" autoplay muted loop poster="<?= $astronaut_poster['sizes']['background']; ?>">
-            <source srcc="<?= $astronaut_video['url'] ?>" type="video/mp4">
+            <source src="<?= $astronaut_video['url'] ?>" type="video/mp4">
             </source>
         </video>
     </section>
