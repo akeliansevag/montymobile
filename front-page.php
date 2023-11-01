@@ -14,7 +14,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 <div class="h-slider-item slide-<?= $key ?>">
                     <div class="h-slider-background">
                         <?php if ($slide['video']) : ?>
-                            <video playsinline autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
+                            <video loading="lazy" playsinline autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
                                 <source src="<?= $slide['video']['url']; ?>" type="video/mp4">
                             </video>
                         <?php else : ?>
