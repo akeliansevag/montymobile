@@ -70,7 +70,13 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <div class="position-relative motion-path-container">
     <div id="path-container" class="d-none d-sm-block" style="position:absolute;height:100%;width:100%;top:0;z-index:-1;">
-        <img style="position:absolute;top:0;max-width:100%;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">
+        <!--<img style="position:absolute;top:0;max-width:100%;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">-->
+        <div style="position:absolute;top:0;" id="floating-astro">
+            <video width="400" height="400" playsinline autoplay loop muted>
+                <source src="https://montymobile.com/wp-content/uploads/2023/11/astronaut_hevc.mov">
+                <source src="https://montymobile.com/wp-content/uploads/2023/11/astronaut.webm">
+            </video>
+        </div>
     </div>
     <?php if (get_field("homepage_about_us")) : ?>
         <section class="h-about-us text-center">
