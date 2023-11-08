@@ -153,13 +153,13 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
                             ?>
                             <?php if ($eventImage) : $withImage = true; ?>
-                                <img class="box-bg" src="<?= $eventImage['sizes']['md-thumb'] ?>" alt="">
+                                <img class="box-bg" src="<?= $eventImage['sizes']['mid-thumb'] ?>" alt="">
                                 <div class="event-overlay"></div>
                             <?php endif; ?>
                             <div class="event-content">
                                 <div>
                                     <?php if ($eventLogo) : ?>
-                                        <img src="<?= $eventLogo['sizes']['lg-thumb'] ?>" alt="" class="event-logo">
+                                        <img src="<?= $eventLogo['sizes']['mid-thumb'] ?>" alt="" class="event-logo">
                                     <?php else : ?>
                                         <h4><?= $event->post_title; ?></h4>
                                     <?php endif; ?>
