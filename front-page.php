@@ -142,7 +142,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     $eventLogo = get_field("event_logo", $event->ID);
                 ?>
                     <div class="event-slide">
-                        <a class="event-item <?= $eventImage ? "with-image" : "" ?>" href="<?= home_url('/events') ?>">
+                        <a class="event-item <?= $eventImage ? "with-image" : "" ?>" href="<?= home_url('/events/') ?>">
                             <?php
 
                             ?>
@@ -288,7 +288,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     <?php endforeach; ?>
                 </div>
                 <div class="text-center">
-                    <a href="<?= home_url('/blog') ?>" class="mm-button-2 my-5">Read more</a>
+                    <a href="<?= home_url('/blog/') ?>" class="mm-button-2 my-5">Read more</a>
                 </div>
 
             </div>

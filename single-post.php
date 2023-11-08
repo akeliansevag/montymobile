@@ -7,12 +7,11 @@ if ($post) {
 }
 $c = $_GET['c'];
 
-$perm = $c ? get_category_link($category[0]->term_id) : home_url() . '/blog';
+$perm = $c ? get_category_link($category[0]->term_id) : home_url() . '/blog/';
 ?>
 
 
 <section class="post-section  d-inline-block w-100 mt-5">
-    <?php var_dump($c); ?>
     <div class="container">
         <div class="row">
             <div class="col-xxl-2"></div>
