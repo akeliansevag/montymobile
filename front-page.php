@@ -362,29 +362,4 @@ $astronaut_poster = get_field("astronaut_video_poster", 7);
         </video>
     </section>
 <?php endif; ?>
-<style>
-    *::-webkit-media-controls-panel {
-
-        display: none !important;
-
-        -webkit-appearance: none;
-
-    }
-
-    *::--webkit-media-controls-play-button {
-
-        display: none !important;
-
-        -webkit-appearance: none;
-
-    }
-
-    *::-webkit-media-controls-start-playback-button {
-
-        display: none !important;
-
-        -webkit-appearance: none;
-
-    }
-</style>
 <?php get_footer(); ?>
