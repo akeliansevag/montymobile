@@ -14,7 +14,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 <div class="h-slider-item slide-<?= $key ?>">
                     <div class="h-slider-background">
                         <?php if ($slide['video']) : ?>
-                            <video loading="lazy" playsinline autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
+                            <video loading="lazy" controls autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
                                 <source src="<?= $slide['video']['url']; ?>" type="video/mp4">
                             </video>
                         <?php else : ?>
@@ -72,7 +72,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     <div id="path-container" class="d-none d-sm-block" style="position:absolute;height:100%;width:100%;top:0;z-index:-1;">
         <!--<img style="position:absolute;top:0;max-width:100%;" id="floating-astro" src="<?= $astroImage['url'] ?>" alt="">-->
         <div style="position:absolute;top:0;" id="floating-astro">
-            <video width="400" height="400" playsinline autoplay loop muted>
+            <video width="400" height="400" controls playsinline autoplay loop muted>
                 <source src="https://montymobile.com/wp-content/uploads/2023/11/astronaut_hevc.mov">
                 <source src="https://montymobile.com/wp-content/uploads/2023/11/astronaut.webm">
             </video>
@@ -356,7 +356,7 @@ $astronaut_poster = get_field("astronaut_video_poster", 7);
 ?>
 <?php if ($astronaut_video) : ?>
     <section class="h-video-section">
-        <video playsinline id="h-video" autoplay muted loop poster="<?= $astronaut_poster['sizes']['background']; ?>">
+        <video playsinline id="h-video" controls autoplay muted loop poster="<?= $astronaut_poster['sizes']['background']; ?>">
             <source src="<?= $astronaut_video['url'] ?>" type="video/mp4">
             </source>
         </video>
