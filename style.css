@@ -3006,7 +3006,7 @@ background-position: right 12px center;
       }
       
 	  .floating-astro{
-		  display:none;
+		  /*display:none;*/
 	  }
     .container-margin{
       margin-left: calc((100vw - 540px)/2);
