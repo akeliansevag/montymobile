@@ -125,9 +125,59 @@
 
 </section>
 <section class="bg-gray py-5">
+    <?php $hotels_data = get_fields(); ?>
     <div class="container">
-        <h2>Hotels</h2>
-        <p class="mb-0">Coming Soon!</p>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="fs-1">Hotels</h2>
+                <?= $hotels_data['hotels_description']; ?>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <img class="w-100" src="<?= $hotels_data['hotels_image']['sizes']['large'] ?>" />
+                </div>
+            </div>
+            <div class="d-flex align-items-end mt-5">
+                <h4 class="mb-0 lh-1 fs-3">Hotel Picks</h4>
+                <div style="height:2px;background-color:black;" class="ms-2 flex-grow-1 align-self-end">&nbsp;</div>
+            </div>
+
+            <?php $hotels = $hotels_data['hotel_listings']; ?>
+            <div class="mt-5 pt-3 mb-5">
+                <div class="row">
+                    <?php foreach ($hotels as $key => $hotel) : ?>
+                        <div class="col-md-6 col-lg-6 col-xl-4">
+                            <div class="mb-5">
+                                <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
+                                <div>
+                                    <div>
+                                        <?php for ($i = 0; $i < $hotel['stars']; $i++) : ?>
+                                            <i class="fa fa-star" style="color:#fbbc04" aria-hidden="true"></i>
+                                        <?php endfor; ?>
+                                        <?php for ($i = 0; $i < (5 - $hotel['stars']); $i++) : ?>
+                                            <i class="fa fa-star" style="color:#dadce0" aria-hidden="true"></i>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <h6 class="fs-7 font-bold"><?= $hotel['stars'] ?> Stars</h6>
+
+
+                                </div>
+
+
+                                <?= $hotel['description'] ?>
+                                <?= $hotel['address'] ?>
+                                <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-4" />
+                                <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                            </div>
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+        </div>
+
+
     </div>
 </section>
 <section class="bg-white py-5">
