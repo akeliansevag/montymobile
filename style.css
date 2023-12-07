@@ -413,7 +413,7 @@ nav.main-menu > ul{
     margin:0;
 }
 
-nav.main-menu > ul > li:last-child{
+nav.main-menu > ul > li:last-child a{
   color:var(--mmPink) !important;
 }
 
