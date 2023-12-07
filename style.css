@@ -273,6 +273,16 @@ h2.section-title{
     white-space: nowrap;
 }
 
+.mm-button.transparent{
+  color:black;
+  border-color: black;
+  background-color:transparent;
+}
+
+.mm-button.transparent:hover{
+  border-color: black !important;
+}
+
 .large-button{
   font-size:1.2rem;
   padding:13px 40px;
