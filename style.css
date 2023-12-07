@@ -413,6 +413,10 @@ nav.main-menu > ul{
     margin:0;
 }
 
+nav.main-menu > ul > li:last-child{
+  color:var(--mmPink) !important;
+}
+
 nav.main-menu > ul > li > a, .no-link-item{
     white-space: nowrap;
     height: var(--headerHeight);
@@ -2842,6 +2846,9 @@ background-position: right 12px center;
     }
     .hhtext p{
       font-size:16px;
+    }
+    .dotted-design{
+      padding:5px 10px;
     }
   }
   
