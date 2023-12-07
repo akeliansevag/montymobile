@@ -147,7 +147,7 @@
                 <div class="row">
                     <?php foreach ($hotels as $key => $hotel) : ?>
                         <div class="col-md-6 col-lg-6 col-xl-4">
-                            <div class="mb-4">
+                            <div class="mb-5">
                                 <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
                                 <div>
                                     <div>
