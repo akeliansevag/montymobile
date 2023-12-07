@@ -45,7 +45,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
             <div class="h-slider-content">
                 <div class="h-slider-inner text-center">
-                    <a href="<?= home_url() ?>/was-19">
+                    <a href="<?= home_url() ?>/was19">
                         <div class="text-center">
                             <img class="d-inline-block mb-2" src="https://montymobile.com/wp-content/uploads/2023/10/mmlogo.png" alt="Logo">
                             <h2 style="letter-spacing:2px;" class="mt-1 mb-3 fw-bold fs-2">HOSTING</h2>
