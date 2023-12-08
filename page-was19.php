@@ -119,7 +119,7 @@
 
 <section class="bg-white py-5">
     <div class="container">
-        <h2>Sponsorships</h2>
+        <h2 class="fs-1">Sponsorships</h2>
         <p class="mb-0">For sponsorship inquiries, please reach out on <a class="text-decoration-underline" href="mailto:was19_sponsorships@montymobile.com ">was19_sponsorships@montymobile.com </a></p>
     </div>
 
@@ -165,7 +165,7 @@
 
 
                                 <?= $hotel['description'] ?>
-                                <?= $hotel['address'] ?>
+                                <!--<?= $hotel['address'] ?>-->
                                 <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-4" />
                                 <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                             </div>
@@ -182,13 +182,13 @@
 </section>
 <section class="bg-white py-5">
     <div class="container">
-        <h2>Travel Details</h2>
+        <h2 class="fs-1">Travel Details</h2>
         <p class="mb-0">Coming Soon!</p>
     </div>
 </section>
 <section class="bg-gray py-5">
     <div class="container">
-        <h2>Agenda</h2>
+        <h2 class="fs-1">Agenda</h2>
         <p class="mb-0">Coming Soon!</p>
     </div>
 </section>
