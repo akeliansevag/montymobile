@@ -170,10 +170,10 @@
                                     <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
                                     <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                                 </div>
-                            <?php endif; ?>
 
                             </div>
-                        <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
