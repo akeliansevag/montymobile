@@ -146,32 +146,34 @@
             <div class="mt-5 pt-3 mb-5">
                 <div class="row">
                     <?php foreach ($hotels as $key => $hotel) : ?>
-                        <div class="col-md-6 col-lg-6 col-xl-4">
-                            <div class="mb-5">
-                                <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
-                                <div>
+                        <?php if ($hotel['status']) : ?>
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="mb-5">
+                                    <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
                                     <div>
-                                        <?php for ($i = 0; $i < $hotel['stars']; $i++) : ?>
-                                            <i class="fa fa-star" style="color:#fbbc04" aria-hidden="true"></i>
-                                        <?php endfor; ?>
-                                        <?php for ($i = 0; $i < (5 - $hotel['stars']); $i++) : ?>
-                                            <i class="fa fa-star" style="color:#dadce0" aria-hidden="true"></i>
-                                        <?php endfor; ?>
+                                        <div>
+                                            <?php for ($i = 0; $i < $hotel['stars']; $i++) : ?>
+                                                <i class="fa fa-star" style="color:#fbbc04" aria-hidden="true"></i>
+                                            <?php endfor; ?>
+                                            <?php for ($i = 0; $i < (5 - $hotel['stars']); $i++) : ?>
+                                                <i class="fa fa-star" style="color:#dadce0" aria-hidden="true"></i>
+                                            <?php endfor; ?>
+                                        </div>
+                                        <h6 class="fs-7 font-bold"><?= $hotel['stars'] ?> Stars</h6>
+
+
                                     </div>
-                                    <h6 class="fs-7 font-bold"><?= $hotel['stars'] ?> Stars</h6>
 
 
+                                    <?= $hotel['description'] ?>
+                                    <!--<?= $hotel['address'] ?>-->
+                                    <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
+                                    <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                                 </div>
+                            <?php endif; ?>
 
-
-                                <?= $hotel['description'] ?>
-                                <!--<?= $hotel['address'] ?>-->
-                                <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
-                                <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                             </div>
-
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
                 </div>
             </div>
 
