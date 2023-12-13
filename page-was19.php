@@ -189,7 +189,7 @@
             <div class="mt-2 mt-md-5 pt-3 mb-2 mb-md-5">
                 <div class="hotels-slider mx-4 mx-md-0">
                     <?php foreach ($hotels as $key => $hotel) : ?>
-                        <?php if ($hotel['status'] && $hotel['stars'] == 5) : ?>
+                        <?php if ($hotel['status'] && $hotel['stars'] == 4) : ?>
                             <div class="mb-5 d-flex flex-column flex-md-row align-items-start gap-3 gap-md-5">
                                 <div class="flex-grow-1 w-100">
                                     <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
