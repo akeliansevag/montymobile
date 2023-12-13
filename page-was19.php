@@ -175,7 +175,9 @@
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
                                         <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
                                     <?php else : ?>
-                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                        <?php if ($hotel['link']) : ?>
+                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex-grow-1 w-100">
@@ -211,16 +213,13 @@
                                         <p><strong>Promo Code: </strong><?= $hotel['promo_code']; ?></p>
                                     <?php endif ?>
 
-
-                                    <?php if ($hotel['link']) : ?>
-                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
-                                    <?php endif; ?>
-
                                     <?php if ($hotel['promo_code_link']) : ?>
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
                                         <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
                                     <?php else : ?>
-                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                        <?php if ($hotel['link']) : ?>
+                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex-grow-1 w-100">
