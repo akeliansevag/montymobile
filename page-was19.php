@@ -143,12 +143,13 @@
             </div>
 
             <?php $hotels = $hotels_data['hotel_listings']; ?>
-            <div class="mt-5 pt-3 mb-5">
-                <div class="row">
+
+            <div class="mt-2 mt-md-5 pt-3 mb-2 mb-md-5">
+                <div class="hotels-slider mx-4 mx-md-0">
                     <?php foreach ($hotels as $key => $hotel) : ?>
-                        <?php if ($hotel['status']) : ?>
-                            <div class="col-md-6 col-lg-6 col-xl-4">
-                                <div class="mb-5">
+                        <?php if ($hotel['status'] && $hotel['stars'] == 5) : ?>
+                            <div class="mb-5 d-flex flex-column flex-md-row align-items-start gap-3 gap-md-5">
+                                <div class="flex-grow-1 w-100">
                                     <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
                                     <div>
                                         <div>
@@ -160,17 +161,67 @@
                                             <?php endfor; ?>
                                         </div>
                                         <h6 class="fs-7 font-bold"><?= $hotel['stars'] ?> Stars</h6>
-
-
                                     </div>
-
-
                                     <?= $hotel['description'] ?>
                                     <!--<?= $hotel['address'] ?>-->
-                                    <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
-                                    <a class="mm-button transparent d-inline-block mt-4" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
-                                </div>
+                                    <?php if ($hotel['promo_code']) : ?>
+                                        <p><strong>Promo Code: </strong><?= $hotel['promo_code']; ?></p>
+                                    <?php endif ?>
 
+
+                                    <?php if ($hotel['link']) : ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                    <?php endif; ?>
+
+                                    <?php if ($hotel['promo_code_link']) : ?>
+                                        <a class="ms-3 mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Promo Code</a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="flex-grow-1 w-100">
+                                    <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <div class="mt-2 mt-md-5 pt-3 mb-2 mb-md-5">
+                <div class="hotels-slider mx-4 mx-md-0">
+                    <?php foreach ($hotels as $key => $hotel) : ?>
+                        <?php if ($hotel['status'] && $hotel['stars'] == 4) : ?>
+                            <div class="mb-5 d-flex flex-column flex-md-row align-items-start gap-3 gap-md-5">
+                                <div class="flex-grow-1 w-100">
+                                    <h5 class="fs-4 mb-1"><?= $hotel['title'] ?></h5>
+                                    <div>
+                                        <div>
+                                            <?php for ($i = 0; $i < $hotel['stars']; $i++) : ?>
+                                                <i class="fa fa-star" style="color:#fbbc04" aria-hidden="true"></i>
+                                            <?php endfor; ?>
+                                            <?php for ($i = 0; $i < (5 - $hotel['stars']); $i++) : ?>
+                                                <i class="fa fa-star" style="color:#dadce0" aria-hidden="true"></i>
+                                            <?php endfor; ?>
+                                        </div>
+                                        <h6 class="fs-7 font-bold"><?= $hotel['stars'] ?> Stars</h6>
+                                    </div>
+                                    <?= $hotel['description'] ?>
+                                    <!--<?= $hotel['address'] ?>-->
+                                    <?php if ($hotel['promo_code']) : ?>
+                                        <p><strong>Promo Code: </strong><?= $hotel['promo_code']; ?></p>
+                                    <?php endif ?>
+
+
+                                    <?php if ($hotel['link']) : ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                    <?php endif; ?>
+
+                                    <?php if ($hotel['promo_code_link']) : ?>
+                                        <a class="ms-3 mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Promo Code</a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="flex-grow-1 w-100">
+                                    <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
+                                </div>
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -199,4 +250,27 @@
         <h4 class="m-0 text-center">For general inquiries, please contact <a class="text-decoration-underline" href="mailto:was19@montymobile.com">was19@montymobile.com </a> </h4>
     </div>
 </section>
+
+<style>
+    .hotels-slider .slick-prev:before,
+    .hotels-slider .slick-next:before {
+        color: gray;
+    }
+
+    .hotels-slider .slick-prev {
+        left: -35px;
+    }
+
+    .hotels-slider .slick-next {
+        right: -35px;
+    }
+</style>
+<script>
+    jQuery(document).ready(() => {
+        jQuery(".hotels-slider").slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
+    });
+</script>
 <?php get_footer(); ?>
