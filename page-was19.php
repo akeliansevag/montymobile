@@ -175,9 +175,7 @@
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
                                         <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
                                     <?php else : ?>
-                                        <?php if ($hotel['link']) : ?>
-                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
-                                        <?php endif; ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex-grow-1 w-100">
@@ -222,9 +220,7 @@
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
                                         <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
                                     <?php else : ?>
-                                        <?php if ($hotel['link']) : ?>
-                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
-                                        <?php endif; ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex-grow-1 w-100">
