@@ -116,7 +116,62 @@
         </div>
     </div>
 </section>
+<section class="bg-gray py-5">
+    <div class="container">
+        <h2 class="fs-1">WAS#19 High Level Agenda</h2>
+        <div class="table-container">
+            <table class="agenda-table mt-3">
+                <thead>
+                    <tr>
+                        <th width="12%">Time</th>
+                        <th>Tuesday 16 April 2024</th>
+                        <th>Wednesday 17 April 2024</th>
+                        <th>Thursday 18 April 2024</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="black-cell">09:00 - 10:30</td>
+                        <td>Opening and Welcome - Host Welcome, Keynote speakers, Interview/Panel on hot topics</td>
+                        <td>5G Stand Alone</td>
+                        <td>BCE Training</td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">10:30 - 11:15</td>
+                        <td colspan="3"><i><strong>Networking Break</strong></i></td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">11:15 - 12:30</td>
+                        <td>Billing Charging Evolution (BCE)</td>
+                        <td>Innovation in Roaming & new Actors</td>
+                        <td>MIoT Training</td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">12:30 - 14:00</td>
+                        <td colspan="3"><i><strong>Lunch</strong></i></td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">14:00 - 15:30</td>
+                        <td>Network Closures & VoLTE</td>
+                        <td>Messaging</td>
+                        <td>5G Training</td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">15:30 - 16:15</td>
+                        <td colspan="3"><i><strong>Networking Break</strong></i></td>
+                    </tr>
+                    <tr>
+                        <td class="black-cell">16:15 - 17:30</td>
+                        <td>Securing your Network – Importance of Quality</td>
+                        <td>Open Gateway & Close - Voting on recent Change Requests, Feedback on Event & Future Planning</td>
+                        <td>Roaming Gateway & RAEX Training</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+    </div>
+</section>
 <section class="bg-white py-5">
     <div class="container">
         <h2 class="fs-1">Sponsorships</h2>
@@ -268,12 +323,7 @@
         <p class="mb-0">Coming Soon!</p>
     </div>
 </section>
-<section class="bg-gray py-5">
-    <div class="container">
-        <h2 class="fs-1">Agenda</h2>
-        <p class="mb-0">Coming Soon!</p>
-    </div>
-</section>
+
 <section class="bg-white py-5">
     <div class="container">
         <h4 class="m-0 text-center">For general inquiries, please contact <a class="text-decoration-underline" href="mailto:was19@montymobile.com">was19@montymobile.com </a> </h4>
@@ -296,6 +346,51 @@
 
     .agent-info a {
         color: var(--mmPink);
+    }
+
+    table.agenda-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table.agenda-table,
+    .agenda-table th,
+    .agenda-table td {
+        border: 1px solid black;
+    }
+
+    .agenda-table th,
+    .agenda-table td {
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .agenda-table th {
+        background-color: #000000;
+        color: white;
+    }
+
+    .black-cell {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    @media (max-width:768px) {
+        table.agenda-table {
+            width: 1000px;
+        }
+
+        .table-container {
+            overflow: auto;
+        }
     }
 </style>
 <script>
