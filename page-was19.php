@@ -141,7 +141,9 @@
                 <h4 class="mb-0 lh-1 fs-3">Hotel Picks</h4>
                 <div style="height:2px;background-color:black;" class="ms-2 flex-grow-1 align-self-end">&nbsp;</div>
             </div>
-
+            <div class="mt-5 fs-4">
+                <?= get_field('intro_text'); ?>
+            </div>
             <?php $hotels = $hotels_data['hotel_listings']; ?>
 
             <div class="mt-2 mt-md-5 pt-3 mb-2 mb-md-5">
@@ -164,20 +166,26 @@
                                     </div>
                                     <?= $hotel['description'] ?>
                                     <!--<?= $hotel['address'] ?>-->
+                                    <?php if (get_field('agent_text')) : ?>
+                                        <div class="agent-info">
+                                            <strong><?= get_field('agent_text'); ?></strong>
+                                        </div>
+
+                                    <?php endif; ?>
                                     <?php if ($hotel['promo_code']) : ?>
                                         <p><strong>Promo Code: </strong><?= $hotel['promo_code']; ?></p>
                                     <?php endif ?>
 
-
-
-
                                     <?php if ($hotel['promo_code_link']) : ?>
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
-                                        <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
+                                        <!-- <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p> -->
                                     <?php else : ?>
                                         <?php if ($hotel['link']) : ?>
-                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">View Hotel</a>
                                         <?php endif; ?>
+                                    <?php endif; ?>
+                                    <?php if ($hotel['map_link']) : ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['map_link'] ?>" target="_blank">View Location</a>
                                     <?php endif; ?>
                                 </div>
                                 <div class="flex-grow-1 w-100">
@@ -186,7 +194,13 @@
                             </div>
                         <?php endif; ?>
                     <?php endforeach; ?>
+
+
                 </div>
+                <div class="agent-info">
+                    <strong><?= get_field('agent_info'); ?></strong>
+                </div>
+
             </div>
 
             <div class="mt-2 mt-md-5 pt-3 mb-2 mb-md-5">
@@ -209,19 +223,28 @@
                                     </div>
                                     <?= $hotel['description'] ?>
                                     <!--<?= $hotel['address'] ?>-->
+                                    <?php if (get_field('agent_text')) : ?>
+                                        <div class="agent-info">
+                                            <strong><?= get_field('agent_text'); ?></strong>
+                                        </div>
+
+                                    <?php endif; ?>
                                     <?php if ($hotel['promo_code']) : ?>
                                         <p><strong>Promo Code: </strong><?= $hotel['promo_code']; ?></p>
                                     <?php endif ?>
 
                                     <?php if ($hotel['promo_code_link']) : ?>
                                         <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['promo_code_link'] ?>" target="_blank">Book Now</a>
-                                        <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p>
+                                        <!-- <p class="mt-2" style="color:var(--mmPink);">*Discounted rates for WAS#19</p> -->
                                     <?php else : ?>
                                         <?php if ($hotel['link']) : ?>
-                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">Book Now</a>
+                                            <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">View Hotel</a>
                                         <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
+                                <?php if ($hotel['map_link']) : ?>
+                                    <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['map_link'] ?>" target="_blank">View Location</a>
+                                <?php endif; ?>
                                 <div class="flex-grow-1 w-100">
                                     <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
                                 </div>
@@ -230,7 +253,9 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-
+            <div class="agent-info">
+                <strong><?= get_field('agent_info'); ?></strong>
+            </div>
         </div>
 
 
@@ -266,6 +291,10 @@
 
     .hotels-slider .slick-next {
         right: -35px;
+    }
+
+    .agent-info a {
+        color: var(--mmPink);
     }
 </style>
 <script>
