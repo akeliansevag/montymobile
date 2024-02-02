@@ -241,10 +241,11 @@
                                             <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['link'] ?>" target="_blank">View Hotel</a>
                                         <?php endif; ?>
                                     <?php endif; ?>
+                                    <?php if ($hotel['map_link']) : ?>
+                                        <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['map_link'] ?>" target="_blank">View Location</a>
+                                    <?php endif; ?>
                                 </div>
-                                <?php if ($hotel['map_link']) : ?>
-                                    <a class="mm-button transparent d-inline-block mt-2" href="<?= $hotel['map_link'] ?>" target="_blank">View Location</a>
-                                <?php endif; ?>
+
                                 <div class="flex-grow-1 w-100">
                                     <img src="<?= $hotel['image']['sizes']['large'] ?>" class="w-100 mt-2" />
                                 </div>
