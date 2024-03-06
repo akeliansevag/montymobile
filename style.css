@@ -1428,7 +1428,7 @@ footer .social-icons svg:hover path{
 
   .feature-inner > div {
     flex:1;
-    max-width: 50%;
+    max-width: 70%;
   }
   .feature-image{
     display: flex;
