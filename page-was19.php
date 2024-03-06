@@ -119,8 +119,8 @@
 
 <section class="bg-white py-5">
     <div class="container">
-        <h2 class="fs-1">Sponsorships</h2>
-        <p class="mb-0">For sponsorship inquiries, please reach out on <a class="text-decoration-underline" href="mailto:was19_sponsorships@montymobile.com ">was19_sponsorships@montymobile.com </a></p>
+        <h2 class="fs-1">Sponsorships and Delegate passes</h2>
+        <p class="mb-0">For sponsorship inquires and Delegate passes purchase please reach out on <a class="text-decoration-underline" href="mailto:was19_sponsorships@montymobile.com ">was19_sponsorships@montymobile.com </a></p>
     </div>
 
 </section>
