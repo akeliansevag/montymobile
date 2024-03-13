@@ -323,6 +323,7 @@
 
 <?= get_template_part("template-parts/was19-party"); ?>
 
+<?= get_template_part("template-parts/monty-esim"); ?>
 <section class="bg-white py-5">
     <div class="container">
         <h4 class="m-0 text-center">For general inquiries, please contact <a class="text-decoration-underline" href="mailto:was19@montymobile.com">was19@montymobile.com </a> </h4>
