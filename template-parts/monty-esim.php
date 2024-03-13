@@ -3,7 +3,7 @@
         <h2 class="fs-1">Monty eSIM</h2>
         <div class="mt-4">
             <div>
-                <p class="mb-0"><strong>No.</strong> You do not have to wait in queues to get your SIM Card.</p>
+                <p class="mb-0"><strong>No.</strong> You don't have to wait in queues to get your SIM Card.</p>
                 <p><strong>No.</strong> You don't have to deal with expensive roaming fees.</p>
             </div>
 
