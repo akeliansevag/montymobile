@@ -1,4 +1,4 @@
-<section class="bg-white py-5">
+<section class="bg-gray py-5">
     <div class="container">
         <h2 class="fs-1">WAS#19 Party by Monty Mobile</h2>
         <div class="row">

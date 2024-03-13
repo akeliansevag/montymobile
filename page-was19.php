@@ -263,8 +263,8 @@
     </div>
 </section>
 <?= get_template_part("template-parts/travel-and-passport"); ?>
-
-<section class="bg-gray py-5">
+<?= get_template_part("template-parts/travel-and-transfers-guide"); ?>
+<section class="bg-white py-5">
     <div class="container">
         <h2 class="fs-1">WAS#19 High Level Agenda</h2>
         <div class="table-container">
