@@ -3,12 +3,12 @@
         <h2 class="fs-1">Monty eSIM</h2>
         <div class="mt-4">
             <div>
-                <p class="mb-0"><strong>No.</strong> You don't have to wait in queues to get your SIM Card.</p>
-                <p><strong>No.</strong> You don't have to deal with expensive roaming fees.</p>
+                <p class="mb-0"><span class="fs-4"><strong>No.</strong></span> You don't have to wait in queues to get your SIM Card.</p>
+                <p><span class="fs-4"><strong>No.</strong></span> You don't have to deal with expensive roaming fees.</p>
             </div>
 
 
-            <p>Download <span style="color:var(--mmPink)"><strong>Monty eSIM App</strong></span> & Get <span style="color:var(--mmPink)"><strong>instant affordable 4G+</strong></span> connection.</p>
+            <p>Download <span class="fs-4" style="color:var(--mmPink)"><strong>Monty eSIM App</strong></span> & Get <span class="fs-4" style="color:var(--mmPink)"><strong>instant affordable 4G+</strong></span> connection.</p>
 
             <div class=" row">
                 <div class="col-lg-4">
