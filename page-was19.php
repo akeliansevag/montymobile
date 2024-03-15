@@ -323,6 +323,7 @@
 
 <?= get_template_part("template-parts/was19-party"); ?>
 
+<?= get_template_part("template-parts/sponsors"); ?>
 
 <section class="bg-white py-5">
     <div class="container">
