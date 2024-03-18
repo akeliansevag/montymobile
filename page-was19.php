@@ -264,62 +264,8 @@
 </section>
 <?= get_template_part("template-parts/travel-and-passport"); ?>
 <?= get_template_part("template-parts/travel-and-transfers-guide"); ?>
-<section class="bg-white py-5">
-    <div class="container">
-        <h2 class="fs-1">WAS#19 High Level Agenda</h2>
-        <div class="table-container">
-            <table class="agenda-table mt-3">
-                <thead>
-                    <tr>
-                        <th width="12%">Time</th>
-                        <th>Tuesday 16 April 2024</th>
-                        <th>Wednesday 17 April 2024</th>
-                        <th>Thursday 18 April 2024</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="black-cell">09:00 - 10:30</td>
-                        <td>Opening and Welcome - Host Welcome, Keynote speakers, Interview/Panel on hot topics</td>
-                        <td>5G Stand Alone</td>
-                        <td>BCE Training</td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">10:30 - 11:15</td>
-                        <td colspan="3"><i><strong>Networking Break</strong></i></td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">11:15 - 12:30</td>
-                        <td>Billing Charging Evolution (BCE)</td>
-                        <td>Innovation in Roaming & new Actors</td>
-                        <td>MIoT Training</td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">12:30 - 14:00</td>
-                        <td colspan="3"><i><strong>Lunch</strong></i></td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">14:00 - 15:30</td>
-                        <td>Network Closures & VoLTE</td>
-                        <td>Messaging</td>
-                        <td>5G Training</td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">15:30 - 16:15</td>
-                        <td colspan="3"><i><strong>Networking Break</strong></i></td>
-                    </tr>
-                    <tr>
-                        <td class="black-cell">16:15 - 17:30</td>
-                        <td>Securing your Network – Importance of Quality</td>
-                        <td>Open Gateway & Close - Voting on recent Change Requests, Feedback on Event & Future Planning</td>
-                        <td>Roaming Gateway & RAEX Training</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
-    </div>
-</section>
+<?= get_template_part("template-parts/was19-agenda"); ?>
 
 <?= get_template_part("template-parts/was19-party"); ?>
 
