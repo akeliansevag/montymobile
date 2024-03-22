@@ -61,7 +61,7 @@
         </div>
 
 
-        <div class="table-container mb-5">
+        <!--<div class="table-container mb-5">
             <h5>Tuesday, 16 April 2024, Istanbul, Türkiye</h5>
             <table class="agenda-table mt-3">
                 <thead>
@@ -229,10 +229,10 @@
 
                 </tbody>
             </table>
-        </div>
+        </div>-->
 
 
-        <div class="table-container mb-5">
+        <!-- <div class="table-container mb-5">
             <h5>
                 Wednesday, 17 April 2024, Istanbul, Türkiye
             </h5>
@@ -439,10 +439,10 @@
 
                 </tbody>
             </table>
-        </div>
+        </div>-->
 
 
-        <div class="table-container mb-5">
+        <!-- <div class="table-container mb-5">
             <h5>Thursday, 18 April 2024, Istanbul, Türkiye</h5>
             <table class="agenda-table mt-3">
                 <thead>
@@ -541,7 +541,7 @@
 
                 </tbody>
             </table>
-        </div>
+        </div>-->
 
 
     </div>
