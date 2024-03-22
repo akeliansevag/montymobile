@@ -59,7 +59,10 @@
                 </tbody>
             </table>
         </div>
+        <div>
+            <a target="_blank" class="mm-button" href="https://membergateway.sharepoint.com/sites/wg-WAS/MeetingDocuments/Forms/AllItems.aspx?id=%2Fsites%2Fwg-WAS%2FMeetingDocuments%2FWAS%2319%20Documents%2016-18%20April%202024%20Istanbul%2C%20Türkiye&viewid=84ad909d-7cbc-4e02-b6df-9048f42c00f2">Click here to access the full agenda</a>
 
+        </div>
 
         <!--<div class="table-container mb-5">
             <h5>Tuesday, 16 April 2024, Istanbul, Türkiye</h5>
