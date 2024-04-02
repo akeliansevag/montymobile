@@ -7,8 +7,9 @@
                     <strong>Date:</strong> April 17th<br>
                     <strong>Time:</strong> Starting at 7:00 PM<br>
                     <strong>Location:</strong> Basilica Cistern<br>
-                    <strong>Dress Code:</strong> Business Casual (comfortable footwear is recommended due to a 5 to 10-minute walking distance)<br>
-                    <strong>Transportation:</strong> Bus shuttles will be available from ICC starting at 7:00 PM, ensuring a convenient journey to and from the venue until 01:00.
+                    <strong>Dress Code:</strong> Business casual (comfortable footwear is recommended due to a 5 minute walking distance)<br>
+                    <strong>Transportation:</strong> Bus shuttles will be available from ICC starting at 7:00 PM, ensuring a convenient journey to and from the venue.
+                    Return bus shuttles will be available from 11:00 PM and depart every 30 minutes. Guests will be dropped off at the ICC and will need to make their own way to their hotels. Shuttles will run until midnight..
                 </p>
 
                 <p>We invite all WAS#19 participants to step into an enchanting evening where history meets modern glam at the Basilica Cistern! As the sun sets over Istanbul, join us for a journey into the depths of this ancient marvel.</p>
