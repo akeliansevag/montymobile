@@ -5,7 +5,7 @@
             <div class="col-md-6">
                 <p>
                     <strong>Date:</strong> April 17th<br>
-                    <strong>Time:</strong> Starting at 7:00 PM<br>
+                    <strong>Time:</strong> Starting at 8:00 PM<br>
                     <strong>Location:</strong> Basilica Cistern<br>
                     <strong>Dress Code:</strong> Business casual (comfortable footwear is recommended due to a 5 minute walking distance)<br>
                     <strong>Transportation:</strong> Bus shuttles will be available from ICC starting at 7:00 PM, ensuring a convenient journey to and from the venue.
