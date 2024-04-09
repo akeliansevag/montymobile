@@ -117,6 +117,7 @@
     </div>
 </section>
 <?= get_template_part("template-parts/monty-esim"); ?>
+<?= get_template_part("template-parts/gsma-registration-times"); ?>
 <section class="bg-white py-5">
     <div class="container">
         <h2 class="fs-1">Sponsorships and Delegate passes</h2>
@@ -265,9 +266,13 @@
 <?= get_template_part("template-parts/travel-and-passport"); ?>
 <?= get_template_part("template-parts/travel-and-transfers-guide"); ?>
 
+
+
 <?= get_template_part("template-parts/was19-agenda"); ?>
 
 <?= get_template_part("template-parts/was19-party"); ?>
+
+<?= get_template_part("template-parts/floor-plan"); ?>
 
 <?= get_template_part("template-parts/sponsors"); ?>
 
