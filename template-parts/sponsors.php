@@ -136,6 +136,12 @@ $sponsors = [
         'description' => "<p>Telefónica Global Solutions (TGS) manages the international Wholesale, Global Roaming and Multinational businesses of the Telefónica Group, along with the USA business. We deliver world-class services and platforms to wholesale carriers, fixed and mobile operators, OTTs, service providers, aggregators and multinational companies.&nbsp;<br>A Tier 1 carrier offering a global footprint, with particularly strong presence in Europe and Latin America, we provide our customers with innovative, global solutions wherever they are. Our integrated service portfolio includes Networking, Voice &amp; UCC, Global Messaging (P2P, A2P, RCS), Roaming (Connectivity Services, 5G Roaming Suite, Roaming VAS, Roaming Engagement, Roaming Outsourcing, Global Connect Hub), Cloud, Security, Satellite, and IoT &amp; Big Data.&nbsp;</p>
         <p><a target='_blank' rel='noopener noreferrer' href='https://www.globalsolutions.telefonica.com '>Website</a> - <a href='mailto:sales.globalsolutions@telefonica.com'>Email</a>&nbsp;<br>&nbsp;</p>"
     ],
+    [
+        'title' => 'Telefónica Global Solutions',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/LOGO-TEF-GLOBAL-SOLUTIONS_CMYK-VER-POS-FONDO-TRANSPARENTE-e1712060571781.webp',
+        'description' => "<p>Telefónica Global Solutions (TGS) manages the international Wholesale, Global Roaming and Multinational businesses of the Telefónica Group, along with the USA business. We deliver world-class services and platforms to wholesale carriers, fixed and mobile operators, OTTs, service providers, aggregators and multinational companies.&nbsp;<br>A Tier 1 carrier offering a global footprint, with particularly strong presence in Europe and Latin America, we provide our customers with innovative, global solutions wherever they are. Our integrated service portfolio includes Networking, Voice &amp; UCC, Global Messaging (P2P, A2P, RCS), Roaming (Connectivity Services, 5G Roaming Suite, Roaming VAS, Roaming Engagement, Roaming Outsourcing, Global Connect Hub), Cloud, Security, Satellite, and IoT &amp; Big Data.&nbsp;</p>
+        <p><a target='_blank' rel='noopener noreferrer' href='https://www.globalsolutions.telefonica.com '>Website</a> - <a href='mailto:sales.globalsolutions@telefonica.com'>Email</a>&nbsp;<br>&nbsp;</p>"
+    ]
     
 ];
 ?>
