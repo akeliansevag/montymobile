@@ -136,7 +136,48 @@ $sponsors = [
         'description' => "<p>Telefónica Global Solutions (TGS) manages the international Wholesale, Global Roaming and Multinational businesses of the Telefónica Group, along with the USA business. We deliver world-class services and platforms to wholesale carriers, fixed and mobile operators, OTTs, service providers, aggregators and multinational companies.&nbsp;<br>A Tier 1 carrier offering a global footprint, with particularly strong presence in Europe and Latin America, we provide our customers with innovative, global solutions wherever they are. Our integrated service portfolio includes Networking, Voice &amp; UCC, Global Messaging (P2P, A2P, RCS), Roaming (Connectivity Services, 5G Roaming Suite, Roaming VAS, Roaming Engagement, Roaming Outsourcing, Global Connect Hub), Cloud, Security, Satellite, and IoT &amp; Big Data.&nbsp;</p>
         <p><a target='_blank' rel='noopener noreferrer' href='https://www.globalsolutions.telefonica.com '>Website</a> - <a href='mailto:sales.globalsolutions@telefonica.com'>Email</a>&nbsp;<br>&nbsp;</p>"
     ],
-    
+
+    [
+        'title' => 'Alaris Labs',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/alaris.webp',
+        'description' => "<p>Alaris Labs – unprecedented development expertise at the service of telecom operators.</p>
+        <p>Alaris Labs is a Singapore-based software vendor, founded in 2008. Our engineering team has been building customized and out-of-the-box carrier-grade solutions to meet the demand of our customers for highly efficient business management tools.<br><strong>Alaris SMS Platform</strong> has the best-in-class logics for A2P, P2A and P2P messaging via SMPP, HTTP, SS7, Viber, WhatsApp, RCS.<br><strong>SMS Firewall</strong> helps our MNO customers be protected against fraud and margin leaks.&nbsp;<br><strong>Alaris inVoice</strong> - a business support platform for voice aggregators incorporating interconnect billing, rate management and routing, sophisticated analytical and reporting tools.</p>"
+    ],
+    [
+        'title' => 'Route Mobile',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/routemobile.webp',
+        'description' => "<p><strong>Company Logo- PFA</strong><br><strong>Company Bio </strong>- We are a leading CPaaS provider that caters to enterprises, over-the-top (OTT) players, and mobile network operators (MNO). Established in 2004, we are serving more than 40,000 customers worldwide. Our goal is to add value at multiple touchpoints across the Omnichannel CXPaaS value chain while addressing unique industry use cases for our clients. We are headquartered in Mumbai, India, and have operations in over 20 countries throughout Asia Pacific, the Middle East, Africa, Europe, and the Americas.<br><strong>Social Media Handles:</strong><br><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/company/routemobile/mycompany/verification/'>LinkedIn</a> - <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/routemobile'>Twitter</a> - <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/routemobile/'>Instagram</a> <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/c/RouteMobileLimited'>- YouTube</a>&nbsp;</p>"
+    ],
+    [
+        'title' => 'Lanck Telecom',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/launk-3.webp',
+        'description' => false
+    ],
+    [
+        'title' => 'Mobileum',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/Mobileum_Logo.webp',
+        'description' => false
+    ],
+    [
+        'title' => 'Araxxe',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/araxxe.webp',
+        'description' => false
+    ],
+    [
+        'title' => 'Eand',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/eand.webp',
+        'description' => "<p>As an enabler of connectivity, e&amp; Carrier &amp; Wholesale stands as a vital and dynamic business unit, playing a pivotal role in e&amp; - one of the leading technology groups in the world.&nbsp;<br>With a commitment to extending its reach to all subscribers by acting as a driver for innovation and ensuring agility across all its solutions, e&amp; Carrier &amp; Wholesale is the largest internet, mobile and regional hub for international cable systems.<br>Globally acclaimed as the “Best Wholesale Provider”, e&amp; Carrier &amp; Wholesale encompasses region’s most extensive international network that links more than 160 international carriers with its international mobile network reaching 800 + destinations.&nbsp;<br>Through a whole range of strategic partnerships and an expanding global footprint across 16 countries e&amp; Carrier &amp; Wholesale offers a comprehensive range of advanced solutions for mobile operators, carriers, ISPs, wholesalers and OTTs worldwide to fulfil their ever-growing connectivity needs. This mainly includes mobile, data, voice and satellite services.<br><a target='_blank' rel='noopener noreferrer' href='https://www.eand.com/en/whoweare/carrier-and-wholesale/index.html'>https://www.eand.com/en/whoweare/carrier-and-wholesale/index.html</a><br>Social handles – for partner announcement.<br><a target='_blank' rel='noopener noreferrer' href='https://twitter.com/etisalatAnd'>https://twitter.com/etisalatAnd</a><br><a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/etisalatand'>https://www.facebook.com/etisalatand</a><br><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/company/etisalatandmore/?viewAsMember=true'>https://www.linkedin.com/company/etisalatandmore/?viewAsMember=true</a><br><a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/etisalatand/'>https://www.instagram.com/etisalatand/</a></p><p><br>&nbsp;</p>"
+    ],
+    [
+        'title' => 'Arelion',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/Arelion_Lockup_Black_RGB-2.webp',
+        'description' => "<p>Arelion solves global connectivity challenges for multinational enterprises whose businesses rely on digital infrastructure. On top of the world’s #1 ranked IP backbone and a unique ecosystem of cloud and network service providers, we provide an award-winning customer experience to customers in more than 125 countries worldwide. Our global Internet services connect more than 700 cloud, security and content providers with low latency. For further resilience, our private Cloud Connect service connects directly to Amazon Web Services, Microsoft Azure, Google Cloud, IBM Cloud and Oracle cloud across North America, Europe and Asia. Discover more at <a target='_blank' rel='noopener noreferrer' href='https://www.arelion.com'>www.arelion.com</a>.<br>Our social handles:<br>X - @ArelionCompany<br>LinkedIn - <a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/company/arelion/'>https://www.linkedin.com/company/arelion/</a></p>"
+    ],
+    [
+        'title' => 'Vodafone',
+        'logo' => 'https://montymobile.com/wp-content/uploads/2024/04/New_VF_Logo_Stack_Large_RGB_RED.webp',
+        'description' => "<p>Company bio: Vodafone Roaming Services (<a target='_blank' rel='noopener noreferrer' href='http://roaming.vodafone.com'>http://roaming.vodafone.com</a>) – a Vodafone Group business - is one of the world’s leading roaming providers, partnering with more than 700 mobile networks in over 210 destinations. Our wide range of services – from Sponsored Roaming, Managed Services, Travel and Maritime Mobility – enables mobile operators to reach and connect millions of customers globally. We offer cutting-edge technology, competitive prices, coverage options and speeds, roaming, IPX and international voice expertise, and an extensive track record of delivering high-quality roaming services to our customers. Driven by Vodafone’s purpose, our mission is to connect people and devices across the world.</p>"
+    ],
 ];
 ?>
 <style>
