@@ -38,7 +38,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <div class="h-slider-item slide-1">
+        <!-- <div class="h-slider-item slide-1">
             <a href="<?= home_url() ?>/was19">
                 <div class="h-slider-background">
                     <img src="https://montymobile.com/wp-content/uploads/2023/10/waslanding.jpg" alt="">
@@ -66,7 +66,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
     <div class="field">
         <div class="mouse"></div>
