@@ -308,26 +308,44 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
     <div class="spacer-75"></div>
     <?php
-    $awards = get_field('homepage_awards', 7);
+    $awards = get_field('awards_items', 7);
     ?>
     <?php if ($awards) : ?>
         <section class="h-awards">
             <div class="container">
-                <h2 class="section-title display-4 fw-semi-bold"><?= get_field("homepage_awards_title", 7); ?></h2>
+                <h2 class="section-title display-4 fw-semi-bold">Awards</h2>
 
-                <div class="awards-slider v-slider" id="slider-awards">
-                    <?php foreach ($awards as $award) : ?>
-                        <div class="v-slide px-2">
-                            <div class="v-wrapper">
-                                <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="" class="v-slider-img">
+                <div class="awards-scroll-slider swiper" id="awards-scroll-slider">
+                    <div class="swiper-line"></div>
+                    <div class="swiper-wrapper">
+                        <?php foreach ($awards as $award) : ?>
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div>
+                                        <img src="<?= $award['image'] ?>" alt="">
+                                    </div>
+                                    <div class="swiper-dot"></div>
+                                    <div class="swiper-desc">
+                                        <div>
+                                            <h4><?= $award['title'] ?></h4>
+                                            <?php if ($award['description']) : ?>
+                                                <p><?= $award['description']; ?></p>
+                                            <?php endif; ?>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
 
 
                 </div>
+                <!-- If we need scrollbar -->
+                <div class="awards-swiper-scrollbar"></div>
 
         </section>
+
     <?php endif; ?>
 
     <div class="spacer-75"></div>

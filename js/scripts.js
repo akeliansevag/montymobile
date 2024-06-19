@@ -119,6 +119,38 @@ if ($sliderAwards.length) {
   });
 }
 
+const $awardsScrollSlider = $("#awards-scroll-slider");
+if ($awardsScrollSlider.length) {
+  const swiper = new Swiper('#awards-scroll-slider', {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    scrollbar: {
+      el: '.awards-swiper-scrollbar',
+      draggable: true,
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 6.3
+      }
+
+    }
+  });
+}
+
 const $sliderClients = $("#slider-clients");
 if ($sliderClients.length) {
   $sliderClients.slick({
