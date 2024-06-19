@@ -123,6 +123,7 @@ const $awardsScrollSlider = $("#awards-scroll-slider");
 if ($awardsScrollSlider.length) {
   const swiper = new Swiper('#awards-scroll-slider', {
     slidesPerView: 1.5,
+    freeMode: true,
     spaceBetween: 30,
     scrollbar: {
       el: '.awards-swiper-scrollbar',
@@ -144,7 +145,7 @@ if ($awardsScrollSlider.length) {
         slidesPerView: 4,
       },
       992: {
-        slidesPerView: 6.3
+        slidesPerView: 6
       }
 
     }
