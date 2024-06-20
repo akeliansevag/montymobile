@@ -141,9 +141,6 @@ if ($awardsScrollSlider.length) {
         slidesPerView: 3,
       },
       // when window width is >= 640px
-      640: {
-        slidesPerView: 4,
-      },
       992: {
         slidesPerView: 6
       }
