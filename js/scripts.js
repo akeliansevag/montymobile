@@ -90,34 +90,34 @@ if ($pslider.length) {
   }
 
 }
-const $sliderAwards = $("#slider-awards");
-if ($sliderAwards.length) {
-  $sliderAwards.slick({
-    slidesToShow: 3,
-    arrows: false,
-    dots: true,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '50px',
-          dots: false
-        }
-      }
-    ]
-  });
-}
+// const $sliderAwards = $("#slider-awards");
+// if ($sliderAwards.length) {
+//   $sliderAwards.slick({
+//     slidesToShow: 3,
+//     arrows: false,
+//     dots: true,
+//     slidesToScroll: 3,
+//     responsive: [
+//       {
+//         breakpoint: 1199,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 2,
+//         }
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//           centerMode: true,
+//           centerPadding: '50px',
+//           dots: false
+//         }
+//       }
+//     ]
+//   });
+// }
 
 const $awardsScrollSlider = $("#awards-scroll-slider");
 if ($awardsScrollSlider.length) {
