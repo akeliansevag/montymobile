@@ -866,7 +866,7 @@ a.black-hover:hover .right-arrow i{
 .award-item .swiper-desc {
   height: 120px;
   display: flex;
-  align-items: start;
+  align-items: end;
 }
 
 .swiper-line {
@@ -891,7 +891,7 @@ a.black-hover:hover .right-arrow i{
 }
 
 .awards-scroll-slider .swiper-slide:nth-of-type(2n) .award-item .swiper-desc {
-  align-items: end;
+  align-items: start;
 }
 
 .award-item h4 {
