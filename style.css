@@ -853,7 +853,7 @@ a.black-hover:hover .right-arrow i{
 
 .award-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   text-align: center;
   justify-content: space-between;
   align-items: center;
@@ -887,7 +887,7 @@ a.black-hover:hover .right-arrow i{
 }
 
 .awards-scroll-slider .swiper-slide:nth-of-type(2n) .award-item {
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .awards-scroll-slider .swiper-slide:nth-of-type(2n) .award-item .swiper-desc {
