@@ -278,8 +278,34 @@
         }
 
         if (isValid) {
-            console.log('Form submitted successfully.');
-            // form.submit(); // Uncomment this line to actually submit the form
+            var data = {
+                CompanyEmail: companyEmail.value,
+                FirstName: firstName.value,
+                LastName: lastName.value,
+                TermsAndConditionsGuid: "3bb342bc-7657-4911-bbbb-eacdfcc2a105",
+                PrivacyPolicyGuid: "ba0fe322-8628-4ece-abcf-a63012f5d018",
+                Section: "ONE_WAY_SMS",
+                ParentId: "91072e04-04cb-49d5-ba71-d70996d3b55c"
+            };
+
+            fetch('https://mm-omni-api-software-dev.montylocal.net/member/api/client/v1/client/register-external', {
+                    method: 'POST',
+                    headers: {
+                        'LanguageCode': 'en',
+                        'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    signUpForm.reset();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    signUpForm.reset();
+                });
         }
     });
 </script>
