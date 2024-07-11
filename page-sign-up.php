@@ -165,6 +165,11 @@
         transition: opacity 0.2s linear;
     }
 
+    .sign-up-popup.open {
+        top: 0;
+        opacity: 1;
+    }
+
     .sign-up-popup .sign-up-popup-content {
         width: 30%;
         border-radius: 50px;
@@ -180,16 +185,44 @@
 
     .sign-up-popup .sign-up-popup-content p {
         font-size: 14px;
-
     }
 
     .sign-up-popup .sign-up-popup-content svg {
         margin-bottom: 20px;
     }
+
+    .sign-up-popup.p-error #resend-container,
+    .sign-up-popup.p-error #success-icon {
+        display: none;
+    }
+
+
+    #resend-clock {
+        font-size: 24px;
+    }
+
+    #resend-button {
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        display: inline;
+    }
+
+    #resend-button.active {
+        color: var(--mmPink);
+    }
+
+    #resend-button.active:hover {
+        color: #000000;
+        cursor: pointer;
+    }
 </style>
-<div class="sign-up-popup">
+<div id="sign-up-popup" class="sign-up-popup open">
     <div class="sign-up-popup-content">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83" height="80" viewBox="0 0 83 80">
+        <div id="close-popup">
+            X
+        </div>
+        <svg id="success-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83" height="80" viewBox="0 0 83 80">
             <defs>
                 <clipPath id="clip-path">
                     <rect id="Rectangle_516" data-name="Rectangle 516" width="83" height="80" fill="#ed204c" />
@@ -201,8 +234,13 @@
                 </g>
             </g>
         </svg>
-        <h2>Sign Up Successful</h2>
-        <p>We Sent A Confirmation Email to email@gmail.com <br> Check Your Email And Click On The Link to Continue</p>
+        <h2 id="sign-up-message"></h2>
+        <p id="sign-up-email-message"></p>
+        <div id="resend-container" class="resend-container">
+
+            <div id="resend-clock">02:00</div>
+            <div id="resend-button">Resend Email</div>
+        </div>
     </div>
 </div>
 <section class="sign-up-section">
@@ -279,6 +317,17 @@
     </div>
 </section>
 <script>
+    var signUpForm = document.getElementById("signUpForm");
+    var closePopupButton = document.getElementById("close-popup");
+
+    var popup = document.getElementById("sign-up-popup");
+    var successIcon = document.getElementById("success-icon");
+    var signUpMessage = document.getElementById("sign-up-message");
+    var signUpEmailMessage = document.getElementById("sign-up-email-message");
+    var resendContainer = document.getElementById("resend-container");
+    var resendClock = document.getElementById("resend-clock");
+    var resendButton = document.getElementById("resend-button");
+
     function isValidEmail(email) {
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(email);
@@ -294,10 +343,80 @@
         inputElement.classList.remove('error-border');
     }
 
-    var signUpForm = document.getElementById("signUpForm");
+    function openPopup(data, email, error) {
+        resetPopup();
+        //console.log(data);
+        if (error) {
+            popup.classList.add("p-error");
+            signUpMessage.innerHTML = "Sign Up Not Successful";
+            signUpEmailMessage.innerHTML = "Please Try Again Later";
+            popup.classList.add('open');
+            return;
+        }
+        if (data && !data.success) {
+            popup.classList.add("p-error");
+            signUpMessage.innerHTML = "Sign Up Not Successful";
+            signUpEmailMessage.innerHTML = data.message;
+            popup.classList.add('open');
+            return;
+        }
+
+        if (data && data.success) {
+            console.log("Email " + email);
+            signUpMessage.innerHTML = "Sign Up Successful";
+            signUpEmailMessage.innerHTML = "We Sent A Confirmation Email to ";
+            signUpEmailMessage.innerHTML += email;
+            signUpEmailMessage.innerHTML += "<br>";
+            signUpEmailMessage.innerHTML += "Check Your Email And Click On The Link to Continue";
+            popup.classList.add('open');
+        }
+
+    }
+
+    function closePopup() {
+        popup.classList.remove("open");
+        popup.classList.remove("p-error");
+        resetPopup();
+    }
+
+    function resetPopup() {
+        signUpMessage.innerHTML = "";
+        signUpEmailMessage.innerHTML = "";
+    }
+
+    function startResendTimer() {
+        resendButton.classList.remove("active");
+        let timer = 10,
+            minutes, seconds;
+        const interval = setInterval(() => {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            resendClock.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(interval);
+                onCountdownComplete();
+            }
+        }, 1000);
+    }
+
+    function onCountdownComplete() {
+        // Event to fire when countdown reaches 0
+        resendButton.classList.add("active");
+    }
+
+    startResendTimer();
+
+    closePopupButton.addEventListener('click', function(e) {
+        closePopup();
+    });
+
     signUpForm.addEventListener('submit', function(e) {
         e.preventDefault();
-
         var companyEmail = document.querySelector('input[name="companyEmail"]');
         var firstName = document.querySelector('input[name="firstName"]');
         var lastName = document.querySelector('input[name="lastName"]');
@@ -354,12 +473,17 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Success:', data);
+                    //console.log('Success:', data);
+                    startResendTimer();
+                    openPopup(data, companyEmail.value, false);
                     signUpForm.reset();
+
                 })
                 .catch((error) => {
-                    console.error('Error:', error);
+                    //console.log('Error:', error);
+                    openPopup(error, companyEmail.value, true);
                     signUpForm.reset();
+
                 });
         }
     });
