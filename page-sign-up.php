@@ -196,6 +196,9 @@
         display: none;
     }
 
+    .sign-up-popup.p-error.with-resend #resend-container {
+        display: block;
+    }
 
     #resend-clock {
         font-size: 24px;
@@ -217,7 +220,7 @@
         cursor: pointer;
     }
 </style>
-<div id="sign-up-popup" class="sign-up-popup open">
+<div id="sign-up-popup" class="sign-up-popup">
     <div class="sign-up-popup-content">
         <div id="close-popup">
             X
@@ -355,6 +358,7 @@
         }
         if (data && !data.success) {
             popup.classList.add("p-error");
+            popup.classList.add("with-resend");
             signUpMessage.innerHTML = "Sign Up Not Successful";
             signUpEmailMessage.innerHTML = data.message;
             popup.classList.add('open');
@@ -362,20 +366,22 @@
         }
 
         if (data && data.success) {
-            console.log("Email " + email);
+
             signUpMessage.innerHTML = "Sign Up Successful";
             signUpEmailMessage.innerHTML = "We Sent A Confirmation Email to ";
             signUpEmailMessage.innerHTML += email;
             signUpEmailMessage.innerHTML += "<br>";
             signUpEmailMessage.innerHTML += "Check Your Email And Click On The Link to Continue";
             popup.classList.add('open');
+            return;
         }
-
+        return;
     }
 
     function closePopup() {
         popup.classList.remove("open");
         popup.classList.remove("p-error");
+        popup.classList.remove("with-resend");
         resetPopup();
     }
 
@@ -384,9 +390,10 @@
         signUpEmailMessage.innerHTML = "";
     }
 
-    function startResendTimer() {
+    function startResendTimer(email) {
         resendButton.classList.remove("active");
-        let timer = 10,
+        resendButton.removeEventListener('click', function(e) {});
+        let timer = 5,
             minutes, seconds;
         const interval = setInterval(() => {
             minutes = parseInt(timer / 60, 10);
@@ -399,17 +406,39 @@
 
             if (--timer < 0) {
                 clearInterval(interval);
-                onCountdownComplete();
+                onCountdownComplete(email);
             }
         }, 1000);
     }
 
-    function onCountdownComplete() {
+    function onCountdownComplete(email) {
         // Event to fire when countdown reaches 0
         resendButton.classList.add("active");
+        resendButton.addEventListener('click', function(e) {
+            var data = {
+                UserName: email,
+            };
+            fetch('https://mm-omni-api-software-dev.montylocal.net/member/api/client/v1/client/resend-email', {
+                    method: 'POST',
+                    headers: {
+                        'LanguageCode': 'en',
+                        'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success email:', data);
+
+                })
+                .catch((error) => {
+                    console.log('Error emails:', error);
+                });
+        });
     }
 
-    startResendTimer();
+
 
     closePopupButton.addEventListener('click', function(e) {
         closePopup();
@@ -474,16 +503,16 @@
                 .then(response => response.json())
                 .then(data => {
                     //console.log('Success:', data);
-                    startResendTimer();
+                    startResendTimer(companyEmail.value);
                     openPopup(data, companyEmail.value, false);
                     signUpForm.reset();
 
                 })
                 .catch((error) => {
+                    //alert("ama");
                     //console.log('Error:', error);
                     openPopup(error, companyEmail.value, true);
                     signUpForm.reset();
-
                 });
         }
     });
