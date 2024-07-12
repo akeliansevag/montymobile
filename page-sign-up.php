@@ -82,10 +82,13 @@
         top: 0;
         right: 0;
         width: 80%;
+        z-index: 0;
     }
 
     .sign-up-form-container {
         width: 80%;
+        z-index: 1;
+        position: relative;
     }
 
     .sign-up-form-container h2 {
@@ -240,6 +243,102 @@
     #close-popup:hover .cls-1 {
         fill: var(--mmPink);
     }
+
+    .loader-container {
+        opacity: 0;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .loader-container.active {
+        opacity: 1;
+    }
+
+    #resend-loader {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2px;
+    }
+
+    .loader {
+        width: 25px;
+        height: 25px;
+        border: 5px solid #000000;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media only screen and (max-width:1399px) {
+        .sign-up-content {
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    @media only screen and (max-width:992px) {
+        .sign-up-section {
+            flex-direction: column;
+            min-height: auto;
+        }
+
+        .sign-up-one {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            padding: 30px;
+        }
+
+        .sign-up-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sign-up-popup .sign-up-popup-content {
+            width: 70%;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        .two-columns {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sign-up-form-container {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width:576px) {
+        .sign-up-content {
+            padding: 25px;
+        }
+
+        .sign-up-content .mm-logo {
+            margin-bottom: 20px;
+        }
+
+        .sign-up-content p {
+            font-size: 22px;
+        }
+
+        .sign-up-popup .sign-up-popup-content {
+            width: 90%;
+        }
+    }
 </style>
 <div id="sign-up-popup" class="sign-up-popup">
     <div class="sign-up-popup-content">
@@ -267,6 +366,9 @@
 
             <div id="resend-clock">02:00</div>
             <div id="resend-button">Resend Email</div>
+            <div class="loader-container" id="resend-loader">
+                <span class="loader"></span>
+            </div>
         </div>
     </div>
 </div>
@@ -338,6 +440,9 @@
                         By signing up, you confirm that you've read and accepted our <a href="">Terms and Conditions</a> and our <a href="">Privacy Notice</a>.
                     </div>
                     <input type="submit" id="signUpSubmit" value="SIGN UP" />
+                    <div class="loader-container" id="form-loader">
+                        <span class="loader"></span>
+                    </div>
                 </form>
             </div>
         </div>
@@ -354,6 +459,10 @@
     var resendContainer = document.getElementById("resend-container");
     var resendClock = document.getElementById("resend-clock");
     var resendButton = document.getElementById("resend-button");
+    var formLoader = document.getElementById("form-loader");
+    var resendLoader = document.getElementById("resend-loader");
+
+    let resendInterval; // Global variable to store the interval ID
 
     function isValidEmail(email) {
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -361,6 +470,7 @@
     }
 
     function showError(inputElement, errorElement, message) {
+        formLoader.classList.remove("active");
         errorElement.textContent = message;
         inputElement.classList.add('error-border');
     }
@@ -403,6 +513,8 @@
     }
 
     function closePopup() {
+        clearInterval(resendInterval); // Clear the timer
+        resendClock.innerHTML = "02:00";
         popup.classList.remove("open");
         popup.classList.remove("p-error");
         popup.classList.remove("with-resend");
@@ -417,9 +529,9 @@
     function startResendTimer(email) {
         resendButton.classList.remove("active");
         resendButton.removeEventListener('click', function(e) {});
-        let timer = 5,
+        let timer = 120,
             minutes, seconds;
-        const interval = setInterval(() => {
+        resendInterval = setInterval(() => {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
 
@@ -429,7 +541,7 @@
             resendClock.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                clearInterval(interval);
+                clearInterval(resendInterval);
                 onCountdownComplete(email);
             }
         }, 1000);
@@ -439,6 +551,7 @@
         // Event to fire when countdown reaches 0
         resendButton.classList.add("active");
         resendButton.addEventListener('click', function(e) {
+            resendLoader.classList.add('active');
             var data = {
                 UserName: email,
             };
@@ -453,10 +566,13 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    resendLoader.classList.remove('active');
                     console.log('Success email:', data);
+                    startResendTimer(email);
 
                 })
                 .catch((error) => {
+                    resendLoader.classList.remove('active');
                     console.log('Error emails:', error);
                 });
         });
@@ -469,6 +585,7 @@
     });
 
     signUpForm.addEventListener('submit', function(e) {
+        formLoader.classList.add("active");
         e.preventDefault();
         var companyEmail = document.querySelector('input[name="companyEmail"]');
         var firstName = document.querySelector('input[name="firstName"]');
@@ -526,6 +643,7 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    formLoader.classList.remove("active");
                     //console.log('Success:', data);
                     startResendTimer(companyEmail.value);
                     openPopup(data, companyEmail.value, false);
@@ -533,6 +651,7 @@
 
                 })
                 .catch((error) => {
+                    formLoader.classList.remove("active");
                     //alert("ama");
                     //console.log('Error:', error);
                     openPopup(error, companyEmail.value, true);
