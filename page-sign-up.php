@@ -437,7 +437,7 @@
                         <span class="grey-text">I want to receive MontyMobile news, trends, or blogs by email.</span>
                     </div>
                     <div class="grey-text">
-                        By signing up, you confirm that you've read and accepted our <a href="">Terms and Conditions</a> and our <a href="">Privacy Notice</a>.
+                        By signing up, you confirm that you've read and accepted our <a href="<?= home_url() ?>/omni-channel-terms-and-conditions">Terms and Conditions</a> and our <a href="<?= home_url() ?>/omni-channel-privacy-policy">Privacy Notice</a>.
                     </div>
                     <input type="submit" id="signUpSubmit" value="SIGN UP" />
                     <div class="loader-container" id="form-loader">
