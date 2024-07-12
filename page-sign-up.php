@@ -241,7 +241,7 @@
         fill: var(--mmPink);
     }
 </style>
-<div id="sign-up-popup" class="sign-up-popup open">
+<div id="sign-up-popup" class="sign-up-popup">
     <div class="sign-up-popup-content">
         <div id="close-popup">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 335.4 335.46">
