@@ -559,7 +559,7 @@
             var data = {
                 UserName: email,
             };
-            fetch('https://mm-omni-api-software-dev.montylocal.net/member/api/client/v1/client/resend-email', {
+            fetch('https://mm-omni-software-vip-qa.montylocal.net/member/api/client/v1/client/resend-email', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
@@ -633,10 +633,10 @@
                 TermsAndConditionsGuid: "3bb342bc-7657-4911-bbbb-eacdfcc2a105",
                 PrivacyPolicyGuid: "ba0fe322-8628-4ece-abcf-a63012f5d018",
                 Section: "ONE_WAY_SMS",
-                ParentId: "91072e04-04cb-49d5-ba71-d70996d3b55c"
+                ParentId: "4393001f-064d-42b7-b77f-d4bb0365056a"
             };
 
-            fetch('https://mm-omni-api-software-dev.montylocal.net/member/api/client/v1/client/register-external', {
+            fetch('https://mm-omni-software-vip-qa.montylocal.net/member/api/client/v1/client/register-external', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
