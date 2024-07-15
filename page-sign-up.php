@@ -1,9 +1,13 @@
 <?php get_header(); ?>
 <style>
+    #wrapper {
+        margin: 0;
+    }
+
     .sign-up-section {
         background-color: white;
         display: flex;
-        min-height: calc(100vh - var(--headerHeight));
+        min-height: calc(100vh);
     }
 
     .sign-up-one {
