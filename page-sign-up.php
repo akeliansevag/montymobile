@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <style>
     #wrapper {
@@ -562,17 +561,29 @@
 </section>
 
 <script>
-    // Initialize reCAPTCHA
-    var recaptchaWidget;
+    document.addEventListener('DOMContentLoaded', function() {
+        var recaptchaWidget;
 
-    function initializeRecaptcha() {
-        recaptchaWidget = grecaptcha.render('recaptcha-container', {
-            'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5', // Replace with your reCAPTCHA site key
-            'theme': 'light' // Adjust theme as needed
-        });
-    }
+        function initializeRecaptcha() {
+            recaptchaWidget = grecaptcha.render('recaptcha-container', {
+                'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5', // Replace with your reCAPTCHA site key
+                'theme': 'light' // Adjust theme as needed
+            });
+        }
 
-    initializeRecaptcha();
+        // Function to check if grecaptcha is defined and initialize if so
+        function checkRecaptcha() {
+            if (typeof grecaptcha !== 'undefined') {
+                initializeRecaptcha();
+            } else {
+                // Retry after a short delay
+                setTimeout(checkRecaptcha, 100);
+            }
+        }
+
+        // Start checking for grecaptcha availability
+        checkRecaptcha();
+    });
 
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
