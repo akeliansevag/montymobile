@@ -567,6 +567,50 @@
 
     let resendInterval; // Global variable to store the interval ID
     let currentEmail = ''; // Global variable to store the current email
+    let TermsAndConditionsGuid, PrivacyPolicyGuid;
+
+    async function fetchGuid(apiUrl) {
+        const headers = {
+            'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+            'LanguageCode': 'en'
+        };
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'GET',
+                headers: headers
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            return data.data.items[0].recordGuid;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+            return ''; // or handle error accordingly
+        }
+    }
+
+    async function fetchGuids() {
+        try {
+            TermsAndConditionsGuid = await fetchGuid('https://mm-omni-api-software-qa.montylocal.net/catalog/api/v1/Content/Term_Condition');
+            PrivacyPolicyGuid = await fetchGuid('https://mm-omni-api-software-qa.montylocal.net/catalog/api/v1/Content/Privacy_Policy');
+
+            // Now you can use TermsAndConditionsGuid and PrivacyPolicyGuid
+            //console.log('Terms and Conditions Guid:', TermsAndConditionsGuid);
+            //console.log('Privacy Policy Guid:', PrivacyPolicyGuid);
+
+            // Any further operations dependent on these values should be placed here
+        } catch (error) {
+            console.error('Error fetching GUIDs:', error);
+        }
+    }
+
+    // Call fetchGuids to initiate fetching the GUIDs
+    fetchGuids();
+
 
     function isValidEmail(email) {
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -607,7 +651,7 @@
 
     function closePopup() {
         clearInterval(resendInterval); // Clear the timer
-        resendClock.innerHTML = "02:00";
+        resendClock.innerHTML = "01:00";
         popup.classList.remove("open");
         popup.classList.remove("p-error");
         popup.classList.remove("with-resend");
@@ -793,8 +837,8 @@
                 CompanyEmail: companyEmail.value,
                 FirstName: firstName.value,
                 LastName: lastName.value,
-                TermsAndConditionsGuid: "3bb342bc-7657-4911-bbbb-eacdfcc2a105",
-                PrivacyPolicyGuid: "ba0fe322-8628-4ece-abcf-a63012f5d018",
+                TermsAndConditionsGuid: TermsAndConditionsGuid,
+                PrivacyPolicyGuid: PrivacyPolicyGuid,
                 Section: "ONE_WAY_SMS",
                 ParentId: "4393001f-064d-42b7-b77f-d4bb0365056a"
             };
