@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <style>
     #wrapper {
         margin: 0;
@@ -535,6 +537,12 @@
 
                         <div class="error" id="termsError"></div>
                     </div>
+                    <div class="mt-3">
+                        <div class="g-recaptcha" data-sitekey="6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5"></div>
+                        <div class="error" id="recaptchaError"></div>
+                    </div>
+
+
                     <div id="error-container">
 
                     </div>
@@ -551,6 +559,7 @@
         </div>
     </div>
 </section>
+
 <script>
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
@@ -624,7 +633,10 @@
     function showError(inputElement, errorElement, message) {
         formLoader.classList.remove("active");
         errorElement.textContent = message;
-        inputElement.classList.add('error-border');
+        if (inputElement) {
+            inputElement.classList.add('error-border');
+        }
+
     }
 
     function clearError(inputElement, errorElement) {
@@ -787,6 +799,7 @@
         var firstName = document.querySelector('input[name="firstName"]');
         var lastName = document.querySelector('input[name="lastName"]');
         var terms = document.querySelector('input[name="terms"]');
+        var recaptchaResponse = grecaptcha.getResponse();
 
         var companyEmailError = document.getElementById('companyEmailError');
         var firstNameError = document.getElementById('firstNameError');
@@ -794,6 +807,14 @@
         var termsError = document.getElementById('termsError');
 
         var isValid = true;
+
+        // Validate reCAPTCHA
+        if (recaptchaResponse.length === 0) {
+            showError(null, recaptchaError, 'Please complete the reCAPTCHA.');
+            isValid = false;
+        } else {
+            clearError(null, recaptchaError);
+        }
 
         if (!companyEmail.value) {
             showError(companyEmail, companyEmailError, 'Company Email is required.');
