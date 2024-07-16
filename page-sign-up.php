@@ -157,6 +157,17 @@
         border: 2px solid var(--mmPink);
     }
 
+    #signUpSubmit:disabled {
+        background-color: #b7b7b7;
+        border-color: #b7b7b7;
+    }
+
+    #signUpSubmit:disabled:hover {
+        background-color: #b7b7b7;
+        border-color: #b7b7b7;
+        color: white;
+    }
+
     #signUpSubmit:hover {
         background-color: #ffffff;
         color: var(--mmPink);
