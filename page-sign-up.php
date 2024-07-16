@@ -368,7 +368,7 @@
         <p id="sign-up-email-message"></p>
         <div id="resend-container" class="resend-container">
 
-            <div id="resend-clock">02:00</div>
+            <div id="resend-clock">00:05</div>
             <div id="resend-button">Resend Email</div>
             <div class="loader-container" id="resend-loader">
                 <span class="loader"></span>
@@ -383,9 +383,7 @@
         <div class="sign-up-content">
             <img class="mm-logo" src="https://montymobile.com/wp-content/uploads/2024/07/monty-mobile-logo.webp" alt="Monty Mobile Logo">
             <p>
-                Your Connections, Your Conversations, Our Solution. <br>
-                <strong> Monty Mobile for Seamsless Communication. <br>
-                    Join us today. </strong>
+                <strong> Your Communication Hub Awaits</strong>
             </p>
             <ul>
                 <li>
@@ -395,7 +393,7 @@
                             <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
                         </svg>
                     </span>
-                    <span>Unlock Free Messaging on SMS Today! Effortlessly Connect with Your Customers Across Preferred Channels with Just a Few Clicks.</span>
+                    <span>Connect With Your Audience Effortlessly, Ensuring They Receive Your Messages On Their Preferred Platforms.</span>
 
                 </li>
                 <li>
@@ -405,7 +403,16 @@
                             <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
                         </svg>
                     </span>
-                    <span>Discover Monty Mobile APIs or Embrace Effortless Integration with Our User-Friendly No-Code Interface. Customize and Manage Communication Channels Your Way.</span>
+                    <span>Unlock A World Of Possibilities With Monty Communication Platform. From Boosting Customer Interaction To Optimizing Your Communication Strategies.</span>
+                </li>
+                <li>
+                    <span>
+                        <svg id="checked" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <path id="Path_420" data-name="Path 420" d="M.214,13.248A15.8,15.8,0,0,1,7.136,2.674,15.716,15.716,0,0,1,15.976,0a1.181,1.181,0,0,1,1.2,1.114,1.159,1.159,0,0,1-1.065,1.27c-.673.073-1.354.077-2.024.167A13.1,13.1,0,0,0,7.346,5.517a13.055,13.055,0,0,0-4.509,7.036,13.222,13.222,0,0,0,3.04,12.511,12.91,12.91,0,0,0,7.949,4.354A13.236,13.236,0,0,0,24.9,26.244a12.947,12.947,0,0,0,4.224-6.787,28.717,28.717,0,0,0,.446-2.988c.024-.175.009-.355.029-.53a1.181,1.181,0,0,1,1.282-1.129A1.2,1.2,0,0,1,32,16.073a14.365,14.365,0,0,1-.575,4.164,15.825,15.825,0,0,1-11.586,11.29,24.337,24.337,0,0,1-2.647.433,18.958,18.958,0,0,1-2.392,0,15.474,15.474,0,0,1-6.99-2.2,15.807,15.807,0,0,1-7.6-11A18.937,18.937,0,0,1,.214,13.248Z" transform="translate(-0.004 0)" />
+                            <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
+                        </svg>
+                    </span>
+                    <span>Our Platform Empowers You To Create, Manage, And Enhance Your Customer Relationships With Ease.</span>
                 </li>
             </ul>
         </div>
@@ -440,9 +447,17 @@
                         <input type="checkbox" name="newsletter" />
                         <span class="grey-text">I want to receive MontyMobile news, trends, or blogs by email.</span>
                     </div>
-                    <div class="grey-text">
-                        By signing up, you confirm that you've read and accepted our <a href="<?= home_url() ?>/omni-channel-terms-and-conditions">Terms and Conditions</a> and our <a href="<?= home_url() ?>/omni-channel-privacy-policy">Privacy Notice</a>.
+                    <div class="input-wrapper">
+                        <input type="checkbox" name="terms" />
+                        <span class="grey-text">
+                            I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/omni-channel-terms-and-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/omni-channel-privacy-policy">Privacy Policy</a>.
+                        </span>
+                        <div class="error" id="termsError"></div>
                     </div>
+                    <div id="error-container">
+
+                    </div>
+
                     <input type="submit" id="signUpSubmit" value="SIGN UP" />
                     <div class="loader-container" id="form-loader">
                         <span class="loader"></span>
@@ -467,10 +482,15 @@
     var resendLoader = document.getElementById("resend-loader");
 
     let resendInterval; // Global variable to store the interval ID
+    let currentEmail = ''; // Global variable to store the current email
 
     function isValidEmail(email) {
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(email);
+    }
+
+    function hasSpaces(str) {
+        return /^\s|\s$/.test(str); // Matches if there's a space at the beginning or end
     }
 
     function showError(inputElement, errorElement, message) {
@@ -487,29 +507,14 @@
     function openPopup(data, email, error) {
         resetPopup();
         //console.log(data);
-        if (error) {
-            popup.classList.add("p-error");
-            signUpMessage.innerHTML = "Sign Up Not Successful";
-            signUpEmailMessage.innerHTML = "Please Try Again Later";
-            popup.classList.add('open');
-            return;
-        }
-        if (data && !data.success) {
-            popup.classList.add("p-error");
-            popup.classList.add("with-resend");
-            signUpMessage.innerHTML = "Sign Up Not Successful";
-            signUpEmailMessage.innerHTML = data.message;
-            popup.classList.add('open');
-            return;
-        }
 
         if (data && data.success) {
 
             signUpMessage.innerHTML = "Sign Up Successful";
-            signUpEmailMessage.innerHTML = "We Sent A Confirmation Email to ";
+            signUpEmailMessage.innerHTML = "A verification link was sent to ";
             signUpEmailMessage.innerHTML += email;
             signUpEmailMessage.innerHTML += "<br>";
-            signUpEmailMessage.innerHTML += "Check Your Email And Click On The Link to Continue";
+            signUpEmailMessage.innerHTML += "Please open your inbox and click on the provided link to finalize your registration. If you do not see the email within a few minutes, be sure to check your spam folder.";
             popup.classList.add('open');
             return;
         }
@@ -531,9 +536,10 @@
     }
 
     function startResendTimer(email) {
+        clearInterval(resendInterval);
         resendButton.classList.remove("active");
-        resendButton.removeEventListener('click', function(e) {});
-        let timer = 120,
+        //resendButton.removeEventListener('click', function(e) {});
+        let timer = 5,
             minutes, seconds;
         resendInterval = setInterval(() => {
             minutes = parseInt(timer / 60, 10);
@@ -554,12 +560,15 @@
     function onCountdownComplete(email) {
         // Event to fire when countdown reaches 0
         resendButton.classList.add("active");
-        resendButton.addEventListener('click', function(e) {
+    }
+
+    function resendEmail(email) {
+        if (resendButton.classList.contains('active')) {
             resendLoader.classList.add('active');
             var data = {
                 UserName: email,
             };
-            fetch('https://mm-omni-software-vip-qa.montylocal.net/member/api/client/v1/client/resend-email', {
+            fetch('https://mm-omni-api-software-qa.montylocal.net/member/api/client/v1/client/resend-email', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
@@ -573,20 +582,75 @@
                     resendLoader.classList.remove('active');
                     console.log('Success email:', data);
                     startResendTimer(email);
-
                 })
                 .catch((error) => {
                     resendLoader.classList.remove('active');
                     console.log('Error emails:', error);
+                    startResendTimer(email);
                 });
-        });
+        }
     }
 
-
+    // Attach event listener once, not on each countdown completion
+    resendButton.addEventListener('click', function(e) {
+        if (resendButton.classList.contains('active')) {
+            resendEmail(currentEmail);
+        }
+    });
 
     closePopupButton.addEventListener('click', function(e) {
         closePopup();
     });
+
+    document.querySelector('input[name="companyEmail"]').addEventListener('input', function(e) {
+        document.getElementById('error-container').innerHTML = '';
+        document.getElementById('companyEmailError').textContent = "";
+        this.classList.remove('error-border');
+    });
+
+    document.querySelector('input[name="firstName"]').addEventListener('input', function(e) {
+        document.getElementById('error-container').innerHTML = '';
+        document.getElementById('firstNameError').textContent = "";
+        this.classList.remove('error-border');
+    });
+
+    document.querySelector('input[name="lastName"]').addEventListener('input', function(e) {
+        document.getElementById('error-container').innerHTML = '';
+        document.getElementById('lastNameError').textContent = "";
+        this.classList.remove('error-border');
+    });
+
+    document.querySelector('input[name="terms"]').addEventListener('change', function(e) {
+        document.getElementById('error-container').innerHTML = '';
+        document.getElementById('termsError').textContent = "";
+    });
+
+    function addGeneralError(message) {
+        // Get the error container element
+        const errorContainer = document.getElementById('error-container');
+
+        // Clear the contents of the error container
+        errorContainer.innerHTML = '';
+        // Create the error div element
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'alert fade show alert-danger alert-dismissible';
+
+        // Create the close button element
+        const closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.className = 'btn-close';
+        closeButton.setAttribute('data-bs-dismiss', 'alert');
+
+        // Create the text node for the custom message
+        const messageText = document.createTextNode(message);
+
+        // Append the elements to the error div
+        errorDiv.appendChild(closeButton);
+        errorDiv.appendChild(messageText);
+
+        // Append the error div to the #error-container div
+        document.getElementById('error-container').appendChild(errorDiv);
+    }
 
     signUpForm.addEventListener('submit', function(e) {
         formLoader.classList.add("active");
@@ -594,10 +658,12 @@
         var companyEmail = document.querySelector('input[name="companyEmail"]');
         var firstName = document.querySelector('input[name="firstName"]');
         var lastName = document.querySelector('input[name="lastName"]');
+        var terms = document.querySelector('input[name="terms"]');
 
         var companyEmailError = document.getElementById('companyEmailError');
         var firstNameError = document.getElementById('firstNameError');
         var lastNameError = document.getElementById('lastNameError');
+        var termsError = document.getElementById('termsError');
 
         var isValid = true;
 
@@ -614,6 +680,9 @@
         if (!firstName.value) {
             showError(firstName, firstNameError, 'First Name is required.');
             isValid = false;
+        } else if (hasSpaces(firstName.value)) {
+            showError(firstName, firstNameError, 'Ensure there are no spaces at the beginning or end.');
+            isValid = false;
         } else {
             clearError(firstName, firstNameError);
         }
@@ -621,8 +690,18 @@
         if (!lastName.value) {
             showError(lastName, lastNameError, 'Last Name is required.');
             isValid = false;
+        } else if (hasSpaces(lastName.value)) {
+            showError(lastName, lastNameError, 'Ensure there are no spaces at the beginning or end.');
+            isValid = false;
         } else {
             clearError(lastName, lastNameError);
+        }
+
+        if (!terms.checked) {
+            showError(terms, termsError, 'Please agree to the Terms & Conditions and Privacy Policy.');
+            isValid = false;
+        } else {
+            clearError(terms, termsError);
         }
 
         if (isValid) {
@@ -636,7 +715,7 @@
                 ParentId: "4393001f-064d-42b7-b77f-d4bb0365056a"
             };
 
-            fetch('https://mm-omni-software-vip-qa.montylocal.net/member/api/client/v1/client/register-external', {
+            fetch('https://mm-omni-api-software-qa.montylocal.net/member/api/client/v1/client/register-external', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
@@ -649,16 +728,26 @@
                 .then(data => {
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
-                    startResendTimer(companyEmail.value);
-                    openPopup(data, companyEmail.value, false);
+
+                    if (data && !data.success) {
+                        addGeneralError(data.message);
+                    }
+
+                    if (data && data.success) {
+                        document.getElementById('error-container').innerHTML = '';
+                        currentEmail = companyEmail.value;
+                        startResendTimer(currentEmail);
+                        openPopup(data, companyEmail.value, false);
+                    }
+
                     signUpForm.reset();
 
                 })
                 .catch((error) => {
                     formLoader.classList.remove("active");
-                    //alert("ama");
                     //console.log('Error:', error);
-                    openPopup(error, companyEmail.value, true);
+                    //openPopup(error, companyEmail.value, true);
+                    addGeneralError("An error occurred");
                     signUpForm.reset();
                 });
         }
