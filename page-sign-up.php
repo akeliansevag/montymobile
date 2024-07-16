@@ -964,7 +964,7 @@
                         openPopup(data, companyEmail.value, false);
                     }
 
-                    signUpForm.reset();
+                    //signUpForm.reset();
 
                 })
                 .catch((error) => {
@@ -974,7 +974,7 @@
                     //console.log('Error:', error);
                     //openPopup(error, companyEmail.value, true);
                     addGeneralError("An error occurred");
-                    signUpForm.reset();
+                    //signUpForm.reset();
                 });
         }
     });
