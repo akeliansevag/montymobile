@@ -903,9 +903,9 @@
                 .then(response => response.json())
                 .then(data => {
                     // Reset reCAPTCHA
-                    if (recaptchaWidget !== undefined) {
-                        grecaptcha.reset(recaptchaWidget);
-                    }
+                    // if (recaptchaWidget !== undefined) {
+                    //     grecaptcha.reset(recaptchaWidget);
+                    // }
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
 
