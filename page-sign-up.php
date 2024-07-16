@@ -538,7 +538,8 @@
                         <div class="error" id="termsError"></div>
                     </div>
                     <div class="mt-3">
-                        <div class="g-recaptcha" data-sitekey="6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5"></div>
+                        <div id="recaptcha-container"></div>
+                        <!-- <div class="g-recaptcha" data-sitekey="6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5"></div> -->
                         <div class="error" id="recaptchaError"></div>
                     </div>
 
@@ -561,6 +562,16 @@
 </section>
 
 <script>
+    // Initialize reCAPTCHA
+    var recaptchaWidget;
+
+    function initializeRecaptcha() {
+        recaptchaWidget = grecaptcha.render('recaptcha-container', {
+            'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5', // Replace with your reCAPTCHA site key
+            'theme': 'light' // Adjust theme as needed
+        });
+    }
+
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
 
@@ -878,6 +889,10 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    // Reset reCAPTCHA
+                    if (recaptchaWidget !== undefined) {
+                        grecaptcha.reset(recaptchaWidget);
+                    }
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
 
@@ -896,6 +911,10 @@
 
                 })
                 .catch((error) => {
+                    // Reset reCAPTCHA
+                    if (recaptchaWidget !== undefined) {
+                        grecaptcha.reset(recaptchaWidget);
+                    }
                     formLoader.classList.remove("active");
                     //console.log('Error:', error);
                     //openPopup(error, companyEmail.value, true);
