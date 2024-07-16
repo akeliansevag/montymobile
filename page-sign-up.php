@@ -106,6 +106,7 @@
 
     .sign-up-form-container h2 {
         font-size: 38px;
+        margin-bottom: 30px;
     }
 
     .sign-up-form input[type="text"],
@@ -126,7 +127,7 @@
 
     .sign-up-form .input-wrapper.checkbox-wrapper {
 
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     .sign-up-form .input-wrapper label {
@@ -138,6 +139,7 @@
         border-radius: 50px;
         padding: 10px;
         font-size: 14px;
+        padding-left: 18px;
     }
 
     #signUpSubmit {
@@ -150,12 +152,15 @@
         font-size: 20px;
         line-height: normal;
         margin-top: 30px;
-        font-weight: bold;
+        font-weight: 600;
         padding-top: 13px;
+        border: 2px solid var(--mmPink);
     }
 
     #signUpSubmit:hover {
-        background-color: #b7b7b7;
+        background-color: #ffffff;
+        color: var(--mmPink);
+        border-color: var(--mmPink);
     }
 
     .grey-text {
@@ -324,6 +329,16 @@
         display: none;
     }
 
+    .icon.unchecked use {
+        fill: #000;
+        /* Default fill color */
+    }
+
+    /* Change fill on hover */
+    input[type=checkbox]:hover+.checkbox-label .icon.unchecked use {
+        fill: #ed204c;
+        /* New fill color on hover */
+    }
 
     .loader {
         width: 25px;
@@ -344,6 +359,10 @@
         100% {
             transform: rotate(360deg);
         }
+    }
+
+    p.account {
+        font-size: 13px;
     }
 
     @media only screen and (max-width:1399px) {
@@ -548,7 +567,7 @@
 
                     <input type="submit" id="signUpSubmit" value="SIGN UP" />
                     <div class="text-center mt-3 mb-2">
-                        <p>Already have an account? <a href="">Sign In</a></p>
+                        <p class="account">Already have an account? <a href="https://app.montymobile.com/">Sign In</a></p>
                     </div>
                     <div class="loader-container" id="form-loader">
                         <span class="loader"></span>
