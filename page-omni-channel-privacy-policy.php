@@ -16,7 +16,7 @@
     </div><!--container-->
 </section>
 <script>
-    const apiUrl = 'https://mm-omni-api-software-dev.montylocal.net/catalog/api/v1/Content/Privacy_Policy';
+    const apiUrl = 'https://mm-omni-software-vip-qa.montylocal.net/catalog/api/v1/Content/Privacy_Policy';
     const headers = {
         'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
         'LanguageCode': 'en'
