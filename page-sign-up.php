@@ -368,7 +368,7 @@
         <p id="sign-up-email-message"></p>
         <div id="resend-container" class="resend-container">
 
-            <div id="resend-clock">00:05</div>
+            <div id="resend-clock">01:00</div>
             <div id="resend-button">Resend Email</div>
             <div class="loader-container" id="resend-loader">
                 <span class="loader"></span>
@@ -539,7 +539,7 @@
         clearInterval(resendInterval);
         resendButton.classList.remove("active");
         //resendButton.removeEventListener('click', function(e) {});
-        let timer = 5,
+        let timer = 60,
             minutes, seconds;
         resendInterval = setInterval(() => {
             minutes = parseInt(timer / 60, 10);
