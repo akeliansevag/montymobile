@@ -83,7 +83,6 @@ if (get_field("dark_theme")) {
 	<noscript>
 		<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=609028&fmt=gif" />
 	</noscript>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<?php wp_head(); ?>
 </head>
 
