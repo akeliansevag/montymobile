@@ -683,7 +683,6 @@
     }
 
     function onReCaptchaSuccess(response) {
-        alert("success");
         // This function will be called when reCAPTCHA is successfully completed
         clearError(false, document.getElementById("recaptchaError"));
     }
