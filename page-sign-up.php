@@ -641,7 +641,10 @@
 
     function clearError(inputElement, errorElement) {
         errorElement.textContent = '';
-        inputElement.classList.remove('error-border');
+        if (inputElement) {
+            inputElement.classList.remove('error-border');
+        }
+
     }
 
     function openPopup(data, email, error) {
@@ -810,10 +813,10 @@
 
         // Validate reCAPTCHA
         if (recaptchaResponse.length === 0) {
-            showError(null, recaptchaError, 'Please complete the reCAPTCHA.');
+            showError(false, recaptchaError, 'Please complete the reCAPTCHA.');
             isValid = false;
         } else {
-            clearError(null, recaptchaError);
+            clearError(false, recaptchaError);
         }
 
         if (!companyEmail.value) {
