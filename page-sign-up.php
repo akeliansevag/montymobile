@@ -845,7 +845,7 @@
         errorContainer.innerHTML = '';
         // Create the error div element
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'alert fade show alert-danger alert-dismissible';
+        errorDiv.className = 'mt-3 alert fade show alert-danger alert-dismissible';
 
         // Create the close button element
         const closeButton = document.createElement('button');
