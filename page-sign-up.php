@@ -4,6 +4,14 @@
         margin: 0;
     }
 
+    a {
+        color: var(--mmPink);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
     .sign-up-section {
         background-color: white;
         display: flex;
@@ -120,7 +128,7 @@
     }
 
     .sign-up-form .input-wrapper input {
-        border: 2px solid #e1e1e1;
+        border: 1px solid #9b9b9b;
         border-radius: 50px;
         padding: 10px;
         font-size: 14px;
@@ -136,6 +144,8 @@
         font-size: 20px;
         line-height: normal;
         margin-top: 30px;
+        font-weight: bold;
+        padding-top: 13px;
     }
 
     #signUpSubmit:hover {
@@ -143,7 +153,7 @@
     }
 
     .grey-text {
-        color: #9e9e9e;
+        color: #9b9b9b;
         font-size: 14px;
     }
 
@@ -154,7 +164,7 @@
     }
 
     .input-wrapper input.error-border {
-        border-color: red;
+        border-color: #d50000;
     }
 
     .sign-up-popup {
@@ -459,6 +469,9 @@
                     </div>
 
                     <input type="submit" id="signUpSubmit" value="SIGN UP" />
+                    <div class="text-center mt-3 mb-2">
+                        <p>Already have an account? <a href="">Sign In</a></p>
+                    </div>
                     <div class="loader-container" id="form-loader">
                         <span class="loader"></span>
                     </div>
