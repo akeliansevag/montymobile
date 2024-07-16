@@ -594,11 +594,7 @@
         });
     };
 
-    function onReCaptchaSuccess(response) {
-        alert("success");
-        // This function will be called when reCAPTCHA is successfully completed
-        clearError(document.getElementById("recaptchaError"));
-    }
+
 
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
@@ -684,6 +680,12 @@
             inputElement.classList.remove('error-border');
         }
 
+    }
+
+    function onReCaptchaSuccess(response) {
+        alert("success");
+        // This function will be called when reCAPTCHA is successfully completed
+        clearError(false, document.getElementById("recaptchaError"));
     }
 
     function openPopup(data, email, error) {
