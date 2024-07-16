@@ -917,6 +917,7 @@
 
                     if (data && !data.success) {
                         addGeneralError(data.message);
+                        return;
                     }
 
                     if (data && data.success) {
