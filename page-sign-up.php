@@ -590,7 +590,7 @@
     var onloadCallback = function() {
         grecaptcha.render('recaptcha-container', {
             'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5',
-            'callback': onReCaptchaSuccess
+            'data-callback': onReCaptchaSuccess
         });
     };
 
