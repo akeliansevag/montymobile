@@ -589,9 +589,16 @@
 
     var onloadCallback = function() {
         grecaptcha.render('recaptcha-container', {
-            'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5'
+            'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5',
+            'callback': onReCaptchaSuccess
         });
     };
+
+    function onReCaptchaSuccess(response) {
+        // This function will be called when reCAPTCHA is successfully completed
+        console.log("reCAPTCHA completed!");
+        clearError(document.getElementById("recaptchaError"));
+    }
 
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
