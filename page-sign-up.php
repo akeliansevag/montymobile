@@ -572,6 +572,8 @@
         });
     }
 
+    initializeRecaptcha();
+
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
 
