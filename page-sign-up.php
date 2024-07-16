@@ -123,6 +123,11 @@
         margin-bottom: 20px;
     }
 
+    .sign-up-form .input-wrapper.checkbox-wrapper {
+
+        margin-bottom: 5px;
+    }
+
     .sign-up-form .input-wrapper label {
         margin: 5px;
     }
@@ -155,6 +160,10 @@
     .grey-text {
         color: #9b9b9b;
         font-size: 14px;
+    }
+
+    .input-wrapper .grey-text {
+        padding-top: 3px;
     }
 
     .error {
@@ -274,6 +283,46 @@
         transform: translateX(-50%);
         bottom: 2px;
     }
+
+    /* Hide the default checkbox */
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    /* Style the label as a container */
+    .checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* Style the icons */
+    .icon {
+        width: 16px;
+        /* Adjust size as needed */
+        height: 16px;
+        /* Adjust size as needed */
+        fill: currentColor;
+        /* Use current text color */
+        margin-right: 4px;
+        /* Adjust spacing between icon and label text */
+    }
+
+    /* Initially hide the checked icon */
+    .checked {
+        display: none;
+    }
+
+    /* Show checked icon when checkbox is checked */
+    input[type="checkbox"]:checked+.checkbox-label .checked {
+        display: inline-block;
+    }
+
+    /* Hide unchecked icon when checkbox is checked */
+    input[type="checkbox"]:checked+.checkbox-label .unchecked {
+        display: none;
+    }
+
 
     .loader {
         width: 25px;
@@ -453,15 +502,37 @@
                             <div class="error" id="lastNameError"></div>
                         </div>
                     </div>
-                    <div class="input-wrapper">
-                        <input type="checkbox" name="newsletter" />
-                        <span class="grey-text">I want to receive MontyMobile news, trends, or blogs by email.</span>
+
+
+                    <div class="input-wrapper checkbox-wrapper">
+                        <input type="checkbox" name="newsletter" id="newsletter" />
+                        <label for="newsletter" class="checkbox-label">
+                            <svg class="icon unchecked">
+                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
+                            </svg>
+                            <svg class="icon checked">
+                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
+                            </svg>
+                            <span class="grey-text">
+                                I want to receive MontyMobile news, trends, or blogs by email.
+                            </span>
+                        </label>
+
                     </div>
-                    <div class="input-wrapper">
-                        <input type="checkbox" name="terms" />
-                        <span class="grey-text">
-                            I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/omni-channel-terms-and-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/omni-channel-privacy-policy">Privacy Policy</a>.
-                        </span>
+                    <div class="input-wrapper checkbox-wrapper">
+                        <input type="checkbox" name="terms" id="terms" />
+                        <label for="terms" class="checkbox-label">
+                            <svg class="icon unchecked">
+                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
+                            </svg>
+                            <svg class="icon checked">
+                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
+                            </svg>
+                            <span class="grey-text">
+                                I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/omni-channel-terms-and-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/omni-channel-privacy-policy">Privacy Policy</a>.
+                            </span>
+                        </label>
+
                         <div class="error" id="termsError"></div>
                     </div>
                     <div id="error-container">
