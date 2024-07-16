@@ -562,7 +562,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var recaptchaWidget;
+        let recaptchaWidget;
 
         function initializeRecaptcha() {
             recaptchaWidget = grecaptcha.render('recaptcha-container', {
