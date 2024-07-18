@@ -1537,6 +1537,13 @@ footer .social-icons svg:hover path{
     margin-left: calc((100vw - 1320px - 15px)/2);
   }
 
+  .container-padding-left{
+    padding-left: calc((100vw - 1320px + 30px)/2);
+  }
+  .container-padding-right{
+    padding-right: calc((100vw - 1320px + 30px)/2);
+  }
+
   .grid-items{
     display: grid;
     grid-gap: 15px;
@@ -2891,6 +2898,8 @@ background-position: right 12px center;
 .read-more[aria-expanded='true']::after{
   content: 'read less';
 }
+
+
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
@@ -2906,6 +2915,14 @@ background-position: right 12px center;
   @media only screen and (max-width:1399px) {
     .container-margin{
       margin-left: calc((100vw - 1140px)/2);
+    }
+
+    .container-padding-left{
+      padding-left: calc((100vw - 1140px)/2);
+    }
+
+    .container-padding-right{
+      padding-right: calc((100vw - 1140px)/2);
     }
     .mission-vision-text .good-block{
       padding-right: 0;
@@ -2942,6 +2959,14 @@ background-position: right 12px center;
   @media only screen and (max-width:1199px) {
     .container-margin{
       margin-left: calc((100vw - 960px)/2);
+    }
+
+    .container-padding-left{
+      padding-left: calc((100vw - 960px)/2);
+    }
+
+    .container-padding-right{
+      padding-right: calc((100vw - 960px)/2);
     }
       .menu-wrapper {
         display: none;
@@ -3031,6 +3056,12 @@ background-position: right 12px center;
     .container-margin{
       margin-left: calc((100vw - 720px)/2);
     }
+    .container-padding-left{
+      padding-left: calc((100vw - 720px)/2);
+    }
+    .container-padding-right{
+      padding-right: calc((100vw - 720px)/2);
+    }
     .home-background{
       height:30vh;
     }
@@ -3096,6 +3127,12 @@ background-position: right 12px center;
 	  }
     .container-margin{
       margin-left: calc((100vw - 540px)/2);
+    }
+    .container-padding-left{
+      padding-left: calc((100vw - 540px)/2);
+    }
+    .container-padding-right{
+      padding-right: calc((100vw - 540px)/2);
     }
     .performance-active::before{
       display: none;
@@ -3169,6 +3206,14 @@ background-position: right 12px center;
     
     .container-margin{
       margin-left: 0;
+    }
+
+    .container-padding-left{
+      padding-left: 0;
+    }
+
+    .container-padding-right{
+      padding-right: 0;
     }
     .solution-items{
       grid-template-columns: repeat(1, minmax(0, 1fr));

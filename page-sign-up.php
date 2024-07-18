@@ -644,7 +644,7 @@
 
     async function fetchGuid(apiUrl) {
         const headers = {
-            'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+            'Tenant': '98df9ffe-fa84-41ee-9293-33614722d952',
             'LanguageCode': 'en'
         };
 
@@ -668,8 +668,8 @@
 
     async function fetchGuids() {
         try {
-            TermsAndConditionsGuid = await fetchGuid('https://mm-omni-api-software-qa.montylocal.net/catalog/api/v1/Content/Term_Condition');
-            PrivacyPolicyGuid = await fetchGuid('https://mm-omni-api-software-qa.montylocal.net/catalog/api/v1/Content/Privacy_Policy');
+            TermsAndConditionsGuid = await fetchGuid('https://omni-apis.montymobile.com/catalog/api/v1/Content/Term_Condition');
+            PrivacyPolicyGuid = await fetchGuid('https://omni-apis.montymobile.com/catalog/api/v1/Content/Privacy_Policy');
 
             // Now you can use TermsAndConditionsGuid and PrivacyPolicyGuid
             //console.log('Terms and Conditions Guid:', TermsAndConditionsGuid);
@@ -780,11 +780,11 @@
             var data = {
                 UserName: email,
             };
-            fetch('https://mm-omni-api-software-qa.montylocal.net/member/api/client/v1/client/resend-email', {
+            fetch('https://omni-apis.montymobile.com/member/api/client/v1/client/resend-email', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
-                        'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+                        'Tenant': '98df9ffe-fa84-41ee-9293-33614722d952',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data)
@@ -933,14 +933,14 @@
                 TermsAndConditionsGuid: TermsAndConditionsGuid,
                 PrivacyPolicyGuid: PrivacyPolicyGuid,
                 Section: "ONE_WAY_SMS",
-                ParentId: "4393001f-064d-42b7-b77f-d4bb0365056a"
+                ParentId: "0e73082d-e634-47d7-90eb-311caafd6423"
             };
 
-            fetch('https://mm-omni-api-software-qa.montylocal.net/member/api/client/v1/client/register-external', {
+            fetch('https://omni-apis.montymobile.com/member/api/client/v1/client/register-external', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
-                        'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+                        'Tenant': '98df9ffe-fa84-41ee-9293-33614722d952',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data)

@@ -16,9 +16,9 @@
     </div><!--container-->
 </section>
 <script>
-    const apiUrl = 'https://mm-omni-api-software-qa.montylocal.net/catalog/api/v1/Content/Term_Condition';
+    const apiUrl = 'https://omni-apis.montymobile.com/catalog/api/v1/Content/Term_Condition';
     const headers = {
-        'Tenant': '3d936a5d-1d56-450b-a04c-f1a7b5c2d5d4',
+        'Tenant': '98df9ffe-fa84-41ee-9293-33614722d952',
         'LanguageCode': 'en'
     };
 
