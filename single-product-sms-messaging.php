@@ -42,25 +42,40 @@
         list-style-type: none;
     }
 
+    ul.disc li {
+        position: relative;
+        /* Position for pseudo-element */
+        padding-left: 28px;
+        /* Adjust padding for text clearance */
+        margin-bottom: 10px;
+        /* Adjust spacing between list items */
+    }
+
     ul.disc li::before {
-        content: " ";
+        content: '';
+        /* Required for pseudo-element */
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 18px;
         height: 18px;
         background-color: black;
-        display: flex;
         border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+        /* Create a circle */
     }
 
-    ul.disc li::before ::after {
-        content: " ";
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: white;
+    ul.disc li::after {
+        content: '';
+        /* Required for pseudo-element */
         position: absolute;
+        left: 4px;
+        top: 0;
+
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+        /* Create a circle */
     }
 </style>
 <?php the_content(); ?>
