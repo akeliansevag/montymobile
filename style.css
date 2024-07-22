@@ -2899,6 +2899,113 @@ background-position: right 12px center;
   content: 'read less';
 }
 
+.boxed {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px #00000029;
+  border-radius: 30px;
+  padding: 24px;
+  text-align: center;
+}
+
+.boxed h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.boxed h4.red {
+  color: var(--mmPink);
+}
+
+.boxed p {
+  margin-bottom: 0;
+}
+
+.black-red {
+  display: flex;
+}
+
+.black-red>div {
+  flex: 1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+.black-red div:nth-child(1) {
+  background-color: var(--mmBlack);
+  padding-right: 5%;
+}
+
+.black-red div:nth-child(2) {
+  background-color: var(--mmPink);
+  padding-left: 5%;
+}
+
+ul.disc {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.disc li {
+  position: relative;
+  /* Position for pseudo-element */
+  padding-left: 28px;
+  /* Adjust padding for text clearance */
+  margin-bottom: 28px;
+  /* Adjust spacing between list items */
+}
+
+ul.disc li::before {
+  content: '';
+  /* Required for pseudo-element */
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--mmPink);
+  border-radius: 50%;
+  /* Create a circle */
+}
+
+ul.disc li::after {
+  content: '';
+  /* Required for pseudo-element */
+  position: absolute;
+  left: 4px;
+  top: 7px;
+
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  border-radius: 50%;
+  /* Create a circle */
+}
+
+ul.disc.black li::before {
+  content: '';
+
+  background-color: #000000;
+  /* Create a circle */
+}
+
+.mm-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.mm-grid.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+section.color-white {
+  color: white;
+}
+
+.w-75-p{
+  width:75%;
+}
+
 
   /*------------------------------------*\
     RESPONSIVE
@@ -3079,6 +3186,21 @@ background-position: right 12px center;
     .solution-items{
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .black-red{
+      flex-direction: column;
+    }
+
+    .black-red>div{
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .w-75-p{
+      width: 100%;
+    }
+    .mm-grid.two-columns {
+      grid-template-columns: 1fr;
+    }
   }
   
   @media only screen and (max-width:768px) {
@@ -3209,11 +3331,13 @@ background-position: right 12px center;
     }
 
     .container-padding-left{
-      padding-left: 0;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .container-padding-right{
-      padding-right: 0;
+      padding-right: 20px;
+      padding-left: 20px;
     }
     .solution-items{
       grid-template-columns: repeat(1, minmax(0, 1fr));
