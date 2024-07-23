@@ -2906,6 +2906,14 @@ background-position: right 12px center;
   padding: 24px;
   text-align: center;
 }
+
+.mm-grid.two-columns .boxed:hover{
+  box-shadow: 0px 0px 20px #ED204C26;
+}
+
+.mm-grid.two-columns .boxed:hover h3{
+  color:var(--mmPink);
+}
 .boxed.wide-padding{
   padding-left:100px;
   padding-right: 100px;
@@ -2927,7 +2935,7 @@ background-position: right 12px center;
   background-color: var(--mmPink);
 }
 
-.boxed .box-separator{
+.red-separator{
   background-color: var(--mmPink);
   height: 1px;
   width: 100%;
@@ -3077,6 +3085,40 @@ section.color-white {
   color:white;
 }
 
+.buttons{
+  display: flex;
+  gap:15px;
+}
+.mm-button-new{
+  color:white;
+  border-radius:40px;
+  text-align: center;
+  background-color:var(--mmPink);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--mmPink);
+  padding:15px;
+  font-size: 20px;
+  flex:1;
+
+}
+
+.mm-button-new:hover{
+  border-color: white;
+  background-color: transparent;
+  color:white;
+  
+}
+
+.mm-button-new.alternate{
+  border-color: white;
+  background-color: transparent;
+}
+
+.mm-button-new.alternate:hover{
+  border-color: var(--mmPink);
+  background-color: var(--mmPink);
+}
 
   /*------------------------------------*\
     RESPONSIVE
@@ -3403,6 +3445,10 @@ section.color-white {
     .container, .container-fluid{
       padding-right:20px !important;
       padding-left:20px !important;
+    }
+
+    .buttons{
+      flex-direction: column;
     }
   }
   

@@ -5,7 +5,7 @@
         <div class="boxed w-75-p mx-auto wide-padding">
             <h3>Transform Customer Journeys with WhatsApp</h3>
             <p>Empower your business with secure interactions, 24/7 support, and tailor-made customer journeys using the world’s most popular messaging app.</p>
-            <div class="box-separator"></div>
+            <div class="red-separator"></div>
             <p><strong><span class="color-pink">Experience the Best:</span></strong> Join 1,000+ global brands that trust WhatsApp powered by MontyMobile.</p>
         </div>
     </div>
@@ -238,5 +238,5 @@
     </div>
 </section>
 
-<?php get_template_part("template-parts/product/actions"); ?>
+<?php get_template_part("template-parts/contact-us", null, ['type' => 'whatsapp']); ?>
 <?php get_footer(); ?>

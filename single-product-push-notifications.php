@@ -124,14 +124,6 @@
         </div>
     </div>
 </section>
-<section class="py-5 bg-black position-relative">
-    <img class="top-0 position-absolute object-fit-cover w-100 h-100 z-0" src="<?= get_template_directory_uri() ?>/assets/img/bg-contact-img.webp" alt="">
 
-    <div class="container">
-        <div class="contact-box">
-
-        </div>
-    </div>
-</section>
-<?php get_template_part("template-parts/product/actions"); ?>
+<?php get_template_part("template-parts/contact-us"); ?>
 <?php get_footer(); ?>

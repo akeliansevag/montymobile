@@ -151,5 +151,5 @@
         </div>
     </div>
 </section>
-<?php get_template_part("template-parts/product/actions"); ?>
+<?php get_template_part("template-parts/contact-us"); ?>
 <?php get_footer(); ?>
