@@ -99,7 +99,7 @@
         ?>
         <div class="mm-grid two-columns">
             <?php foreach ($items as $item) : ?>
-                <div class="boxed d-flex align-items-center">
+                <div class="boxed d-flex justify-content-center align-items-center">
                     <div>
                         <h3><?= $item['title'] ?></h3>
                         <p><?= $item['description'] ?></p>
