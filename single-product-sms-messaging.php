@@ -112,7 +112,9 @@
     </div>
 </section>
 
-<section class="bg-black color-white py-5">
+<section class="bg-black color-white py-5 position-relative overflow-hidden">
+    <img class="z-0 mw-100 position-absolute start-0 bottom-0" src="<?= get_template_directory_uri() ?>/assets/img/left-dots.webp" alt="">
+    <img class="z-0 mw-100 position-absolute end-0 top-0" src="<?= get_template_directory_uri() ?>/assets/img/right-dots.webp" alt="">
     <div class="container py-5">
         <h3 class="mb-3">Detailed Analytics</h3>
         <div class="mm-grid two-columns">
@@ -133,7 +135,7 @@
     </div>
 </section>
 <section class="bg-white py-5">
-    <div class="container">
+    <div class="container my-4">
         <div class="row align-items-center pt-4">
             <div class="col-lg-6">
                 <img class="mw-100" src="<?= get_template_directory_uri() ?>/assets/img/emblem.webp" alt="">

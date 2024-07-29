@@ -140,7 +140,7 @@
     </div>
 </section>
 <section class="bg-white py-5">
-    <div class="container">
+    <div class="container my-4">
         <div class="row align-items-center pt-4">
             <div class="col-lg-6">
                 <img class="mw-100" src="<?= get_template_directory_uri() ?>/assets/img/emblem.webp" alt="">
