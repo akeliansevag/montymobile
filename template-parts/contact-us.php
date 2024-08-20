@@ -13,8 +13,8 @@
 
             <?php endif; ?>
             <div class="buttons mt-4 w-75-p mx-auto">
-                <a class="mm-button-new" href="/sign-up">Sign Up For Free</a>
-                <a class="mm-button-new alternate" href="/contact-us">Contact An Expert</a>
+                <a class="mm-button-new" href="<?= home_url('/sign-up/') ?>">Sign Up For Free</a>
+                <a class="mm-button-new alternate" href="<?= home_url('/contact-us/') ?>">Contact An Expert</a>
             </div>
         </div>
     </div>
