@@ -139,7 +139,7 @@ if (get_field("dark_theme")) {
 						</div>
 						<div class="right-content-wrapper d-flex align-items-center">
 							<a href="<?= home_url('/contact-us/') ?>" class="mm-button transparent d-none d-xl-inline-block">Contact An Expert</a>
-							<a href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up For Free</a>
+							<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up For Free</a>
 							<a href="#" class="search-icon" id="search-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve" stroke="#ffffff">
 
