@@ -112,8 +112,8 @@ if (get_field("dark_theme")) {
 					)
 				);
 				?>
-				<a href="<?= home_url('/contact-us/') ?>" class="mb-3 mm-button inside-menu d-block d-lg-none border-0">Contact An Expert</a>
-				<a href="<?= home_url('/sign-up/') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Sign Up For Free</a>
+				<a href="<?= home_url('/contact-us/') ?>" class="d-block mb-3 mm-button inside-menu d-block d-lg-none border-0">Contact An Expert</a>
+				<a href="<?= home_url('/sign-up/') ?>" class="d-block mm-button inside-menu d-block d-lg-none border-0">Sign Up For Free</a>
 			</div>
 			<div class="background-container">
 				<div class="stars"></div>
@@ -134,29 +134,32 @@ if (get_field("dark_theme")) {
 								<img class="header-logo" src="<?= get_field('logo', 'options') ?>" alt="Monty Mobile Logo">
 							</a>
 						</div>
-						<div class="menu-wrapper">
-							<?= get_template_part("template-parts/menu"); ?>
-						</div>
-						<div class="right-content-wrapper d-flex align-items-center">
-							<a href="<?= home_url('/contact-us/') ?>" class="mm-button transparent d-none d-xl-inline-block">Contact An Expert</a>
-							<a href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up For Free</a>
-							<a href="#" class="search-icon" id="search-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve" stroke="#ffffff">
+						<div class="d-flex">
+							<div class="menu-wrapper">
+								<?= get_template_part("template-parts/menu"); ?>
+							</div>
+							<div class="right-content-wrapper d-flex align-items-center">
+								<a href="<?= home_url('/contact-us/') ?>" class="mm-button transparent d-none d-xl-inline-block">Contact An Expert</a>
+								<a href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up For Free</a>
+								<a href="#" class="search-icon" id="search-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve" stroke="#ffffff">
 
-									<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
 
-									<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
 
-									<g id="SVGRepo_iconCarrier">
-										<g>
-											<path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796 s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"></path>
+										<g id="SVGRepo_iconCarrier">
+											<g>
+												<path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796 s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"></path>
+											</g>
 										</g>
-									</g>
 
-								</svg>
-							</a>
+									</svg>
+								</a>
 
+							</div>
 						</div>
+
 					</div>
 				</div>
 			</header>
