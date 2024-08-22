@@ -83,6 +83,18 @@ if (get_field("dark_theme")) {
 	<noscript>
 		<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=609028&fmt=gif" />
 	</noscript>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-979460023"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'AW-979460023');
+	</script>
+
 	<?php wp_head(); ?>
 </head>
 
