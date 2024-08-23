@@ -2968,6 +2968,31 @@ background-position: right 12px center;
   padding-left: 5%;
 }
 
+.black-red.style-two > div{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.black-red.style-two div:nth-child(1){
+  color:black;
+  background-color: white;  
+}
+
+.black-red.style-two div:nth-child(2){
+  color:white;
+  background-color: black;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+
+}
+
+.py-6{
+  padding-top:6rem;
+  padding-bottom:6rem;
+}
+
 ul.disc {
   list-style-type: none;
   padding-left: 0;
@@ -3027,6 +3052,10 @@ ul.disc.black li::before {
   grid-template-columns: 1fr 1fr;
 }
 
+.gap-10{
+  gap:15vw;
+}
+
 section.color-white {
   color: white;
 }
@@ -3048,6 +3077,7 @@ section.color-white {
   gap:15px;
   align-items:center;
   justify-content: center;
+  max-width: 1000px;
 }
 
 .blurred-box{

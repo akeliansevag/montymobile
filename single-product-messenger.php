@@ -1,5 +1,24 @@
 <?php get_header(); ?>
 <?php the_content(); ?>
+<section class="bg-white py-5">
+    <div class="black-red style-two py-5">
+        <div class="container-padding-left">
+            <ul class="disc mt-3">
+                <li><strong>Brand Enhancement:</strong> Provide a mobile-first experience for your customers.</li>
+                <li><strong>Unified Inbox:</strong> Combine marketing, support, and sales in one messaging platform.</li>
+                <li><strong>Customer Familiarity:</strong> Be present where your customers already are—Facebook Messenger.</li>
+            </ul>
+
+        </div>
+        <div class="container-padding-right">
+            <ul class="disc mt-3">
+                <li><strong>Real-Time Responses:</strong> Address customer needs instantly with automated chatbot conversations.</li>
+                <li><strong>Conversational Commerce:</strong> Facilitate browsing, purchasing, and order confirmations through chat.</li>
+                <li><strong>Ad Conversion:</strong> Convert Facebook ads into conversations and gain insights across the customer journey.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 <section class="bg-white">
     <div class="black-red">
         <div class="container-padding-left">
@@ -26,7 +45,7 @@
 
         </div>
         <div class="container-padding-right">
-            <h5 class="mb-4"><br /><br /></h5>
+            <h5 class="mb-4"><br /></h5>
             <h3>Omni-Channel Capability</h3>
             <ul class="disc black mt-3">
                 <li>Integrate Facebook Messenger into your broader communication strategy for a unified customer experience.</li>
@@ -55,58 +74,64 @@
     <img class="z-0 mw-100 position-absolute end-0 top-0" src="<?= get_template_directory_uri() ?>/assets/img/right-dots.webp" alt="">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 color-black">
-                <h3>Versatile Use Cases for Number Lookup</h3>
-                <p>Monty Mobile’s Number Lookup service is versatile, offering a range of applications to optimize your communication strategy.</p>
+            <div class="col-md-12 color-black">
+                <h3 class="text-center mb-3">Effective Use Cases for Facebook Messenger</h3>
+            </div>
+        </div>
+        <div class="pink-boxes three-columns">
+            <div class="pink-box">
+                <h3>Marketing Campaigns</h3>
+                <ul class="disc black">
+                    <li>Integrate Messenger into your marketing strategy to reach customers with personalized messages and promotions.</li>
+                </ul>
+            </div>
+            <div class="pink-box">
+                <h3>Sales and Promotions</h3>
+                <ul class="disc black">
+                    <li>Drive sales through conversational commerce, allowing customers to shop directly within the chat.</li>
+                </ul>
+            </div>
+            <div class="pink-box">
+                <h3>Ad Engagement</h3>
+                <ul class="disc black">
+                    <li>Convert interactions from Facebook ads into conversations, providing a seamless transition from ad to chat.</li>
+                </ul>
             </div>
         </div>
         <div class="pink-boxes">
             <div class="pink-box">
-                <h3>Real-Time MSISDN Information</h3>
+                <h3>Customer Service Excellence</h3>
                 <ul class="disc black">
-                    <li>Access real-time routing information for improved efficiency in message delivery</li>
+                    <li>Use Facebook Messenger to provide quick, efficient support, improving customer satisfaction.</li>
                 </ul>
             </div>
+
             <div class="pink-box">
-                <h3>Revenue Leakage Prevention</h3>
+                <h3>Appointment Scheduling</h3>
                 <ul class="disc black">
-                    <li>Avoid revenue loss by eliminating inefficiencies in ported-number routing.</li>
+                    <li>Simplify the booking process by enabling customers to schedule appointments through automated replies.</li>
                 </ul>
             </div>
         </div>
         <div class="pink-boxes three-columns">
             <div class="pink-box">
-                <h3>Message Delivery Optimization</h3>
+                <h3>Order Notifications</h3>
                 <ul class="disc black">
-                    <li>Ensure messages reach the correct recipients by verifying numbers before sending, reducing bounce rates.</li>
-                </ul>
-            </div>
-            <div class="pink-box">
-                <h3>Cost-Effective Routing Decisions</h3>
-                <ul class="disc black">
-                    <li>Make informed routing choices based on accurate number data, lowering costs associated with incorrect routing.</li>
+                    <li>Keep customers informed with real-time order confirmations and updates through Messenger.</li>
                 </ul>
             </div>
 
             <div class="pink-box">
-                <h3>Ported-Number Management</h3>
+                <h3>Feedback Collection</h3>
                 <ul class="disc black">
-                    <li>Enhance the accuracy of your number management by identifying ported numbers and their current operators.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="pink-boxes">
-            <div class="pink-box">
-                <h3>Enhanced Service Coverage</h3>
-                <ul class="disc black">
-                    <li>Broaden your service reach with reliable number verification across various networks.</li>
+                    <li>Gather customer feedback directly through chat, making it easy for customers to provide insights.</li>
                 </ul>
             </div>
 
             <div class="pink-box">
-                <h3>Increased Profits</h3>
+                <h3>Loyalty Programs</h3>
                 <ul class="disc black">
-                    <li>Boost your profitability by improving delivery success rates and reducing operational costs.</li>
+                    <li>Engage customers with loyalty programs and rewards, communicated through Messenger.</li>
                 </ul>
             </div>
         </div>
