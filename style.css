@@ -428,9 +428,9 @@ nav.main-menu > ul{
     margin:0;
 }
 
-nav.main-menu > ul > li:last-child a{
+/* nav.main-menu > ul > li:last-child a{
   color:var(--mmPink) !important;
-}
+} */
 
 nav.main-menu > ul > li > a, .no-link-item{
     white-space: nowrap;
