@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php the_content(); ?>
 <section class="bg-white py-5">
     <div class="container">
         <div class="boxed w-75-p mb-3">
