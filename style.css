@@ -3101,7 +3101,7 @@ section.color-white {
   gap:15px;
   align-items:center;
   justify-content: center;
-  max-width: 1000px;
+  /* max-width: 1000px; */
 }
 
 .blurred-box{
