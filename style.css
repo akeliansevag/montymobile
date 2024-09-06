@@ -3214,6 +3214,40 @@ section.color-white {
     margin-top:5px;
   }
 
+
+  .map-bg {
+    width: 100%;
+    position: relative;
+}
+
+.map-img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.map-bg>.row {
+    position: relative;
+    z-index: 1;
+}
+
+.esim-mobile-img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+}
+
+.border-box {
+    border: 1px solid var(--mmPink);
+    padding: 30px;
+    border-radius: 50px;
+}
+
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/

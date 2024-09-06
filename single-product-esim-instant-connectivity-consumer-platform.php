@@ -4,19 +4,19 @@
         <div class="map-bg">
             <img class="map-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/map.svg" alt="Map">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
                     <img class="esim-mobile-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/mobile.svg" alt="Mobile">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-1 order-lg-2">
                     <h2>Connect Instantly, Manage Effortlessly with our Instant-Connectivity Platform.</h2>
-                    <div class="d-flex gap-3">
-                        <img src="<?= get_template_directory_uri() ?>/assets/img/esim/esim-simcard.svg" alt="eSIM Simcard">
+                    <div class="d-flex flex-column flex-lg-row gap-3">
+                        <img style="max-width: 95px;" src="<?= get_template_directory_uri() ?>/assets/img/esim/esim-simcard.svg" alt="eSIM Simcard">
                         <p>Consumer eSIM places subscribers at the heart of convenience. By eliminating the need for physical SIM cards, users can activate or modify mobile plans without manual SIM swaps. This not only reduces delays but also empowers subscribers to easily switch between service providers or packages, promoting a seamless, global mobile experience.</p>
                     </div>
 
-                    <div class="d-flex gap-3">
-                        <p>Our RSP (Remote Sim Provisioning) portal provides mobile operators with a multitude of benefits, streamlining operations and enhancing customer satisfaction. By leveraging the portal, operators can efficiently manage eSIM profile inventory, ensuring timely distribution and activation without the logistical challenges of physical SIM cards.</p>
-                        <img src="<?= get_template_directory_uri() ?>/assets/img/esim/remote-sim.svg" alt="Remote SIM">
+                    <div class="d-flex flex-column flex-lg-row gap-3">
+                        <p class="order-2 order-lg-1">Our RSP (Remote Sim Provisioning) portal provides mobile operators with a multitude of benefits, streamlining operations and enhancing customer satisfaction. By leveraging the portal, operators can efficiently manage eSIM profile inventory, ensuring timely distribution and activation without the logistical challenges of physical SIM cards.</p>
+                        <img style="max-width: 70px;" class="order-1 order-lg-2" src="<?= get_template_directory_uri() ?>/assets/img/esim/remote-sim.svg" alt="Remote SIM">
                     </div>
 
                     <div class="border-box mt-4">
@@ -38,20 +38,20 @@
     <div class="container">
         <div class="blurred-boxes mx-auto py-5 position-relative z-1">
             <div class="blurred-box">
-                <h3>Create Exceptional Experiences</h3>
-                <p>From booking to touch down and beyond, create exceptional experiences for your customers. Send immediate booking confirmations, provide conversational customer support on digital channels, keep travelers informed with pre-flight information, and send check-in and security reminders. Offer flight status updates and notifications, and send targeted upgrade and cross-sell promotions. </p>
+                <h3>Certifications and Accreditations</h3>
+                <p>Monty Mobile has been recognized and accredited by several esteemed organizations, ensuring its commitment to superior quality and utmost security. The company holds the GSMA’s Security Accreditation Scheme (SAS) certification, endorsing it as an approved provider for the safe production and data personalization of eSIMs in the consumer market.</p>
+                <p>
+                    Key certifications held by Monty Mobile include:
+                </p>
 
                 <div class="d-lg-flex justify-content-between">
                     <ul class="disc">
-                        <li>Immediate booking confirmations.</li>
-                        <li>Conversational customer support on digital channels.</li>
-                        <li>Pre-flight information updates.</li>
-
+                        <li><strong>GSMA SAS-SM </strong><br /> Certification, Affirming Its Credibility In Secure ESIM Management</li>
+                        <li><strong>ISO 27001 </strong><br /> Certification, Validating Its Commitment To Information Security</li>
                     </ul>
                     <ul class="disc">
-                        <li>Check-in and security reminders.</li>
-                        <li>Flight status updates and notifications.</li>
-                        <li>Targeted upgrade and cross-sell promotions.</li>
+                        <li><strong>ISO 9001 </strong><br /> Certification, Underscoring Its Adherence To Quality Management Standards</li>
+                        <li><strong>TCA </strong><br /> Trusted Connectivity Alliance Member since February 2024</li>
                     </ul>
                 </div>
 
@@ -69,15 +69,14 @@
             </div>
             <div class="col-lg-6">
                 <h3 class="mb-3 mt-4 mt-lg-0">
-                    Personalized and Timely Communication
+                    Instant Benefits
                 </h3>
-                <p>Support your business with secure, timely, and personalized communication for every use case. Privacy and security through number masking.</p>
                 <ul class="disc">
-                    <li><strong>Fast and reliable authentication with OTPs.</strong></li>
-                    <li><strong>Real-time notifications and reminders.</strong></li>
-                    <li><strong>Cost-effective digital channels for transactional messages.</strong></li>
-                    <li><strong>Promotion and management of loyalty programs.</strong></li>
-                    <li><strong>Collection of customer feedback and reviews.</strong></li>
+                    <li>Management Portal to manage eSIM lifecycle efficiently and to provide inventory management.</li>
+                    <li>Multi-tenancy to manage enterprises and more than one sales channel.</li>
+                    <li>Security, the platform must be GSMA SAS-SM certified.</li>
+                    <li>Compatibility and Interoperability.</li>
+                    <li>Security and Compliance.</li>
                 </ul>
             </div>
         </div>
@@ -89,8 +88,10 @@
     <div class="container">
         <div class="blurred-boxes mx-auto py-5 position-relative z-1">
             <div class="blurred-box">
-                <h3>Prioritize Security and Compliance</h3>
-                <p>Our platform complies with global privacy regulations, allowing you to deploy secure authentication across various touchpoints throughout the customer journey. This ensures your customers’ data is always protected.</p>
+                <h3>eSIM Customer Portal</h3>
+                <p>Our customer portal offers a convenient and efficient way to instantly manage your subscribers’ connectivity needs effortlessly, allowing you
+                    to view and track your transactions, access key metrics, profile logs,
+                    and reports. </p>
 
             </div>
 
@@ -98,38 +99,40 @@
     </div>
 </section>
 
-<style>
-    .map-bg {
-        width: 100%;
-        position: relative;
-    }
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>Provide a seamless and fully digitized customer journey
+                    through a sophisticated portal that will allow you to: </h2>
+            </div>
+        </div>
 
-    .map-img {
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        object-fit: contain;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
 
-    .map-bg>.row {
-        position: relative;
-        z-index: 1;
-    }
+        <div class="mt-4 d-lg-flex justify-content-between">
+            <ul class="disc">
+                <li>Track key metrics, profiles, profile logs and report information.</li>
+                <li>Export all type of reports.</li>
+                <li>Optionally print physical QR vouchers or deliver by email.</li>
+            </ul>
+            <ul class="disc">
+                <li>Troubleshoot customer complaints.</li>
+                <li>Provisioning APIs.</li>
+                <li>Reveal details related to eSIM compliant devices, billing and financial management.</li>
+            </ul>
 
-    .esim-mobile-img {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        display: block;
-    }
 
-    .border-box {
-        border: 1px solid var(--mmPink);
-        padding: 30px;
-        border-radius: 50px;
-    }
-</style>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <p>
+                    Gain real-time insights into various transactions, such as profile activations, deactivations..
+                    Users can access detailed logs based on Different filtering criteria such as ICCID, MSISDN and EID.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<?php get_template_part("template-parts/contact-us"); ?>
 <?php get_footer(); ?>
