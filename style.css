@@ -3248,6 +3248,68 @@ section.color-white {
     border-radius: 50px;
 }
 
+
+.image-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 235px;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.boxed.with-icon {
+  min-height: 230px;
+  padding: 0;
+  margin: 100px 0;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  padding-left: 170px;
+  padding-right: 30px;
+}
+
+.boxed.with-icon.image-right {
+  padding-left: 30px;
+  padding-right: 170px;
+}
+
+.boxed.with-icon.image-right .image-icon {
+  right: 0;
+  left: auto;
+  transform: translateX(50%) scale(1.5);
+}
+
+.boxed.with-icon h2 {
+  display: inline-block;
+  background-color: rgba(237, 33, 28, 0.75);
+  padding: 5px 13px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  border-radius: 15px;
+}
+
+.box-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.box-stats>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boxes-wrapper {
+  padding-left: 157px;
+  padding-right: 157px;
+}
+
+.max-w-650{
+  max-width: 650px;
+  margin:0 auto;
+}
   /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
@@ -3346,6 +3408,32 @@ section.color-white {
       }
       .popup-description{
         text-align: center;
+      }
+      .boxed.with-icon{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:30px;
+        padding-left:30px;
+        padding-top:30px;
+        padding-bottom:30px;
+      }
+
+      .boxed.with-icon .image-icon{
+        position:relative;
+        transform: translateX(0) scale(1);
+      }
+
+      .boxed.with-icon.image-right {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      
+      .boxed.with-icon.image-right .image-icon {
+        transform: translateX(0) scale(1);
+      }
+
+      .boxes-wrapper{
+        padding:0;
       }
   }
   
@@ -3513,10 +3601,7 @@ section.color-white {
       .v-slider .slick-prev{
         left:15px;
       }
-      
-	  .floating-astro{
-		  /*display:none;*/
-	  }
+    
     .container-margin{
       margin-left: calc((100vw - 540px)/2);
     }

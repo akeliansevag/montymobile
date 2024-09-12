@@ -87,7 +87,7 @@
     <img class="w-100 h-100 z-0 mw-100 position-absolute top-0 object-fit-cover" src="<?= get_template_directory_uri() ?>/assets/img/redpattern.webp" alt="">
     <div class="container">
         <div class="blurred-boxes mx-auto py-5 position-relative z-1">
-            <div class="blurred-box">
+            <div class="blurred-box max-w-650">
                 <h3>eSIM Customer Portal</h3>
                 <p>Our customer portal offers a convenient and efficient way to instantly manage your subscribers’ connectivity needs effortlessly, allowing you
                     to view and track your transactions, access key metrics, profile logs,
