@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php the_content(); ?>
 <section class="py-5 bg-white">
     <div class="container">
         <div class="map-bg">
