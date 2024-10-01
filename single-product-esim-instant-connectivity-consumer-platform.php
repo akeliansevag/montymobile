@@ -3,20 +3,20 @@
 <section class="py-5 bg-white">
     <div class="container">
         <div class="map-bg">
-            <img class="map-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/map.svg" alt="Map">
+            <img class="map-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/world-map.svg" alt="Map">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
-                    <img class="esim-mobile-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/mobile.svg" alt="Mobile">
+                    <img class="esim-mobile-img" src="<?= get_template_directory_uri() ?>/assets/img/esim/phone.webp" alt="Mobile">
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2">
+                <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column gap-2">
                     <h2>Connect Instantly, Manage Effortlessly with our Instant-Connectivity Platform.</h2>
                     <div class="d-flex flex-column flex-lg-row gap-3">
                         <img style="max-width: 95px;" src="<?= get_template_directory_uri() ?>/assets/img/esim/esim-simcard.svg" alt="eSIM Simcard">
-                        <p>Consumer eSIM places subscribers at the heart of convenience. By eliminating the need for physical SIM cards, users can activate or modify mobile plans without manual SIM swaps. This not only reduces delays but also empowers subscribers to easily switch between service providers or packages, promoting a seamless, global mobile experience.</p>
+                        <p class="m-0">Consumer eSIM places subscribers at the heart of convenience. By eliminating the need for physical SIM cards, users can activate or modify mobile plans without manual SIM swaps. This not only reduces delays but also empowers subscribers to easily switch between service providers or packages, promoting a seamless, global mobile experience.</p>
                     </div>
 
                     <div class="d-flex flex-column flex-lg-row gap-3">
-                        <p class="order-2 order-lg-1">Our RSP (Remote Sim Provisioning) portal provides mobile operators with a multitude of benefits, streamlining operations and enhancing customer satisfaction. By leveraging the portal, operators can efficiently manage eSIM profile inventory, ensuring timely distribution and activation without the logistical challenges of physical SIM cards.</p>
+                        <p class="order-2 order-lg-1 m-0">Our RSP (Remote Sim Provisioning) portal provides mobile operators with a multitude of benefits, streamlining operations and enhancing customer satisfaction. By leveraging the portal, operators can efficiently manage eSIM profile inventory, ensuring timely distribution and activation without the logistical challenges of physical SIM cards.</p>
                         <img style="max-width: 70px;" class="order-1 order-lg-2" src="<?= get_template_directory_uri() ?>/assets/img/esim/remote-sim.svg" alt="Remote SIM">
                     </div>
 
@@ -24,7 +24,7 @@
                         <p>
                             The portal’s comprehensive logs and reports offer valuable insights into transaction patterns and potential issues, enabling proactive troubleshooting and continuous service improvement.
                         </p>
-                        <p>
+                        <p class="m-0">
                             Additionally, the portal’s robust security features ensure data protection and compliance with regulatory standards. Overall, the RSP customer portal is an indispensable tool for operators, driving operational efficiency, reducing costs, and delivering a superior, hassle-free experience to subscribers.
                         </p>
                     </div>
@@ -37,7 +37,7 @@
 <section class="py-5 bg-black color-white position-relative overflow-hidden">
     <img class="z-0 position-absolute start-0 bottom-0 mw-100" src="<?= get_template_directory_uri() ?>/assets/img/emblem-bg.webp" alt="">
     <div class="container">
-        <div class="blurred-boxes mx-auto py-5 position-relative z-1">
+        <div class="blurred-boxes max-w-1000 mx-auto py-5 position-relative z-1">
             <div class="blurred-box">
                 <h3>Certifications and Accreditations</h3>
                 <p>Monty Mobile has been recognized and accredited by several esteemed organizations, ensuring its commitment to superior quality and utmost security. The company holds the GSMA’s Security Accreditation Scheme (SAS) certification, endorsing it as an approved provider for the safe production and data personalization of eSIMs in the consumer market.</p>

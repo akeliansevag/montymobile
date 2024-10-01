@@ -3237,7 +3237,7 @@ section.color-white {
 
 .esim-mobile-img {
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
     margin: 0 auto;
     display: block;
 }
@@ -3246,6 +3246,7 @@ section.color-white {
     border: 1px solid var(--mmPink);
     padding: 30px;
     border-radius: 50px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 
@@ -3308,6 +3309,11 @@ section.color-white {
 
 .max-w-650{
   max-width: 650px;
+  margin:0 auto;
+}
+
+.max-w-1000{
+  max-width: 1000px;
   margin:0 auto;
 }
   /*------------------------------------*\
