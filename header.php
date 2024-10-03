@@ -94,7 +94,19 @@ if (get_field("dark_theme")) {
 		gtag('js', new Date());
 		gtag('config', 'AW-979460023');
 	</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16690522364">
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-16690522364');
+	</script>
 	<?php wp_head(); ?>
 </head>
 
