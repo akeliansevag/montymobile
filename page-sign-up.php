@@ -962,6 +962,8 @@
                         currentEmail = companyEmail.value;
                         startResendTimer(currentEmail);
                         openPopup(data, companyEmail.value, false);
+                        // Call gtag_report_conversion here
+                        gtag_report_conversion();
                     }
 
                     //signUpForm.reset();
