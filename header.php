@@ -107,6 +107,23 @@ if (get_field("dark_theme")) {
 
 		gtag('config', 'AW-16690522364');
 	</script>
+	<!-- Event snippet for Sign-Up conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+	<script>
+		function gtag_report_conversion(url) {
+			var callback = function() {
+				if (typeof(url) != 'undefined') {
+					window.location = url;
+				}
+			};
+			gtag('event', 'conversion', {
+				'send_to': 'AW-16690522364/e9ogCIbNws8ZEPzR1JY-',
+				'event_callback': callback
+			});
+			return false;
+		}
+	</script>
+
 	<?php wp_head(); ?>
 </head>
 
