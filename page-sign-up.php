@@ -54,8 +54,8 @@
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 70px;
         padding: 50px;
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         position: relative;
         z-index: 2;
     }
@@ -379,8 +379,16 @@
 
     @media only screen and (max-width:1399px) {
         .sign-up-content {
-            width: 90%;
-            height: 90%;
+            width: 92%;
+            height: 92%;
+        }
+
+        .sign-up-content p {
+            font-size: 17px;
+        }
+
+        .sign-up-content ul li {
+            margin-bottom: 17px;
         }
     }
 
