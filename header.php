@@ -154,7 +154,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 				);
 				?>
 				<a href="<?= home_url('/contact-us/') ?>" class="mb-3 mm-button inside-menu d-block d-lg-none border-0">Contact An Expert</a>
-				<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Sign Up For Free</a>
+				<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Sign Up</a>
 			</div>
 			<div class="background-container">
 				<div class="stars"></div>
