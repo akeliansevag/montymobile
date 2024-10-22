@@ -154,7 +154,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 				);
 				?>
 				<a href="<?= home_url('/contact-us/') ?>" class="mb-3 mm-button inside-menu d-block d-lg-none border-0">Contact An Expert</a>
-				<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Sign Up</a>
+				<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button inside-menu d-block d-lg-none border-0">Sign Up For Free</a>
 			</div>
 			<div class="background-container">
 				<div class="stars"></div>
@@ -180,7 +180,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 						</div>
 						<div class="right-content-wrapper d-flex align-items-center">
 							<a href="<?= home_url('/contact-us/') ?>" class="mm-button transparent d-none d-xl-inline-block">Contact An Expert</a>
-							<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up</a>
+							<a target="_blank" href="<?= home_url('/sign-up/') ?>" class="mm-button d-none d-xl-inline-block">Sign Up For Free</a>
 							<a href="#" class="search-icon" id="search-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 490.4 490.4" xml:space="preserve" stroke="#ffffff">
 
