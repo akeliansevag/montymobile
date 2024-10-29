@@ -538,8 +538,8 @@
     <div class="sign-up-two">
         <img class="logo-pattern" src="https://montymobile.com/wp-content/uploads/2024/07/logo-pattern.webp" alt="logo Pattern">
         <div class="sign-up-form-container">
-            <h2><strong>Welcome to Monty<br> Communication Platform</strong>
-            </h2>
+            <h1><strong>Sign up to Monty<br> Communication Platform</strong>
+            </h1>
 
             <div class="sign-up-form">
                 <form id="signUpForm" action="">

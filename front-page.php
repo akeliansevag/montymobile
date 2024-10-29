@@ -9,7 +9,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <section class="slider-section position-relative">
     <div id="h-slider" class="h-slider">
-        <div class="h-slider-item slide-1">
+        <!-- <div class="h-slider-item slide-1">
             <div class="h-slider-background">
                 <img src="<?= get_template_directory_uri() ?>/assets/img/webinar-banner.webp" alt="Webinar Banner">
             </div>
@@ -53,10 +53,10 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     <a class="mm-button d-inline-block mb-5" href="">Register Now</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <?php if ($slider) : ?>
             <?php foreach ($slider as $key => $slide) : ?>
-                <!-- <div class="h-slider-item slide-<?= $key ?>">
+                <div class="h-slider-item slide-<?= $key ?>">
                     <div class="h-slider-background">
                         <?php if ($slide['video']) : ?>
                             <video loading="lazy" autoplay muted loop poster="<?= $slide['image'] ? $slide['image']['sizes']['background'] : ""; ?>">
@@ -80,7 +80,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                         </div>
 
                     </div>
-                </div> -->
+                </div>
             <?php endforeach; ?>
         <?php endif; ?>
         <!-- <div class="h-slider-item slide-1">

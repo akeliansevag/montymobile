@@ -5,6 +5,7 @@
             <div class="col-xxl-2"></div>
             <div class="col-xxl-8">
                 <div class="page-wrapper mb-5 p-4">
+                    <h1>Omni-Channel Privacy Policy</h1>
                     <div class="page-content mt-3">
 
                     </div><!--post-content-->

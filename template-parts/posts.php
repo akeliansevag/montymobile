@@ -28,7 +28,11 @@ $query = new WP_Query($args);
 $posts = $query->posts;
 ?>
 <section class="bg-white">
+  <div class="container">
+    <h1 class="text-center pt-5">Discover Monty Mobile's latest blogs</h1>
+  </div>
   <div class="container-fluid">
+
     <?php if ($posts) : ?>
       <div class="row">
         <div class="col-xxl-2"></div>
