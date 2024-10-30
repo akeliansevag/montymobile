@@ -29,7 +29,14 @@ $posts = $query->posts;
 ?>
 <section class="bg-white">
   <div class="container">
-    <h1 class="text-center pt-5">Discover Monty Mobile's latest blogs</h1>
+    <?php if (!$category): ?>
+      <h1 class="text-center pt-5">Discover Monty Mobile's latest blogs</h1>
+    <?php endif; ?>
+    <?php if ($category): ?>
+      <?php if ($category->description): ?>
+        <h1 class="text-center pt-5"><?= $category->description ?></h1>
+      <?php endif; ?>
+    <?php endif; ?>
   </div>
   <div class="container-fluid">
 
