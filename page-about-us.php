@@ -202,7 +202,7 @@ $timeline_items = get_field("timeline_items");
     </div>
 <?php endforeach; ?>
 <?php $gpimage = get_field("global_presence_background"); ?>
-<section class="py-5 section global-presence" style="background-image: url(<?= $gpimage['sizes']['background-no-crop'] ?>">
+<section class="py-5 section global-presence" style="background-image: url(<?= $gpimage['sizes']['lg-thumb'] ?>">
     <div class="container">
         <div class="global-presence-content">
             <div class="row">
