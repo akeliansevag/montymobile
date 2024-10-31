@@ -10,7 +10,7 @@ $textDark = get_field("block_product_top_banner_dark_text");
 ?>
 <div id="<?= $blockID ?>" class="product-top-banner py-4 d-flex align-items-center" style="<?= $backgroundColor ? "background-color:" . $backgroundColor . ";" : "" ?>">
     <?php if ($top_banner_image) : ?>
-        <img class="background-image <?= $mobile_image ? "d-none d-md-block" : "" ?>" src="<?= $top_banner_image['sizes']['background']; ?>" alt="">
+        <img class="background-image <?= $mobile_image ? "d-none d-md-block" : "" ?>" src="<?= $top_banner_image['sizes']['background-product']; ?>" alt="">
         <div class="bg-overlay"></div>
     <?php endif; ?>
     <?php if ($mobile_image) : ?>
