@@ -14,7 +14,7 @@ $textDark = get_field("block_product_top_banner_dark_text");
         <div class="bg-overlay"></div>
     <?php endif; ?>
     <?php if ($mobile_image) : ?>
-        <img class="background-image mobile-background-image d-block d-md-none" src="<?= $mobile_image['sizes']['background']; ?>" alt="">
+        <img class="background-image mobile-background-image d-block d-md-none" src="<?= $mobile_image['sizes']['background-product']; ?>" alt="">
         <div class="bg-overlay"></div>
     <?php endif; ?>
     <div class="container">
