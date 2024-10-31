@@ -78,6 +78,7 @@ function montymobile_setup()
 		)
 	);
 
+	add_image_size('background-product', 1920, 800, true);
 	add_image_size('background', 1920, 1080, true);
 	add_image_size('background-no-crop', 1920, 1080);
 	add_image_size('background-entire', 1920, 2500);
