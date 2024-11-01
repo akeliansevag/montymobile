@@ -39,13 +39,13 @@ $posts = $query->posts;
                 <div class="search-items card-items">
                     <div class="row">
                         <?php foreach ($posts as $p) : ?>
-                            <?php $thumbnail = get_the_post_thumbnail_url($p->ID, "lg-thumb"); ?>
+                            <?php $thumbnail = get_the_post_thumbnail($p->ID, "lg-thumb", ['class' => 'event-thumbnail']); ?>
 
                             <div class="col-md-4 mb-3">
 
                                 <div class="card-item">
                                     <div class="card-image">
-                                        <img src="<?= $thumbnail ?>" alt="" class="event-thumbnail">
+                                        <?= $thumbnail ?>
                                     </div>
                                     <h4 class="card-title fs-5 pt-3"><?= $p->post_title ?></h4>
                                 </div>
