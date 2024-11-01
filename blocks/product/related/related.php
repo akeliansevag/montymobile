@@ -11,7 +11,7 @@ $blockID = $block['id'];
             <h2 class="fw-semi-bold"><?= $title ?></h2>
         </div>
         <div class="related-products-container position-relative bg-gray py-5 mt-3 d-flex align-items-center ">
-            <img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg2.jpg" alt="" class="position-absolute object-fit-cover top-0 left-0 z-0 w-100 h-100">
+            <img src="<?= get_template_directory_uri() ?>/assets/img/relatedbg2.jpg" alt="Background image used on Monty Mobile's website featuring space and planets" class="position-absolute object-fit-cover top-0 left-0 z-0 w-100 h-100">
             <div class="container px-5 px-md-0">
                 <div class="swiper-cont position-relative my-4">
                     <div class="related-products-slider" id="related-products-slider-<?= $blockID ?>">
