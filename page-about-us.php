@@ -274,10 +274,7 @@ $awards = get_field('homepage_awards', 7);
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
             </div>
-
     </section>
 <?php endif; ?>
 <section class="py-5 white-text">
