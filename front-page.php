@@ -196,6 +196,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 foreach ($events as $key => $event) :
                     $eventImage = get_field('event_small_thumbnail', $event->ID);
                     $eventLogo = get_field("event_logo", $event->ID);
+
                 ?>
                     <div class="event-slide">
                         <a class="event-item <?= $eventImage ? "with-image" : "" ?>" href="<?= home_url('/events/') ?>">
@@ -203,13 +204,13 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
                             ?>
                             <?php if ($eventImage) : $withImage = true; ?>
-                                <img class="box-bg" src="<?= $eventImage['sizes']['mid-thumb'] ?>" alt="">
+                                <img class="box-bg" src="<?= $eventImage['sizes']['mid-thumb'] ?>" alt="<?= $eventImage['alt'] ?>">
                                 <div class="event-overlay"></div>
                             <?php endif; ?>
                             <div class="event-content">
                                 <div>
                                     <?php if ($eventLogo) : ?>
-                                        <img src="<?= $eventLogo['sizes']['mid-thumb'] ?>" alt="" class="event-logo">
+                                        <img src="<?= $eventLogo['sizes']['mid-thumb'] ?>" alt="<?= $eventLogo['alt'] ?>" class="event-logo">
                                     <?php else : ?>
                                         <h4><?= $event->post_title; ?></h4>
                                     <?php endif; ?>
