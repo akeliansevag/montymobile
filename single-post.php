@@ -41,7 +41,7 @@ $perm = $c ? get_category_link($category[0]->term_id) : home_url() . '/blog/';
 
                     </div><!--post-meta-->
                     <div class="post-image mt-5">
-                        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, "banner-image"); ?>
+                        <?php $thumbnail = get_the_post_thumbnail_url($post->ID, "lg-thumb"); ?>
                         <img class="border-top-right-radius" src="<?= $thumbnail ?>" />
                     </div>
 
