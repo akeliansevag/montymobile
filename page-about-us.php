@@ -271,7 +271,7 @@ $awards = get_field('homepage_awards', 7);
                     <?php foreach ($awards as $award) : ?>
                         <div class="v-slide col-6 col-md-3 px-2">
                             <div class="v-wrapper">
-                                <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="<?= $award['alt'] ?>" class="v-slider-img">
+                                <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="<?= $award['image']['alt'] ?>" class="v-slider-img">
                             </div>
                         </div>
                     <?php endforeach; ?>
