@@ -1802,6 +1802,7 @@ ul.join-us-items li::before {
 
 .post-image img {
   max-width: 100%;
+  height: auto;
 }
 
 .post-content h2 {
