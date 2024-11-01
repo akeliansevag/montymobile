@@ -267,13 +267,15 @@ $awards = get_field('homepage_awards', 7);
             <h2 class="section-title fs-2 fw-semi-bold text-white"><?= get_field("homepage_awards_title", 7); ?></h2>
 
             <div class="awards-slider v-slider" id="slider-awards">
-                <?php foreach ($awards as $award) : ?>
-                    <div class="v-slide px-2">
-                        <div class="v-wrapper">
-                            <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="<?= $award['alt'] ?>" class="v-slider-img">
+                <div class="row">
+                    <?php foreach ($awards as $award) : ?>
+                        <div class="v-slide col-6 col-md-3 px-2">
+                            <div class="v-wrapper">
+                                <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="<?= $award['alt'] ?>" class="v-slider-img">
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
             </div>
     </section>
 <?php endif; ?>
