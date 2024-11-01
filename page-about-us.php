@@ -99,7 +99,7 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t1['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t1['image']) : ?>
-                                <div class="member-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"><img src="<?= $t1['image']['sizes']['lg-thumb'] ?>" alt="<?= $t1['alt'] ?>"></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"><img src="<?= $t1['image']['sizes']['lg-thumb'] ?>" alt="<?= $t1['image']['alt'] ?>"></div>
                             <?php else : ?>
                                 <div class="member-pic no-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
@@ -127,7 +127,7 @@ $timeline_items = get_field("timeline_items");
                 <div class="col-xl-2"></div>
                 <div class="col-xl-4">
                     <div class="popup-image">
-                        <img src="<?= $p['image']['sizes']['lg-thumb']; ?>" alt="<?= $p['alt'] ?>">
+                        <img src="<?= $p['image']['sizes']['lg-thumb']; ?>" alt="<?= $p['image']['alt'] ?>">
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -154,7 +154,7 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t2['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t2['image']) : ?>
-                                <div class="member-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"><img src="<?= $t2['image']['sizes']['lg-thumb'] ?>" alt="<?= $t2['alt'] ?>"></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"><img src="<?= $t2['image']['sizes']['lg-thumb'] ?>" alt="<?= $t2['image']['alt'] ?>"></div>
                             <?php else : ?>
                                 <div class="member-pic no-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
@@ -185,7 +185,7 @@ $timeline_items = get_field("timeline_items");
                 <div class="col-xl-2"></div>
                 <div class="col-xl-4">
                     <div class="popup-image">
-                        <img src="<?= $p2['image']['sizes']['lg-thumb']; ?>" alt="<?= $p2['alt'] ?>">
+                        <img src="<?= $p2['image']['sizes']['lg-thumb']; ?>" alt="<?= $p2['image']['alt'] ?>">
                     </div>
                 </div>
                 <div class="col-xl-4">
