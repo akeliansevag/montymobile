@@ -174,7 +174,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
     ?>
     <?php if ($planet_image) : ?>
         <section class="home-background">
-            <img src="<?= $planet_image['sizes']['lg-thumb'] ?>" class="parallax-image" alt="">
+            <img src="<?= $planet_image['sizes']['lg-thumb'] ?>" class="parallax-image" alt="<?= $planet_image['alt'] ?>">
         </section>
     <?php endif; ?>
 
