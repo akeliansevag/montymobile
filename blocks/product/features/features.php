@@ -61,7 +61,7 @@ $blockID = $block['id'];
                                         <?php endif; ?>
                                         <?php if ($ft2['image']) : ?>
                                             <div class="feature-image">
-                                                <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['sizes']['lg-thumb'] ?>" alt="">
+                                                <img style="<?= $ft2['width_infographic'] ? "width:" . $ft2['width_infographic'] . "%;" : "" ?>" src="<?= $ft2['image']['sizes']['lg-thumb'] ?>" alt="<?= $ft2['image']['alt'] ?>">
                                             </div>
                                         <?php endif; ?>
                                     </div>
@@ -108,7 +108,7 @@ $blockID = $block['id'];
                                             <?php endif; ?>
                                             <?php if ($ft['image'] && !$sameImage) : ?>
                                                 <div class="feature-image">
-                                                    <img style="<?= $ft['width_infographic'] ? "width:" . $ft['width_infographic'] . "%;" : "" ?>" src="<?= $ft['image']['sizes']['lg-thumb'] ?>" alt="">
+                                                    <img style="<?= $ft['width_infographic'] ? "width:" . $ft['width_infographic'] . "%;" : "" ?>" src="<?= $ft['image']['sizes']['lg-thumb'] ?>" alt="<?= $ft['image']['alt'] ?>">
                                                 </div>
                                             <?php endif; ?>
                                         </div>
@@ -117,7 +117,7 @@ $blockID = $block['id'];
                             <?php endforeach; ?>
                             <?php if ($sameImage && $features[0]['image']) : ?>
                                 <div class="feature-image">
-                                    <img src="<?= $features[0]['image']['sizes']['lg-thumb'] ?>" alt="">
+                                    <img src="<?= $features[0]['image']['sizes']['lg-thumb'] ?>" alt="<?= $features[0]['image']['alt'] ?>">
                                 </div>
                             <?php endif; ?>
                         </div>
