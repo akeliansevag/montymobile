@@ -3,7 +3,7 @@
 $top_banner = get_field("about_us_top_banner");
 ?>
 <section class="py-5 min-full-section pt-5 position-relative" id="about-us-section">
-    <img class="background-image" src="<?= $top_banner['sizes']['background-no-crop'] ?>" alt="">
+    <img class="background-image" src="<?= $top_banner['sizes']['background-no-crop'] ?>" alt="<?= $top_banner['alt'] ?>">
     <div class="container">
         <div class="">
             <div class="row">
@@ -62,7 +62,7 @@ $timeline_items = get_field("timeline_items");
         <div class="mission mission-vision-content act">
             <div class="left-image animate" data-animation="fadeInDown">
                 <?php $mimage = get_field("mission_image"); ?>
-                <img src="<?= $mimage['sizes']['lg-thumb'] ?>" alt="">
+                <img src="<?= $mimage['sizes']['lg-thumb'] ?>" alt="<?= $mimage['alt'] ?>">
             </div>
             <div class="mission-vision-text">
                 <div class="good-block animate" data-animation="blackHighlighter">
@@ -82,7 +82,7 @@ $timeline_items = get_field("timeline_items");
             </div>
             <div class="right-image">
                 <?php $vimage = get_field("vision_image"); ?>
-                <img src="<?= $vimage['sizes']['lg-thumb'] ?>" alt="">
+                <img src="<?= $vimage['sizes']['lg-thumb'] ?>" alt="<?= $vimage['alt'] ?>">
             </div>
         </div>
     </div>
@@ -99,7 +99,7 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t1['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t1['image']) : ?>
-                                <div class="member-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"><img src="<?= $t1['image']['sizes']['lg-thumb'] ?>" alt=""></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"><img src="<?= $t1['image']['sizes']['lg-thumb'] ?>" alt="<?= $t1['alt'] ?>"></div>
                             <?php else : ?>
                                 <div class="member-pic no-pic" data-popup="<?= sanitize_title($t1['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
@@ -127,7 +127,7 @@ $timeline_items = get_field("timeline_items");
                 <div class="col-xl-2"></div>
                 <div class="col-xl-4">
                     <div class="popup-image">
-                        <img src="<?= $p['image']['sizes']['lg-thumb']; ?>" alt="">
+                        <img src="<?= $p['image']['sizes']['lg-thumb']; ?>" alt="<?= $p['alt'] ?>">
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -154,7 +154,7 @@ $timeline_items = get_field("timeline_items");
                         <?php if ($t2['hide']) continue; ?>
                         <div class="team-member" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>">
                             <?php if ($t2['image']) : ?>
-                                <div class="member-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"><img src="<?= $t2['image']['sizes']['lg-thumb'] ?>" alt=""></div>
+                                <div class="member-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"><img src="<?= $t2['image']['sizes']['lg-thumb'] ?>" alt="<?= $t2['alt'] ?>"></div>
                             <?php else : ?>
                                 <div class="member-pic no-pic" data-popup="<?= sanitize_title($t2['for_slug']); ?>-<?= $key ?>"></div>
                             <?php endif; ?>
@@ -185,7 +185,7 @@ $timeline_items = get_field("timeline_items");
                 <div class="col-xl-2"></div>
                 <div class="col-xl-4">
                     <div class="popup-image">
-                        <img src="<?= $p2['image']['sizes']['lg-thumb']; ?>" alt="">
+                        <img src="<?= $p2['image']['sizes']['lg-thumb']; ?>" alt="<?= $p2['alt'] ?>">
                     </div>
                 </div>
                 <div class="col-xl-4">
@@ -270,7 +270,7 @@ $awards = get_field('homepage_awards', 7);
                 <?php foreach ($awards as $award) : ?>
                     <div class="v-slide px-2">
                         <div class="v-wrapper">
-                            <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="" class="v-slider-img">
+                            <img src="<?= $award['image']['sizes']['md-thumb'] ?>" alt="<?= $award['alt'] ?>" class="v-slider-img">
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -338,7 +338,7 @@ $awards = get_field('homepage_awards', 7);
             <div class="col-md-5 mt-5 mt-md-0">
                 <?php $cimage = get_field("careers_image"); ?>
                 <?php if ($cimage) : ?>
-                    <img class="mw-100" src="<?= $cimage['sizes']['lg-thumb']; ?>" alt="">
+                    <img class="mw-100" src="<?= $cimage['sizes']['lg-thumb']; ?>" alt="<?= $cimage['alt'] ?>">
                 <?php endif; ?>
             </div>
         </div>
