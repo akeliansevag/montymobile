@@ -1,9 +1,9 @@
 <?php
 $top_banner_image = get_field("block_product_top_banner_image");
 $mobile_image = get_field("block_product_top_banner_mobile_image");
-$top_banner_title = get_field("block_product_top_banner_title_h1") ? get_field("block_product_top_banner_title_h1") : get_field("block_product_top_banner_title");
+$top_banner_title = get_field("block_product_top_banner_title");
 $top_banner_description = get_field("block_product_top_banner_description");
-$product_title = get_the_title();
+$product_title = get_field("block_product_top_banner_title_h1") ? get_field("block_product_top_banner_title_h1") : get_the_title();
 $blockID = $block['id'];
 $backgroundColor = get_field("block_background_color");
 $textDark = get_field("block_product_top_banner_dark_text");
