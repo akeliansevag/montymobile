@@ -9,7 +9,6 @@ $top_banner = get_field("about_us_top_banner");
             <div class="row">
                 <div class="col-xl-6">
                     <div class="section-content animate about-us-header" data-animation="fadeInUp">
-                        <h1 class="text-white">About Monty Mobile</h1>
                         <?php if (get_field("about_us_title")) : ?><h1 class="display-2 pb-5 about-us-big-title white-text"><?= get_field("about_us_title"); ?></h1><?php endif; ?>
 
                         <span class="white-text"><?= get_field("about_us_description"); ?></span>
