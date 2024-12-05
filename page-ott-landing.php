@@ -815,7 +815,7 @@
                                 <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
                             </svg>
                             <span class="grey-text">
-                                I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/monty-mobile-terms-and-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/monty-mobile-privacy-policy">Privacy Policy</a>.
+                                I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/terms-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/privacy-policy">Privacy Policy</a>.
                             </span>
                         </label>
 
