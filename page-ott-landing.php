@@ -907,7 +907,7 @@
     function openPopup(data, email, error) {
         resetPopup();
 
-        if (data && data.message == "mail_sent") {
+        if (data && data.status == "mail_sent") {
             signUpMessage.innerHTML = "Thank you for your submission! We will get back to you shortly!";
             popup.classList.add('open');
             return;
@@ -1127,13 +1127,12 @@
                     // Reset reCAPTCHA
                     //grecaptcha.reset();
                     formLoader.classList.remove("active");
-                    console.log('Success:', data);
-                    if (data && !data.message == "mail_sent") {
+                    if (data && !data.status == "mail_sent") {
                         addGeneralError(data.message);
                         return;
                     }
 
-                    if (data && data.message == "mail_sent") {
+                    if (data && data.status == "mail_sent") {
                         document.getElementById('error-container').innerHTML = '';
                         currentEmail = companyEmail.value;
                         openPopup(data, companyEmail.value, false);
