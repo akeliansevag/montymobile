@@ -13,6 +13,9 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '10.1.4');
 }
 
+add_filter('wpcf7_spam', '__return_false');
+
+
 require_once 'custom-menu-walker.php';
 
 function custom_search_rewrite_rule()
