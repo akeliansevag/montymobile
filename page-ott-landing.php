@@ -838,8 +838,8 @@
                         <span class="loader"></span>
                     </div>
                 </form>
-                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-                </script>
+                <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+                </script> -->
             </div>
         </div>
     </div>
@@ -1014,7 +1014,8 @@
         var industry = document.querySelector('select[name="industry"]');
 
         var terms = document.querySelector('input[name="terms"]');
-        var recaptchaResponse = grecaptcha.getResponse();
+        var newsletter = document.querySelector('input[name="newsletter"]');
+        //var recaptchaResponse = grecaptcha.getResponse();
 
         var companyNameError = document.getElementById('companyNameError');
         var fullNameError = document.getElementById('fullNameError');
@@ -1028,12 +1029,12 @@
         var isValid = true;
 
         // Validate reCAPTCHA
-        if (recaptchaResponse.length === 0) {
-            showError(false, recaptchaError, 'Please complete the reCAPTCHA.');
-            isValid = false;
-        } else {
-            clearError(false, recaptchaError);
-        }
+        // if (recaptchaResponse.length === 0) {
+        //     showError(false, recaptchaError, 'Please complete the reCAPTCHA.');
+        //     isValid = false;
+        // } else {
+        //     clearError(false, recaptchaError);
+        // }
 
         if (!companyName.value) {
             showError(companyName, companyNameError, 'Company Name is required.');
@@ -1110,10 +1111,14 @@
                 companyName: companyName.value,
                 fullName: fullName.value,
                 companyEmail: companyEmail.value,
-                phoneNumber: phoneNumber.value
+                phoneNumber: phoneNumber.value,
+                country: country.value,
+                industry: industry.value,
+                newsletter: newsletter.value,
+                _wpcf7_unit_tag: 'rte'
             };
 
-            fetch('https://omni-apis.montymobile.com/member/api/client/v1/client/register-external', {
+            fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25777/feedback', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
@@ -1124,7 +1129,7 @@
                 .then(response => response.json())
                 .then(data => {
                     // Reset reCAPTCHA
-                    grecaptcha.reset();
+                    //grecaptcha.reset();
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
 
@@ -1146,7 +1151,7 @@
                 })
                 .catch((error) => {
                     // Reset reCAPTCHA
-                    grecaptcha.reset();
+                    //grecaptcha.reset();
                     formLoader.classList.remove("active");
                     //console.log('Error:', error);
                     //openPopup(error, companyEmail.value, true);
