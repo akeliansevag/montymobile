@@ -906,10 +906,10 @@
 
     function openPopup(data, email, error) {
         resetPopup();
-        //console.log(data);
+        console.log("fet la hon");
 
         if (data && data.message == "mail_sent") {
-
+            console.log("yihhh kamen fet");
             signUpMessage.innerHTML = "Thank you for your submission! We will get back to you shortly!";
             popup.classList.add('open');
             return;
