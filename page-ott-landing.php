@@ -1140,7 +1140,7 @@
                         //gtag_report_conversion();
                     }
 
-                    //signUpForm.reset();
+                    signUpForm.reset();
 
                 })
                 .catch((error) => {
