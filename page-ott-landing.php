@@ -1136,7 +1136,7 @@
                         return;
                     }
 
-                    if (data && data.success) {
+                    if (data && data.message == "mail_sent") {
                         document.getElementById('error-container').innerHTML = '';
                         currentEmail = companyEmail.value;
                         openPopup(data, companyEmail.value, false);
