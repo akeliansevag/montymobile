@@ -1131,7 +1131,7 @@
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
                     console.log(data);
-                    if (data && !data.success) {
+                    if (data && !data.message == "mail_sent") {
                         addGeneralError(data.message);
                         return;
                     }
