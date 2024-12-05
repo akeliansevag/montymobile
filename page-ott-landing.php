@@ -1107,24 +1107,22 @@
         }
 
         if (isValid) {
-            var data = {
-                companyName: companyName.value,
-                fullName: fullName.value,
-                companyEmail: companyEmail.value,
-                phoneNumber: phoneNumber.value,
-                country: country.value,
-                industry: industry.value,
-                newsletter: newsletter.value,
-                _wpcf7_unit_tag: 'rte'
-            };
+            var data = new FormData();
+            data.append('companyName', companyName.value);
+            data.append('fullName', fullName.value);
+            data.append('companyEmail', companyEmail.value);
+            data.append('phoneNumber', phoneNumber.value);
+            data.append('country', country.value);
+            data.append('industry', industry.value);
+            data.append('newsletter', newsletter.value);
+            data.append('_wpcf7_unit_tag', 'rte');
 
             fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25777/feedback', {
                     method: 'POST',
                     headers: {
                         'LanguageCode': 'en',
-                        'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: data
                 })
                 .then(response => response.json())
                 .then(data => {
