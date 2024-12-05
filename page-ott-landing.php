@@ -1130,7 +1130,7 @@
                     //grecaptcha.reset();
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
-
+                    console.log(data);
                     if (data && !data.success) {
                         addGeneralError(data.message);
                         return;
