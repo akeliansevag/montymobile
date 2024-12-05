@@ -908,7 +908,7 @@
         resetPopup();
         //console.log(data);
 
-        if (data && data.success) {
+        if (data && data.message == "mail_sent") {
 
             signUpMessage.innerHTML = "Thank you for your submission! We will get back to you shortly!";
             popup.classList.add('open');
@@ -1130,7 +1130,6 @@
                     //grecaptcha.reset();
                     formLoader.classList.remove("active");
                     //console.log('Success:', data);
-                    console.log(data);
                     if (data && !data.message == "mail_sent") {
                         addGeneralError(data.message);
                         return;
