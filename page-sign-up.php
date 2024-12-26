@@ -620,30 +620,6 @@
 </section>
 
 <script>
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     let recaptchaWidget;
-
-    //     function initializeRecaptcha() {
-    //         recaptchaWidget = grecaptcha.render('recaptcha-container', {
-    //             'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5', // Replace with your reCAPTCHA site key
-    //             'theme': 'light' // Adjust theme as needed
-    //         });
-    //     }
-
-    //     // Function to check if grecaptcha is defined and initialize if so
-    //     function checkRecaptcha() {
-    //         if (typeof grecaptcha !== 'undefined') {
-    //             initializeRecaptcha();
-    //         } else {
-    //             // Retry after a short delay
-    //             setTimeout(checkRecaptcha, 100);
-    //         }
-    //     }
-
-    //     // Start checking for grecaptcha availability
-    //     checkRecaptcha();
-    // });
-
     var onloadCallback = function() {
         grecaptcha.render('recaptcha-container', {
             'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5',
