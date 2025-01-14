@@ -13,7 +13,7 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '10.1.4');
 }
 
-//add_filter('wpcf7_spam', '__return_false');
+add_filter('wpcf7_spam', '__return_false');
 
 
 require_once 'custom-menu-walker.php';
@@ -168,14 +168,14 @@ add_filter('rest_endpoints', function ($endpoints) {
 require_once "blocks/register.php";
 
 
-add_filter('wpcf7_spam', function ($spam, $submission) {
-	$contact_form = $submission->get_contact_form();
-	$form_id = $contact_form->id();
+// add_filter('wpcf7_spam', function ($spam, $submission) {
+// 	$contact_form = $submission->get_contact_form();
+// 	$form_id = $contact_form->id();
 
-	// Disable spam check only for form ID 25777
-	if ($form_id == 25777) {
-		return false;
-	}
+// 	// Disable spam check only for form ID 25777
+// 	if ($form_id == 25777) {
+// 		return false;
+// 	}
 
-	return $spam;
-}, 10, 2);
+// 	return $spam;
+// }, 10, 2);
