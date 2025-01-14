@@ -174,7 +174,6 @@ add_filter('wpcf7_spam', function ($spam, $submission) {
 
 	// Disable spam check only for form ID 25777
 	if ($form_id == 25777) {
-		var_dump("trueeee");
 		return false;
 	}
 
