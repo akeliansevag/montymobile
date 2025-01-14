@@ -169,12 +169,12 @@ require_once "blocks/register.php";
 
 
 add_filter('wpcf7_spam', function ($spam, $submission) {
-	var_dump("eentered");
 	$contact_form = $submission->get_contact_form();
 	$form_id = $contact_form->id();
-	var_dump($form_id);
+
 	// Disable spam check only for form ID 25777
-	if ($form_id == 3187) {
+	if ($form_id == 25777) {
+		var_dump("trueeee");
 		return false;
 	}
 
