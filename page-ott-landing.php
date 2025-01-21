@@ -1166,47 +1166,53 @@
         }
 
         if (isValid) {
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6Le9PtEZAAAAAHZr-CD56EW6Bn6mBRZzKZzjJ8Nv', {
-                    action: 'submit'
-                }).then(function(token) {
-                    // Include the reCAPTCHA token in your data
-                    var data = new FormData();
-                    data.append('companyName', companyName.value);
-                    data.append('fullName', fullName.value);
-                    data.append('companyEmail', companyEmail.value);
-                    data.append('phoneNumber', phoneNumber.value);
-                    data.append('country', country.value);
-                    data.append('industry', industry.value);
-                    data.append('newsletter', newsletter.value);
-                    data.append('g-recaptcha-response', token); // Add reCAPTCHA token here
-                    data.append('_wpcf7_unit_tag', 'rte');
+            var data = new FormData();
+            data.append('companyName', companyName.value);
+            data.append('fullName', fullName.value);
+            data.append('companyEmail', companyEmail.value);
+            data.append('phoneNumber', phoneNumber.value);
+            data.append('country', country.value);
+            data.append('industry', industry.value);
+            data.append('newsletter', newsletter.value);
+            data.append('_wpcf7_unit_tag', 'rte');
 
-                    // Submit form data via API
-                    fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25777/feedback', {
-                            method: 'POST',
-                            headers: {
-                                'LanguageCode': 'en'
-                            },
-                            body: data,
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            formLoader.classList.remove("active");
+            fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25777/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'LanguageCode': 'en',
+                    },
+                    body: data
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Reset reCAPTCHA
+                    //grecaptcha.reset();
+                    formLoader.classList.remove("active");
+                    if (data && !data.status == "mail_sent") {
+                        addGeneralError(data.message);
+                        return;
+                    }
 
-                            if (data && data.status === "mail_sent") {
-                                openPopup(data, companyEmail.value, false);
-                                signUpForm.reset();
-                            } else {
-                                addGeneralError(data.message);
-                            }
-                        })
-                        .catch(error => {
-                            formLoader.classList.remove("active");
-                            addGeneralError("An error occurred");
-                        });
+                    if (data && data.status == "mail_sent") {
+                        document.getElementById('error-container').innerHTML = '';
+                        currentEmail = companyEmail.value;
+                        openPopup(data, companyEmail.value, false);
+                        // Call gtag_report_conversion here
+                        //gtag_report_conversion();
+                    }
+
+                    signUpForm.reset();
+
+                })
+                .catch((error) => {
+                    // Reset reCAPTCHA
+                    //grecaptcha.reset();
+                    formLoader.classList.remove("active");
+                    //console.log('Error:', error);
+                    //openPopup(error, companyEmail.value, true);
+                    addGeneralError("An error occurred");
+                    //signUpForm.reset();
                 });
-            });
         }
     });
 </script>

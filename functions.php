@@ -15,6 +15,20 @@ if (!defined('_S_VERSION')) {
 
 //add_filter('wpcf7_spam', '__return_false');
 
+add_filter('wpcf7_spam', function ($spam, $submission) {
+	// Check if the submission exists
+	if ($submission) {
+		// Get the form ID
+		$form_id = $submission->get_contact_form()->id();
+
+		// Disable spam check for the specific form ID
+		if ($form_id == 25777) { // Replace 25777 with your form ID
+			return false;
+		}
+	}
+
+	return $spam;
+}, 10, 2);
 
 require_once 'custom-menu-walker.php';
 
