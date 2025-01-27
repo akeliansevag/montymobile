@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <style>
     #wrapper {
@@ -112,6 +114,7 @@
     }
 
     .sign-up-form input[type="text"],
+    .sign-up-form input[type="datetime-local"],
     .sign-up-form input[type="email"],
     .sign-up-form input[type="submit"] {
         width: 100%;
@@ -550,8 +553,8 @@
                 <form id="signUpForm" action="">
                     <div class="two-columns">
                         <div class="input-wrapper">
-                            <label for="companyName">Date</label>
-                            <input type="datetime-local" name="datetime" placeholder="Date" />
+                            <label for="companyName">Date & Time</label>
+                            <input id="datetime-picker" type="text" name="datetime" placeholder="Date & Time" />
                             <div class="error" id="datetimeError"></div>
                         </div>
                         <div class="input-wrapper">
@@ -641,6 +644,10 @@
 </section>
 
 <script>
+    jQuery("#datetime-picker").flatpickr({
+        enableTime: true
+    });
+
     function changeColor(select) {
         if (select.value) {
             select.style.color = "black";
