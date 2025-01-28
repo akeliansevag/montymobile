@@ -3,8 +3,13 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 <style>
+    body {
+        background-color: white;
+    }
+
     #wrapper {
         margin: 0;
+        background-color: #ffffff;
     }
 
     a {
@@ -15,49 +20,33 @@
         text-decoration: underline;
     }
 
-    .sign-up-section {
-        background-color: white;
-        display: flex;
-        min-height: calc(100vh);
-    }
-
-    .sign-up-one {
-        background-color: black;
-        position: relative;
-        flex: 1;
-        border-top-right-radius: 70px;
-        border-bottom-right-radius: 70px;
+    .sign-ups {
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-    }
-
-    .sign-up-one img.hands-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+        gap: 50px;
+        flex: 1;
+        min-height: 100vh;
+        position: relative;
         z-index: 1;
     }
 
-    .sign-up-one img.mm-emblem {
-        position: absolute;
-        width: 50%;
-        bottom: 0;
-        right: 0;
-        z-index: 3;
+    .sign-up-one {
+        flex: 1;
+    }
+
+    .sign-up-two {
+        flex: 1;
+    }
+
+    .sign-up-one img.hands-background {
+        width: 100%;
+        border-radius: 70px;
     }
 
     .sign-up-content {
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 70px;
-        padding: 50px;
-        width: 90%;
-        height: 90%;
         position: relative;
         z-index: 2;
     }
@@ -84,30 +73,6 @@
         text-transform: uppercase;
     }
 
-    .sign-up-two {
-        background-color: white;
-        position: relative;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-    }
-
-    .sign-up-two img.logo-pattern {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80%;
-        z-index: 0;
-    }
-
-    .sign-up-form-container {
-        width: 80%;
-        z-index: 1;
-        position: relative;
-    }
-
     .sign-up-form-container h2 {
         font-size: 38px;
         margin-bottom: 30px;
@@ -116,8 +81,14 @@
     .sign-up-form input[type="text"],
     .sign-up-form input[type="datetime-local"],
     .sign-up-form input[type="email"],
-    .sign-up-form input[type="submit"] {
+    .sign-up-form input[type="submit"],
+    .sign-up-form textarea {
         width: 100%;
+    }
+
+    .sign-up-form textarea {
+        resize: none;
+        height: 100px;
     }
 
     .two-columns {
@@ -140,12 +111,24 @@
     }
 
     .sign-up-form .input-wrapper input,
-    .sign-up-form .input-wrapper select {
+    .sign-up-form .input-wrapper select,
+    .sign-up-form .input-wrapper textarea {
         border: 1px solid #9b9b9b;
         border-radius: 50px;
         padding: 10px;
         font-size: 14px;
         padding-left: 18px;
+    }
+
+    .sign-up-form .input-wrapper textarea {
+        border-radius: 20px;
+    }
+
+    .logo-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
     }
 
     #signUpSubmit {
@@ -408,10 +391,6 @@
     }
 
     @media only screen and (max-width:1399px) {
-        .sign-up-content {
-            width: 92%;
-            height: 92%;
-        }
 
         .sign-up-content p {
             font-size: 17px;
@@ -422,21 +401,21 @@
         }
     }
 
+    @media only screen and (max-width:1200px) {
+        .sign-ups {
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+        .logo-pattern {
+            display: none;
+        }
+    }
+
     @media only screen and (max-width:992px) {
         .sign-up-section {
             flex-direction: column;
             min-height: auto;
-        }
-
-        .sign-up-one {
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-            padding: 30px;
-        }
-
-        .sign-up-content {
-            width: 100%;
-            height: 100%;
         }
 
         .sign-up-popup .sign-up-popup-content {
@@ -456,9 +435,7 @@
     }
 
     @media only screen and (max-width:576px) {
-        .sign-up-content {
-            padding: 25px;
-        }
+
 
         .sign-up-content .mm-logo {
             margin-bottom: 20px;
@@ -498,154 +475,134 @@
     </div>
 </div>
 <section class="sign-up-section">
-    <div class="sign-up-one">
-        <img class="hands-background" src="<?= get_template_directory_uri() ?>/assets/img/ottbg.webp" alt="OTT">
-        <img class="mm-emblem" src="<?= get_template_directory_uri() ?>/assets/img/monty-emblem.webp" alt="Monty Mobile Emblem">
-        <div class="sign-up-content">
-            <img class="mm-logo" src="<?= get_template_directory_uri() ?>/assets/img/monty-mobile-logo.webp" alt="Monty Mobile Logo">
-            <p>
-                Optimize Spending with Monty Mobile’s A2P Wholesale Solution.
-            </p>
-            <p>
-                Stay connected with your customers effortlessly. Monty Mobile’s OTT & A2P messaging solutions can give your business the flexibility, reach, and reliability it needs to thrive in today’s fast-paced world. Empower your communications with secure OTPs, urgent notifications, and engaging marketing messages that build trust and drive results.
-            </p>
-            <p><strong>Why Monty Mobile OTT/A2P Wholesale Solution?</strong></p>
-            <ul>
-                <li>
-                    <span>
-                        <svg id="checked" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                            <path id="Path_420" data-name="Path 420" d="M.214,13.248A15.8,15.8,0,0,1,7.136,2.674,15.716,15.716,0,0,1,15.976,0a1.181,1.181,0,0,1,1.2,1.114,1.159,1.159,0,0,1-1.065,1.27c-.673.073-1.354.077-2.024.167A13.1,13.1,0,0,0,7.346,5.517a13.055,13.055,0,0,0-4.509,7.036,13.222,13.222,0,0,0,3.04,12.511,12.91,12.91,0,0,0,7.949,4.354A13.236,13.236,0,0,0,24.9,26.244a12.947,12.947,0,0,0,4.224-6.787,28.717,28.717,0,0,0,.446-2.988c.024-.175.009-.355.029-.53a1.181,1.181,0,0,1,1.282-1.129A1.2,1.2,0,0,1,32,16.073a14.365,14.365,0,0,1-.575,4.164,15.825,15.825,0,0,1-11.586,11.29,24.337,24.337,0,0,1-2.647.433,18.958,18.958,0,0,1-2.392,0,15.474,15.474,0,0,1-6.99-2.2,15.807,15.807,0,0,1-7.6-11A18.937,18.937,0,0,1,.214,13.248Z" transform="translate(-0.004 0)" />
-                            <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
-                        </svg>
-                    </span>
-                    <span>Increased Customer Engagement & Loyalty</span>
+    <img class="logo-pattern" src="<?= get_template_directory_uri() ?>/assets/img/logo-pattern.webp" alt="logo Pattern">
+    <div class="container">
+        <div class="sign-ups">
+            <div class="sign-up-one">
+                <img class="hands-background" src="<?= get_template_directory_uri() ?>/assets/img/mwc-2025.webp" alt="MWC 2025">
+            </div>
+            <div class="sign-up-two">
+                <div class="sign-up-form-container">
+                    <h1><strong>Let’s Connect @MWC25</strong>
+                    </h1>
 
-                </li>
-                <li>
-                    <span>
-                        <svg id="checked" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                            <path id="Path_420" data-name="Path 420" d="M.214,13.248A15.8,15.8,0,0,1,7.136,2.674,15.716,15.716,0,0,1,15.976,0a1.181,1.181,0,0,1,1.2,1.114,1.159,1.159,0,0,1-1.065,1.27c-.673.073-1.354.077-2.024.167A13.1,13.1,0,0,0,7.346,5.517a13.055,13.055,0,0,0-4.509,7.036,13.222,13.222,0,0,0,3.04,12.511,12.91,12.91,0,0,0,7.949,4.354A13.236,13.236,0,0,0,24.9,26.244a12.947,12.947,0,0,0,4.224-6.787,28.717,28.717,0,0,0,.446-2.988c.024-.175.009-.355.029-.53a1.181,1.181,0,0,1,1.282-1.129A1.2,1.2,0,0,1,32,16.073a14.365,14.365,0,0,1-.575,4.164,15.825,15.825,0,0,1-11.586,11.29,24.337,24.337,0,0,1-2.647.433,18.958,18.958,0,0,1-2.392,0,15.474,15.474,0,0,1-6.99-2.2,15.807,15.807,0,0,1-7.6-11A18.937,18.937,0,0,1,.214,13.248Z" transform="translate(-0.004 0)" />
-                            <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
-                        </svg>
-                    </span>
-                    <span>Reliable & Secure Messaging</span>
-                </li>
-                <li>
-                    <span>
-                        <svg id="checked" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                            <path id="Path_420" data-name="Path 420" d="M.214,13.248A15.8,15.8,0,0,1,7.136,2.674,15.716,15.716,0,0,1,15.976,0a1.181,1.181,0,0,1,1.2,1.114,1.159,1.159,0,0,1-1.065,1.27c-.673.073-1.354.077-2.024.167A13.1,13.1,0,0,0,7.346,5.517a13.055,13.055,0,0,0-4.509,7.036,13.222,13.222,0,0,0,3.04,12.511,12.91,12.91,0,0,0,7.949,4.354A13.236,13.236,0,0,0,24.9,26.244a12.947,12.947,0,0,0,4.224-6.787,28.717,28.717,0,0,0,.446-2.988c.024-.175.009-.355.029-.53a1.181,1.181,0,0,1,1.282-1.129A1.2,1.2,0,0,1,32,16.073a14.365,14.365,0,0,1-.575,4.164,15.825,15.825,0,0,1-11.586,11.29,24.337,24.337,0,0,1-2.647.433,18.958,18.958,0,0,1-2.392,0,15.474,15.474,0,0,1-6.99-2.2,15.807,15.807,0,0,1-7.6-11A18.937,18.937,0,0,1,.214,13.248Z" transform="translate(-0.004 0)" />
-                            <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
-                        </svg>
-                    </span>
-                    <span>Scalability & Cost Reduction</span>
-                </li>
+                    <div class="sign-up-form">
+                        <form id="signUpForm" action="">
+                            <div class="two-columns">
+                                <div class="input-wrapper">
+                                    <label for="companyName">Date & Time</label>
+                                    <input id="datetime-picker" type="text" name="datetime" placeholder="Date & Time" />
+                                    <div class="error" id="datetimeError"></div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" name="fullName" placeholder="Full Name" />
+                                    <div class="error" id="fullNameError"></div>
+                                </div>
+                            </div>
 
-            </ul>
-        </div>
-    </div>
-    <div class="sign-up-two">
-        <img class="logo-pattern" src="<?= get_template_directory_uri() ?>/assets/img/logo-pattern.webp" alt="logo Pattern">
-        <div class="sign-up-form-container">
-            <h1><strong>Welcome to Monty Mobile’s <br /> A2P Wholesale Solution</strong>
-            </h1>
+                            <div class="two-columns">
+                                <div class="input-wrapper">
+                                    <label for="companyEmail">Email</label>
+                                    <input type="text" name="companyEmail" placeholder="Email" />
+                                    <div class="error" id="companyEmailError"></div>
+                                </div>
 
-            <div class="sign-up-form">
-                <form id="signUpForm" action="">
-                    <div class="two-columns">
-                        <div class="input-wrapper">
-                            <label for="companyName">Date & Time</label>
-                            <input id="datetime-picker" type="text" name="datetime" placeholder="Date & Time" />
-                            <div class="error" id="datetimeError"></div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" name="fullName" placeholder="Full Name" />
-                            <div class="error" id="fullNameError"></div>
-                        </div>
-                    </div>
+                            </div>
+                            <div class="two-columns">
 
-                    <div class="two-columns">
-                        <div class="input-wrapper">
-                            <label for="companyEmail">Email</label>
-                            <input type="text" name="companyEmail" placeholder="Email" />
-                            <div class="error" id="companyEmailError"></div>
-                        </div>
+                                <div class="input-wrapper">
+                                    <label for="companyName">Company Name</label>
+                                    <input type="text" name="companyName" placeholder="Company Name" />
+                                    <div class="error" id="companyNameError"></div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="jobTitle">Job Title</label>
+                                    <input type="text" name="jobTitle" placeholder="Job Title" />
+                                    <div class="error" id="jobTitleError"></div>
+                                </div>
+                            </div>
 
-                    </div>
-                    <div class="two-columns">
+                            <div class="two-columns">
+                                <div class="input-wrapper">
+                                    <label for="message">Let us know what you’re looking for, and we’ll <br /> connect you with the right expert to help</label>
+                                    <textarea name="message" placeholder="Your message"></textarea>
+                                    <div class="error" id="messageError"></div>
+                                </div>
 
-                        <div class="input-wrapper">
-                            <label for="companyName">Company Name</label>
-                            <input type="text" name="companyName" placeholder="Company Name" />
-                            <div class="error" id="companyNameError"></div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="jobTitle">Job Title</label>
-                            <input type="text" name="jobTitle" placeholder="Job Title" />
-                            <div class="error" id="jobTitleError"></div>
-                        </div>
-                    </div>
+                            </div>
 
 
 
-                    <div class="input-wrapper checkbox-wrapper">
-                        <input type="checkbox" name="newsletter" id="newsletter" />
-                        <label for="newsletter" class="checkbox-label">
-                            <svg class="icon unchecked">
-                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
-                            </svg>
-                            <svg class="icon checked">
-                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
-                            </svg>
-                            <span class="grey-text">
-                                I want to receive MontyMobile news, trends, or blogs by email.
-                            </span>
-                        </label>
+                            <div class="input-wrapper checkbox-wrapper">
+                                <input type="checkbox" name="newsletter" id="newsletter" />
+                                <label for="newsletter" class="checkbox-label">
+                                    <svg class="icon unchecked">
+                                        <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
+                                    </svg>
+                                    <svg class="icon checked">
+                                        <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
+                                    </svg>
+                                    <span class="grey-text">
+                                        I want to receive MontyMobile news, trends, or blogs by email.
+                                    </span>
+                                </label>
 
-                    </div>
-                    <div class="input-wrapper checkbox-wrapper">
-                        <input type="checkbox" name="terms" id="terms" />
-                        <label for="terms" class="checkbox-label">
-                            <svg class="icon unchecked">
-                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
-                            </svg>
-                            <svg class="icon checked">
-                                <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
-                            </svg>
-                            <span class="grey-text">
-                                I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/terms-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/privacy-policy">Privacy Policy</a>.
-                            </span>
-                        </label>
+                            </div>
+                            <div class="input-wrapper checkbox-wrapper">
+                                <input type="checkbox" name="terms" id="terms" />
+                                <label for="terms" class="checkbox-label">
+                                    <svg class="icon unchecked">
+                                        <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#unchecked"></use>
+                                    </svg>
+                                    <svg class="icon checked">
+                                        <use xlink:href="<?= get_template_directory_uri() ?>/assets/img/sprites.svg#checked"></use>
+                                    </svg>
+                                    <span class="grey-text">
+                                        I have read and agree to Monty Mobile’s <a target="_blank" href="<?= home_url() ?>/terms-conditions">Terms & Conditions</a> and <a target="_blank" href="<?= home_url() ?>/privacy-policy">Privacy Policy</a>.
+                                    </span>
+                                </label>
 
-                        <div class="error" id="termsError"></div>
-                    </div>
-                    <div class="mt-3">
-                        <div id="recaptcha-container"></div>
-                        <!-- <div class="g-recaptcha" data-sitekey="6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5"></div> -->
-                        <div class="error" id="recaptchaError"></div>
-                    </div>
+                                <div class="error" id="termsError"></div>
+                            </div>
+                            <div class="mt-3">
+                                <div id="recaptcha-container"></div>
+                                <!-- <div class="g-recaptcha" data-sitekey="6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5"></div> -->
+                                <div class="error" id="recaptchaError"></div>
+                            </div>
 
 
-                    <div id="error-container">
+                            <div id="error-container">
 
-                    </div>
+                            </div>
 
-                    <input type="submit" id="signUpSubmit" value="SCHEDULE YOUR FREE CONSULTATION" />
+                            <input type="submit" id="signUpSubmit" value="SCHEDULE YOUR FREE CONSULTATION" />
 
-                    <div class="loader-container" id="form-loader">
-                        <span class="loader"></span>
-                    </div>
-                </form>
-                <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+                            <div class="loader-container" id="form-loader">
+                                <span class="loader"></span>
+                            </div>
+                        </form>
+                        <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
                 </script> -->
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+
 </section>
 
 <script>
     jQuery("#datetime-picker").flatpickr({
-        enableTime: true
+        enableTime: true,
+        minDate: "2025-03",
+        maxDate: "2025-04",
+        enable: ["2025-03-03", "2025-03-04", "2025-03-05", "2025-03-06"],
+        minTime: "09:00",
+        maxTime: "18:00",
+        defaultHour: "09",
+        defaultMinute: "00"
     });
 
     function changeColor(select) {
@@ -764,6 +721,12 @@
         this.classList.remove('error-border');
     });
 
+    document.querySelector('textarea[name="message"]').addEventListener('input', function(e) {
+        document.getElementById('error-container').innerHTML = '';
+        document.getElementById('messageError').textContent = "";
+        this.classList.remove('error-border');
+    });
+
 
     document.querySelector('input[name="terms"]').addEventListener('change', function(e) {
         document.getElementById('error-container').innerHTML = '';
@@ -805,6 +768,7 @@
         var companyEmail = document.querySelector('input[name="companyEmail"]');
         var jobTitle = document.querySelector('input[name="jobTitle"]');
         var dateTime = document.querySelector('input[name="datetime"]');
+        var message = document.querySelector('textarea[name="message"]');
 
         var terms = document.querySelector('input[name="terms"]');
         var newsletter = document.querySelector('input[name="newsletter"]');
@@ -815,6 +779,7 @@
         var companyEmailError = document.getElementById('companyEmailError');
         var jobTitleError = document.getElementById('jobTitleError');
         var dateTimeError = document.getElementById('datetimeError');
+        var messageError = document.getElementById('messageError');
 
 
         var termsError = document.getElementById('termsError');
@@ -880,6 +845,13 @@
             clearError(dateTime, dateTimeError);
         }
 
+        if (hasSpaces(message.value)) {
+            showError(message, messageError, 'Ensure there are no spaces at the beginning or end.');
+            isValid = false;
+        } else {
+            clearError(message, messageError);
+        }
+
         if (!terms.checked) {
             showError(terms, termsError, 'Please agree to the Terms & Conditions and Privacy Policy.');
             isValid = false;
@@ -895,6 +867,7 @@
             data.append('jobTitle', jobTitle.value);
             data.append('dateTime', dateTime.value);
             data.append('newsletter', newsletter.value);
+            data.append('newsletter', message.value);
             data.append('_wpcf7_unit_tag', 'rte');
 
             fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25793/feedback', {
