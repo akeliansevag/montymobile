@@ -867,7 +867,7 @@
             data.append('jobTitle', jobTitle.value);
             data.append('dateTime', dateTime.value);
             data.append('newsletter', newsletter.value);
-            data.append('newsletter', message.value);
+            data.append('message', message.value);
             data.append('_wpcf7_unit_tag', 'rte');
 
             fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25793/feedback', {
