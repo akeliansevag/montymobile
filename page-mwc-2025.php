@@ -576,7 +576,7 @@
 
                             </div>
 
-                            <input type="submit" id="signUpSubmit" value="SCHEDULE YOUR FREE CONSULTATION" />
+                            <input type="submit" id="signUpSubmit" value="SUBMIT" />
 
                             <div class="loader-container" id="form-loader">
                                 <span class="loader"></span>
@@ -815,7 +815,7 @@
         }
 
         if (!companyEmail.value) {
-            showError(companyEmail, companyEmailError, 'Company Email is required.');
+            showError(companyEmail, companyEmailError, 'Email is required.');
             isValid = false;
         } else if (!isValidEmail(companyEmail.value)) {
             showError(companyEmail, companyEmailError, 'Please enter a valid email address.');
