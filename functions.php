@@ -22,7 +22,7 @@ add_filter('wpcf7_spam', function ($spam, $submission) {
 		$form_id = $submission->get_contact_form()->id();
 
 		// Disable spam check for the specific form ID
-		if ($form_id == 25777 || $form_id == 25793) { // Replace 25777 with your form ID
+		if ($form_id == 25777 || $form_id == 25793 || $form_id == 25797) { // Replace 25777 with your form ID
 			return false;
 		}
 	}
