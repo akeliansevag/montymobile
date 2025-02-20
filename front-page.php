@@ -9,51 +9,32 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <section class="slider-section position-relative">
     <div id="h-slider" class="h-slider">
-        <!-- <div class="h-slider-item slide-1">
-            <div class="h-slider-background">
-                <img src="<?= get_template_directory_uri() ?>/assets/img/webinar-banner.webp" alt="Webinar Banner">
-            </div>
-            <div class="position-relative z-1 mt-4 py-4">
-                <div class="container">
-                    <div class="button-box my-3">Free Webinar</div>
-                    <h2>Unlocking eSIM: <br />
-                        Challenges & Opportunities in Roaming & RSP</h2>
-                    <h4>30th October - 12:00 GMT / 14:00 CET</h4>
-                    <div class="d-flex flex-wrap gap-5 mt-4 text-center">
-                        <div class="d-flex flex-column align-items-center gap-2">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/sara-yaghoubi.webp" alt="Sara Yaghoubi">
-                            <div>
-                                <h5>Sara Yaghoubi</h5>
-                                <h6>Director of Growth, <br /> Monty eSIM</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column align-items-center gap-2">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/farouk-tabbal.webp" alt="Farouk Tabbal">
-                            <div>
-                                <h5>Farouk Tabbal</h5>
-                                <h6>eSIM Product Director, <br /> Monty Mobile</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column align-items-center gap-2">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/elisha.webp" alt="Elish">
-                            <div>
-                                <h5>Elisha Sudlow-Poole</h5>
-                                <h6>Senior Research Analyst, <br /> Juniper Research</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex gap-5 my-5">
-                        <div>
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/mm-logo.webp" alt="Monty Mobile Logo">
-                        </div>
-                        <div>
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/juniper-logo.webp" alt="Juniper Logo">
-                        </div>
-                    </div>
-                    <a class="mm-button d-inline-block mb-5" href="">Register Now</a>
+        <div class="h-slider-item slide-1">
+            <a href="<?= get_permalink(get_page_by_path('mwc-2025')) ?>" target="_blank">
+                <div class="h-slider-background">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/mwc-banner.webp" alt="Webinar Banner">
                 </div>
-            </div>
-        </div> -->
+                <div class="position-relative z-1 mt-4 py-4 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-lg-12">
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <img style="width: auto; height: 40px;" src="<?= get_template_directory_uri() ?>/assets/img/mwc-logo.svg" alt="MWC Logo">
+                                    <div style="width: 3px; height: 60px; background-color: #fff;" class=""></div>
+                                    <img style="width: auto; height: 40px;" src="<?= get_template_directory_uri() ?>/assets/img/mm-logo.svg" alt="Monty Mobile Logo">
+                                </div>
+
+                                <h1 class="display-5 fw-semi-bold text-white mb-4">It's <span class="text-red">Big</span>, it's <span class="text-red">Tech</span>, it's what's <span class="text-red">Next</span>.</h1>
+                                <div class="display-7 text-red bg-white d-inline-block px-3 py-2 rounded fw-semi-bold mb-4">March 3<sup>rd</sup> - March 6<sup>th</sup></div>
+                                <p class="text-white display-7 mb-4">Meet us at <strong>Fira Gran Via, Barcelona</strong><br><strong>Booth 5B81 Hall 5</strong></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
         <?php if ($slider) : ?>
             <?php foreach ($slider as $key => $slide) : ?>
                 <div class="h-slider-item slide-<?= $key ?>">
