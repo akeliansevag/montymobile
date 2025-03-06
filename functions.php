@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '10.1.6');
+	define('_S_VERSION', '10.1.8');
 }
 
 //add_filter('wpcf7_spam', '__return_false');

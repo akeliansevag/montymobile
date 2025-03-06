@@ -6,7 +6,7 @@
     <img class="z-0 mw-100 position-absolute end-0 top-0" src="<?= get_template_directory_uri() ?>/assets/img/right-dots.webp" alt="">
     <div class="container">
         <h3 class="text-center text-black">Protect Your Voice Traffic with Monty Mobile</h3>
-        <div class="pink-boxes three-columns py-5">
+        <div class="pink-boxes-special py-5">
             <div class="pink-box">
                 <h3>Impact</h3>
 
@@ -34,11 +34,10 @@
     <img class="z-0 position-absolute start-0 bottom-0 mw-100" src="<?= get_template_directory_uri() ?>/assets/img/emblem-bg.webp" alt="">
 
     <div class="container">
-        <h4 class="position-relative z-1 w-75-p">Monty Mobile’s Solution</h4>
-        <div class="blurred-boxes py-5 position-relative z-1">
+        <h4 class="position-relative z-1 mb-3 w-75-p">Monty Mobile’s Solution</h4>
+        <div class="blurred-boxes-special pb-5 position-relative z-1">
             <div class="blurred-box">
                 <h3>Dynamic Search Testing Service</h3>
-
                 <ul class="disc">
                     <li>Advanced technology to detect and mitigate bypass fraud.</li>
 
