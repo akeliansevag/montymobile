@@ -3141,7 +3141,7 @@ section.color-white {
   grid-column: span 2;
 }
 .pink-box {
-  padding: 40px;
+  padding: 38px;
 
   background-color: #ff6d79;
   border: 1px solid #ffffff;
@@ -3176,6 +3176,10 @@ section.color-white {
   padding: 15px;
   font-size: 20px;
   flex: 1;
+}
+
+.pink-box h3 {
+  font-size: 28px;
 }
 
 .mm-button-new:hover {
