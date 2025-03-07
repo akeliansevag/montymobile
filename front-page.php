@@ -9,7 +9,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
 
 <section class="slider-section position-relative">
     <div id="h-slider" class="h-slider">
-        <div class="h-slider-item slide-1">
+        <!-- <div class="h-slider-item slide-1">
             <a href="<?= get_permalink(get_page_by_path('mwc-2025')) ?>" target="_blank">
                 <div class="h-slider-background">
                     <img src="<?= get_template_directory_uri() ?>/assets/img/mwc-banner.webp" alt="Webinar Banner">
@@ -34,7 +34,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 </div>
             </a>
 
-        </div>
+        </div> -->
         <?php if ($slider) : ?>
             <?php foreach ($slider as $key => $slide) : ?>
                 <div class="h-slider-item slide-<?= $key ?>">
