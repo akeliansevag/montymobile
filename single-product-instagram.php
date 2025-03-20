@@ -53,7 +53,7 @@
             <h5 class="mb-4"><br /></h5>
             <h3>Automated Customer Interactions</h3>
             <ul class="disc black mt-3">
-                <li>Integrate Facebook Messenger into your broader communication strategy for a unified customer experience.</li>
+                <li>Use chatbots to automate responses and guide interactions effectively.</li>
             </ul>
 
             <h3>API Integration</h3>
