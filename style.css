@@ -2087,6 +2087,7 @@ span.filter-separator {
   z-index: 11;
   transition: top 0.2s ease;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .team-popup .container-fluid,
