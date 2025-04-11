@@ -345,11 +345,11 @@ $astroImage = get_field("floating_astronaut_image", 7);
                 <div class="awards-scroll-slider swiper" id="awards-scroll-slider">
                     <div class="swiper-line"></div>
                     <div class="swiper-wrapper">
-                        <?php foreach ($awards as $award) : ?>
+                        <?php foreach ($awards as $award) : var_dump($award); ?>
                             <div class="swiper-slide">
                                 <div class="award-item">
                                     <div>
-                                        <img src="<?= $award['image'] ?>" alt="" />
+                                        <img src="<?= $award['image']['url'] ?>" alt="<?= $award['image']['alt'] ?>" />
                                     </div>
                                     <div class="swiper-dot"></div>
                                     <div class="swiper-desc">
