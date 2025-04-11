@@ -315,11 +315,11 @@ $astroImage = get_field("floating_astronaut_image", 7);
                             </div>
                             <div class="col-md-6 text-center d-none d-md-block">
                                 <?php if ($key == 0) : ?>
-                                    <img width="70%" src="https://montymobile.com/wp-content/uploads/2023/10/new-moon1.png" class="parallax-image" alt="Moon image">
+                                    <img width="70%" src="https://montymobile.com/wp-content/uploads/2025/04/new-moon1.webp" class="parallax-image" alt="Moon image">
                                 <?php endif; ?>
 
                                 <?php if ($key == 2) : ?>
-                                    <img src="https://montymobile.com/wp-content/uploads/2023/10/new-planet.png" class="parallax-image position-absolute top-0" alt="Moon image">
+                                    <img src="https://montymobile.com/wp-content/uploads/2025/04/new-planet.webp" class="parallax-image position-absolute top-0" alt="Moon image">
                                 <?php endif; ?>
                             </div>
                         </div>
