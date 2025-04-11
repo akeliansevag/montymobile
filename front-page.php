@@ -349,7 +349,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                             <div class="swiper-slide">
                                 <div class="award-item">
                                     <div>
-                                        <img src="<?= $award['image'] ?>" alt="<?= $award['image']['alt'] ?>">
+                                        <img src="<?= $award['image'] ?>" alt="">
                                     </div>
                                     <div class="swiper-dot"></div>
                                     <div class="swiper-desc">
