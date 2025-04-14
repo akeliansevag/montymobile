@@ -483,7 +483,7 @@
             </div>
             <div class="sign-up-two">
                 <div class="sign-up-form-container">
-                    <h1><strong>Let’s Connect @MWC25</strong>
+                    <h1><strong>Let’s Connect Internally @MWC25</strong>
                     </h1>
 
                     <div class="sign-up-form">
