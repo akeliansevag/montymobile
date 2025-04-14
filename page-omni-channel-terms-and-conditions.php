@@ -6,7 +6,7 @@
             <div class="col-xxl-8">
                 <div class="page-wrapper mb-5 p-4">
                     <div class="page-content mt-3">
-
+                        <h1>Omni Channel Terms and Conditions</h1>
                     </div><!--post-content-->
                 </div>
             </div><!--outer-column-->
