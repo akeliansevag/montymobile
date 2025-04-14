@@ -386,7 +386,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                     <?php foreach ($clients as $client) : ?>
                         <div class="v-slide">
                             <div class="v-wrapper">
-                                <img src="<?= $client['image']['sizes']['lg-thumb'] ?>" alt="" class="v-slider-img">
+                                <img src="<?= $client['image']['sizes']['lg-thumb'] ?>" alt="<?= $client['image']['alt'] ?>" class="v-slider-img">
                             </div>
                         </div>
 
