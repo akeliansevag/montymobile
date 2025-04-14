@@ -246,7 +246,7 @@ $astroImage = get_field("floating_astronaut_image", 7);
                                             <?php $infographic = $product['image']; ?>
                                             <?php if ($infographic) : ?>
                                                 <div class="h-product-image">
-                                                    <img src="<?= $infographic['sizes']['lg-thumb']; ?>" alt="">
+                                                    <img src="<?= $infographic['sizes']['lg-thumb']; ?>" alt="<?= $infographic['alt'] ?>">
                                                 </div>
                                             <?php endif; ?>
                                         </div>
